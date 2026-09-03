@@ -89,7 +89,7 @@ Dossier V2 restructures the 18-month timeline to align strictly with the five ca
 *   **Experiment Executed:** Core RQ5 (150 deep exploratory tasks from GAIA Level 3 and deep refactoring benchmarks).
 *   **Gate M15 Criteria:**
     - *Success Threshold:* gibbrn extends trajectory survival depth such that $\text{MDDD}_{0.90}(\text{gibbrn}) \ge 2.0 \times \text{baseline}$ evaluated via the Log-Rank Test ($p < 0.01$). Must also demonstrate tasks where dynamic managed autonomy resolves problems that static pipelines (Agentless) cannot express.
-    - *Action if Failed:* **KILL PROJECT / RETURN CAPITAL.** If state integrity and checkpoint rollback fail to double dependable survival depth, the central systems premise of the company is invalidated.
+    - *Action if Failed:* **WIND DOWN OR NARROW DIRECTION.** Cease pursuing the broad autonomous runtime thesis; preserve remaining capital subject to investor governance.
 
 ---
 

@@ -26,7 +26,7 @@ Table 8.1 details the line-item expenditures for the Primary Plan (\$285,000) al
 
 ### Table 8.1: Audited 18-Month Expense Model (USD)
 
-> **Note:** All figures in Table 8.1 are BUDGET ASSUMPTIONS as of September 2026. Stipend rates reflect planned compensation for a distributed research team and are not binding commitments.
+> **Note:** All figures in Table 8.1 are BUDGET ASSUMPTIONS as of September 2026. Stipend and contractor rates reflect planned compensation assumptions for a founder-led program with optional part-time research engineering support contingent on funding, and are not binding commitments.
 
 | Expense Category | Primary Pre-Seed Plan (\$285,000) | Constrained Fallback Plan (\$120,000) | Milestone Gate Supported | What Disappears Under Constrained Plan |
 | :--- | :--- | :--- | :--- | :--- |
@@ -80,9 +80,9 @@ Table 8.3 outlines cumulative expenditure and unspent capital preserved across e
 
 | Checkpoint Gate | Cumulative Months | Monthly Burn Rate | Cumulative Capital Spent | Capital Remaining / Preserved | Falsification Trigger if Gate Fails |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Gate M3** | Months 1–3 | \$12,000 / mo | \$36,000 | **\$249,000** | **Return \$249,000 to investors** if interception latency $>100\text{ms}$. |
+| **Gate M3** | Months 1–3 | \$12,000 / mo | \$36,000 | **\$249,000** | Stop or materially narrow the program; preserve unspent capital subject to investor governance if interception latency $>100\text{ms}$. |
 | **Gate M6** | Months 4–6 | \$14,000 / mo | \$78,000 | **\$207,000** | Narrow thesis; preserve capital if replay fails. |
 | **Gate M9** | Months 7–9 | \$18,000 / mo | \$132,000 | **\$153,000** | Pivot to narrow security proxy if capability tokens leak. |
 | **Gate M12** | Months 10–12 | \$18,000 / mo | \$186,000 | **\$99,000** | Defer autonomous admission if regression testing is too costly. |
-| **Gate M15** | Months 13–15 | \$21,000 / mo | \$249,000 | **\$36,000** | **Terminate company & return \$36,000** if MDDD fails to double. |
+| **Gate M15** | Months 13–15 | \$21,000 / mo | \$249,000 | **\$36,000** | Stop pursuing the broad company thesis; preserve remaining capital subject to governing investment terms if MDDD fails to double. |
 | **Gate M18** | Months 16–18 | \$12,000 / mo | \$285,000 | **\$0** | Final Thesis Verdict (Seed Round vs. Dissolve). |

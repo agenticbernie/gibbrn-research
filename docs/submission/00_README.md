@@ -18,7 +18,7 @@
 
 Specifically, the project researches whether a framework-neutral control layer can preserve the integrity, authority, provenance, validation status, and recoverability of consequential agent state as autonomous systems operate, accumulate experience, and change over time.
 
-This dossier reflects a complete systems reconstruction following an adversarial technical diligence audit. It formally separates the broad research thesis from the immediate pre-seed commercial wedge:
+This dossier reflects a complete systems reconstruction following an independent 1517-oriented adversarial diligence simulation and subsequent evidence verification pass. It formally separates the broad research thesis from the immediate pre-seed commercial wedge:
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -52,7 +52,7 @@ Architectural bloat has been eliminated. The system is consolidated into **three
 2.  **Engine 2: The Deterministic Effect Gate (Inline Policy & Kernel Sandbox) [PRIMARY WEDGE]**
     - Merges Authority Reducer and Effect Gate into an out-of-process daemon (Rust/Go).
     - Issues short-lived single-use capability leases (TTL $\le 2000\text{ms}$) mitigating TOCTOU race conditions.
-    - Couples capability checks with **gVisor (runsc) micro-sandboxes** to neutralize parameter smuggling.
+    - Couples capability checks with **gVisor (runsc) micro-sandboxes** to constrain the blast radius of malicious or unsafe tool parameters at the OS boundary.
 3.  **Engine 3: The Experience Admission Engine (Verifier-Rich Skill Governance)**
     - Narrowed strictly to verifier-rich domains (deterministic Python functions and Bash tool macros).
     - Enforces Git quarantine staging branches and micro-sandbox regression testing before promoting skills.

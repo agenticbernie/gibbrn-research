@@ -1,7 +1,7 @@
 # AUDIT-02: Citation Verification and Academic Source Audit
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Standard:** Primary Academic Source Verification (arXiv, CrossRef, DBLP, OpenReview, IEEE Xplore)  
 **Status:** **CRITICAL DILIGENCE FINDINGS (Severity S3)**  
 

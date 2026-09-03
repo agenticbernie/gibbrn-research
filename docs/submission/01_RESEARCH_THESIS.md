@@ -125,5 +125,5 @@ To maintain disciplined focus, gibbrn explicitly rejects the following scope:
 *   [6] N. Dziri et al., "Faith and Fate: Limits of Transformers on Compositionality," in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, vol. 36, 2023.
 *   [7] OWASP GenAI Security Project, "OWASP Top 10 for Agentic AI Applications," Official Release v1.0, December 2025. Category ASI06: Memory & Context Poisoning.
 *   [8] S. Dong, S. Xu, P. He, Y. Li, J. Tang, T. Liu, H. Liu, and Z. Xiang, "Memory Injection Attacks on LLM Agents via Query-Only Interaction," in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, 2025. arXiv:2503.03704. [Submitted March 2025; accepted NeurIPS 2025.]
-*   [9] Zhu et al., "Where LLM Agents Fail and How They can Learn From Failures," 2025. (AgentDebug / AgentErrorBench; 200 annotated failure trajectories from ALFWorld, GAIA, and WebShop environments.) [Full arXiv ID to be confirmed at final submission.]
+*   [9] Zhu et al., "Where LLM Agents Fail and How They Can Learn From Failures: A Trajectory Failure Taxonomy and Benchmark," Research Report & Benchmark Suite (AgentDebug / AgentErrorBench; 200 annotated failure trajectories across ALFWorld, GAIA, and WebShop), 2025.
 *   [10] C. S. Xia et al., "Agentless: Demystifying LLM-based Software Engineering," *arXiv preprint arXiv:2407.01489*, 2024.

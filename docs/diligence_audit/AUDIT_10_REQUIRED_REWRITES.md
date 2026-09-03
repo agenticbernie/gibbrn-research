@@ -1,7 +1,7 @@
 # AUDIT-10: Required Surgical Rewrites and Text Patches
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Purpose:** Precise, Drop-In Remediation Patches for Severity S2, S3, and S4 Diligence Defects  
 
 ---

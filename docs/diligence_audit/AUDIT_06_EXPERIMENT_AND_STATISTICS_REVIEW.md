@@ -1,7 +1,7 @@
 # AUDIT-06: Experimental Design, Statistical Methodology, and MDDD Reformulation
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Standard:** Empirical Statistical Rigor, Hypothesis Falsifiability, and Survival Analysis  
 
 ---

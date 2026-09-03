@@ -1,7 +1,7 @@
 # AUDIT-00: Executive Diligence Verdict & Scorecard
 
 **Target Project:** GIBBRN (Agent State Integrity Layer)  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Audit Date:** September 2026  
 **Diligence Standard:** Institutional Pre-Seed / Deep-Tech Systems Research Standard  
 

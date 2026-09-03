@@ -1,7 +1,7 @@
 # AUDIT-07: Roadmap Feasibility, Financial Audit, and Capital Scenarios
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Standard:** Critical Path Feasibility, Single-Point-of-Failure (SPOF) Analysis, and Financial Recalculation  
 
 ---

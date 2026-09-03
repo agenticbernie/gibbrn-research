@@ -13,7 +13,7 @@
 The GIBBRN technical dossier has undergone a rigorous, three-stage development and verification process:
 
 1.  **Phase 1 (V1 Dossier):** Initial 18-month R&D dossier formulating the Agent State Integrity thesis.
-2.  **Phase 2 (Adversarial Diligence Audit & V2 Reconstruction):** Diligence audit (`AUDIT_00`–`AUDIT_11`) followed by complete structural reconstruction: consolidating 5 subsystems into 3 physical engines, eliminating naive geometric failure models in favor of discrete survival analysis, hardening kernel-level sandboxing, and establishing $285,000 as the primary capital ask.
+2.  **Phase 2 (Adversarial Diligence Simulation & V2 Reconstruction):** Independent 1517-oriented diligence simulation (`AUDIT_00`–`AUDIT_11`) followed by complete structural reconstruction: consolidating 5 subsystems into 3 physical engines, eliminating naive geometric failure models in favor of discrete survival analysis, hardening kernel-level sandboxing, and establishing $285,000 as the primary capital ask.
 3.  **Phase 3 (Submission-Grade Evidence Verification Pass):** Independent citation auditing and factual verification pass (`FINAL_VERIFY_00`–`FINAL_VERIFY_09`), correcting critical citation metadata (MINJA year, AgentErrorBench attribution), eliminating ungrounded quantitative claims (the "27.4 percentage point" harness claim reframed to appropriate cross-literature sensitivity), scrubbing self-certifying language ("100% verified"), softening absolute security assertions, and enforcing strict epistemic classification across all numbers and targets.
 
 ---

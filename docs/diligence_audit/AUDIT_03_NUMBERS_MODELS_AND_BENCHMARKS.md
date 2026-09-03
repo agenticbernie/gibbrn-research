@@ -1,7 +1,7 @@
 # AUDIT-03: Numerical Rigor, Benchmark Validity, and Model Lifecycle Audit
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Standard:** Quantitative Defensibility, Statistical Soundness, and Benchmark Operationalization  
 
 ---

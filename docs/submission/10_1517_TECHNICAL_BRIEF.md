@@ -43,9 +43,9 @@ We are researching how an autonomous agent can change its probabilistic cognitiv
 ---
 
 ### 6. Why might existing stacks be insufficient?
-*   **Temporal / DBOS:** Guarantee durable execution for deterministic code, but cannot detect if an LLM's *decision* to call an API was caused by an injected prompt or hallucinated authority.
-*   **Mem0 / Letta:** Public documentation reviewed does not describe native support for regression testing or sandboxed validation before memory promotion, leaving direct vectors for MINJA-style memory poisoning.
-*   **Lakera Guard / Guardrails:** Rely on probabilistic text classifiers to scan prompts, which can be evaded by semantic rephrasing; they cannot enforce atomic integer balances or kernel-level seccomp boundaries.
+*   **Temporal / DBOS:** Temporal's documented durability model guarantees workflow replay and activity retries for deterministic code, but does not provide agent-specific semantic validation of why a model proposed a given side effect or whether its in-context authority was laundered.
+*   **Mem0 / Letta:** Focus on semantic similarity retrieval; public documentation reviewed does not describe native support for regression testing, sandboxed validation, or provenance isolation before memory promotion, leaving direct vectors for MINJA-style memory poisoning.
+*   **Lakera Guard / Guardrails:** Rely on probabilistic natural-language classifiers to scan prompts and outputs, operating at the text inspection layer rather than enforcing deterministic kernel sandboxing or state constraints.
 
 ---
 
@@ -70,7 +70,7 @@ Five causally chained research questions across 13,200 benchmark trajectories:
 *   **Gate M9 (Effect Gate - Main Wedge):** Unauthorized-Effect Rate $\text{UER} \le 0.001$; false denials $\le 2.0\%$; latency $\le 15\text{ms}$.
 *   **Gate M12 (Experience Admission):** False-Promotion Rate $\text{FPR} \le 0.02$; downstream retention $\ge 98\%$.
 *   **Gate M15 (Survival - Company Thesis Gate):** $\text{MDDD}_{0.90} \ge 2.0\times$ baseline ($p < 0.01$ Log-Rank test).
-*   **Gate M18 (Final Thesis Gate):** Cross-model replication, 2 design-partner pilots, final proceed/pivot/stop verdict.
+*   **Gate M18 (Final Thesis Gate):** Cross-model replication, target of up to 2 external pilot evaluations (contingent on partner availability and workflow match), and formal proceed/pivot/stop verdict.
 
 ---
 
@@ -91,15 +91,15 @@ Five causally chained research questions across 13,200 benchmark trajectories:
 *   **At M9:** If capability tokens and kernel sandboxing fail to stop unauthorized mutating effects ($\text{UER} > 0.001$).
 *   **At M15:** If checkpoint rollback fails to double $\text{MDDD}_{0.90}$ with $p < 0.01$.
 
-If Gate M15 fails, **we will terminate the company and return unspent capital.** We will not pivot to a generic AI wrapper.
+If Gate M15 fails, **we will stop pursuing the broad company thesis and either wind down the program or pursue only a narrower direction if supported by evidence and investor governance.** We will not pivot to a generic AI wrapper.
 
 ---
 
 ### 12. What result would justify a subsequent seed round?
-A subsequent \$3M–\$4M institutional Seed round will be justified if gibbrn proves that on tasks requiring exploratory branching (illustrative scenario):
-1.  gibbrn-managed agents achieve $\text{MDDD}_{0.90} \ge 35$ steps with $>70\%$ task completion, while unmanaged loops collapse ($\text{MDDD} \le 12$) and static pipelines cannot express the problem.
-2.  The Effect Gate maintains zero unauthorized executions across 1,000+ red-team attacks.
-3.  Two enterprise design-partner pilots confirm integration with $<20\text{ms}$ latency overhead and measurable failure-recovery savings.
+A subsequent institutional Seed round would become defensible if gibbrn demonstrates that on tasks requiring exploratory branching:
+1.  gibbrn-managed agents achieve substantial survival depth gains (e.g., target benchmark scenario: $\text{MDDD}_{0.90} \ge 35$ steps vs. unmanaged baselines $\le 12$, with $>70\%$ completion; *illustrative post-R&D commercialization threshold, not a current empirical expectation*).
+2.  The Effect Gate maintains zero unauthorized mutating executions across 1,000+ red-team attacks.
+3.  External deployment evaluations confirm integration with $<20\text{ms}$ latency overhead and measurable failure-recovery savings.
 
 ---
 

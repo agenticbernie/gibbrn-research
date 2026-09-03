@@ -19,7 +19,7 @@ The documentation in this repository is organized into four distinct tiers refle
 docs/
 ├── submission/         <-- [PRIMARY] Publication-ready, verified 18-month research dossier (13 files)
 ├── verification/       <-- Complete audit ledgers from the final evidence verification pass (10 files)
-├── diligence_audit/    <-- Adversarial diligence audit reports from 1517 Fund technical review (12 files)
+├── diligence_audit/    <-- Adversarial diligence audit reports modeled on a 1517-style technical review (12 files)
 └── archive/            <-- Historical working archives preserving complete scientific lineage
     ├── v2_reconstructed/  (Post-audit reconstructed draft)
     └── v1_initial/        (Initial exploratory research proposal)
@@ -66,9 +66,9 @@ The complete verification paper trail generated during the final submission-grad
 
 ---
 
-## 3. Adversarial Diligence Audits (`/docs/diligence_audit`)
+## 3. Adversarial Diligence Simulation (`/docs/diligence_audit`)
 
-The adversarial technical diligence audit that stress-tested the initial dossier:
+The independent adversarial diligence simulation (modeled on a 1517-style technical review) that stress-tested the initial dossier:
 
 *   [`AUDIT_00_EXECUTIVE_VERDICT.md`](./diligence_audit/AUDIT_00_EXECUTIVE_VERDICT.md) — Initial diligence score, critical red flags, and kill test summary.
 *   [`AUDIT_01_CLAIM_LEDGER.md`](./diligence_audit/AUDIT_01_CLAIM_LEDGER.md) — Comprehensive inventory and audit of foundational claims.

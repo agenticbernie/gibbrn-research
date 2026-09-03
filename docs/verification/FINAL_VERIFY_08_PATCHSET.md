@@ -48,7 +48,7 @@
 ```
 **Replace with:**
 ```
-[9] Zhu et al., "Where LLM Agents Fail and How They can Learn From Failures," 2025. (AgentDebug / AgentErrorBench; 200 annotated failure trajectories from ALFWorld, GAIA, and WebShop environments.) [Full arXiv ID to be confirmed at final submission.]
+[9] Zhu et al., "Where LLM Agents Fail and How They can Learn From Failures," 2025. (AgentDebug / AgentErrorBench; 200 annotated failure trajectories from ALFWorld, GAIA, and WebShop environments.) [Research Report & Benchmark Suite, ulab-uiuc/AgentDebug]
 ```
 
 ### PATCH 01-03 🟡 (SWE-agent first author)

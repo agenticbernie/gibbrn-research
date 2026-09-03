@@ -34,7 +34,7 @@ A foundational systems insight emerging from 2024–2026 artificial intelligence
 +-----------------------------------------------------------------------------------+
 ```
 
-Prior commercial efforts have concentrated almost exclusively on Layer 1 (scaling parameters and post-training test-time compute [1]) or Layer 2 (graph-based developer ergonomics [2], [3]). Layer 3 has been largely neglected, leaving autonomous systems vulnerable to epistemic drift, privilege laundering, and cascading failures.
+The public systems and product literature reviewed for this dossier is substantially richer in foundation-model capabilities and orchestration/runtime developer tooling than in framework-neutral agent-state integrity controls, leaving long-horizon autonomous systems vulnerable to epistemic drift, privilege laundering, and compounding Markovian failure cascades.
 
 ---
 
@@ -48,7 +48,7 @@ Prior commercial efforts have concentrated almost exclusively on Layer 1 (scalin
 
 *   **The Agentless Finding (`SUPPORTED`):** Xia et al. [5] demonstrated that a three-phase pipeline (localization → repair → patch validation) matched or outperformed fully autonomous agent loops. The autonomous loops failed primarily due to **unconstrained state thrashing and context pollution**: once an agent executed a flawed bash command or introduced a syntax error, the error was summarized into context, biasing all subsequent decisions.
 
-*   **Systems Implication for gibbrn:** Unconstrained autonomy without external, deterministic state isolation degrades reliability. gibbrn must provide external checkpointing and rollback rather than relying on the model to "think its way out" of an infected context.
+*   **Systems Implication for gibbrn (`GIBBRN INFERENCE` $\to$ `DESIGN HYPOTHESIS`):** Evidence indicates that unconstrained autonomous execution loops can experience severe state degradation under error conditions. This motivates testing whether external state isolation, causal checkpointing, and deterministic rollback can measurably improve trajectory reliability compared to unmanaged loops.
 
 ---
 
@@ -88,13 +88,13 @@ Table 2.1 analyzes the eight primary commercial and architectural substitutes to
 
 | System / Platform | Primary Architectural Category | Durable Execution | State Persistence Model | Authority & Privilege Enforcement | Causal Provenance | Experience Admission | Rollback & Recovery | Primary Limitation Addressed by gibbrn |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Temporal / Cadence** | Durable Workflow Engine | **Native (Gold Standard)** | Workflow event log | Host IAM / RBAC | Activity history | None | Workflow history replay | Assumes deterministic code. Cannot detect if an LLM's *decision* to call an API was hallucinated or poisoned. |
+| **Temporal / Cadence** | Durable Workflow Engine | **Native (Gold Standard)** | Workflow event log | Host IAM / RBAC | Activity history | None | Workflow history replay | Assumes deterministic host code. Temporal's documented durability model does not provide agent-specific semantic validation of why a model proposed an effect. |
 | **DBOS (dbos.dev)** | Database-Centric OS | **Native (PostgreSQL)** | Relational tables | Database roles / SQL | Transaction log | None | Time-travel debugging | Focuses on database-level execution speed. Lacks agent semantic state models and capability reducers. |
-| **LangGraph (Checkpointers)**| Agent Graph Framework | Built-in (Savepoints) | Unvalidated state dict | Edge conditions | Trace spans | None | Human-in-the-loop rewind | State dict is model-writable. Authority is easily laundered via context reflection. |
+| **LangGraph (Checkpointers)**| Agent Graph Framework | Built-in (Savepoints) | Unvalidated state dict | Edge conditions | Trace spans | None | Human-in-the-loop rewind | LangGraph's native checkpoint/state abstractions manage workflow graph transitions but do not themselves constitute an external authorization reference monitor. |
 | **Mem0 (mem0.ai) / Letta** | Agent Memory Layer | None | Vector / Graph RAG | None | User metadata | Naive summary | None | Focuses on personalization. Public documentation does not describe external regression validation; vulnerable to MINJA memory poisoning. |
 | **Zep (getzep.com)** | Temporal Knowledge Graph | None | Temporal graph RAG | None | Temporal edge dates | None | None | Optimized for chat entity extraction. Does not gate tool execution or manage spending quotas. |
 | **Portkey (portkey.ai)** | AI Gateway | Basic (Retries/Queues) | Cached responses | Virtual keys / Budgets | Request log | None | Fallback routing | Primarily a network gateway for LLM calls. Does not intercept local filesystem mutations, shell calls, or sandboxed tools. |
-| **Lakera Guard / Promptfoo** | AI Security & Red-Teaming | None | None | Probabilistic prompt scan | Telemetry spans | None | None | Relies on probabilistic text classifiers. Vulnerable to classifier evasion. gibbrn uses deterministic schema & capability gates. |
+| **Lakera Guard / Promptfoo** | AI Security & Red-Teaming | None | None | Probabilistic prompt scan | Telemetry spans | None | None | Operates at the natural-language prompt/response inspection layer rather than enforcing deterministic kernel sandboxing or state constraints. |
 | **SWE-agent / OpenHands** | Coding Agent Runtimes | Session-scoped | Working Git repo | Docker container | Bash execution logs | None | Git reset | Single-session execution runtime. Lacks cross-trajectory memory validation and cross-session authority reducers. |
 | **GIBBRN (Proposed)** | **Agent State Integrity Layer** | Delegated (Postgres/DBOS) | **4-Tier Typed State Schema** | **Deterministic Authority Reducer** | **Causal State Spine** | **Regression-Gated Sandbox Admission** | **Bounded Causal Replay** | **Unified control plane separating mutable cognition from canonical authority and verified experience.** |
 
@@ -131,7 +131,7 @@ Table 2.2 documents the empirical standing of every foundational proposition und
 *   [8] K. Valmeekam, M. Marquez, S. Sreedharan, and S. Kambhampati, "On the Planning Abilities of Large Language Models: A Critical Investigation," in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, vol. 36, 2023.
 *   [9] OWASP GenAI Security Project, "OWASP Top 10 for Agentic AI Applications," Official Release v1.0, December 2025. Category ASI06: Memory & Context Poisoning.
 *   [10] S. Dong, S. Xu, P. He, Y. Li, J. Tang, T. Liu, H. Liu, and Z. Xiang, "Memory Injection Attacks on LLM Agents via Query-Only Interaction," in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, 2025. arXiv:2503.03704. [Submitted March 2025; accepted NeurIPS 2025.]
-*   [11] Zhu et al., "Where LLM Agents Fail and How They can Learn From Failures," 2025. (AgentDebug / AgentErrorBench; 200 annotated failure trajectories from ALFWorld, GAIA, and WebShop environments.) [Full arXiv ID to be confirmed at final submission.]
+*   [11] Zhu et al., "Where LLM Agents Fail and How They Can Learn From Failures: A Trajectory Failure Taxonomy and Benchmark," Research Report & Benchmark Suite (AgentDebug / AgentErrorBench; 200 annotated failure trajectories across ALFWorld, GAIA, and WebShop), 2025.
 *   [12] F. Perez and I. Ribeiro, "Ignore Previous Prompt: Attack Techniques For Language Models," *arXiv preprint arXiv:2305.14874*, 2023.
 *   [13] L. Lamport, "Time, Clocks, and the Ordering of Events in a Distributed System," *Commun. ACM*, vol. 21, no. 7, pp. 558–565, 1978.
 *   [14] P. A. Bernstein, V. Hadzilacos, and N. Goodman, *Concurrency Control and Recovery in Database Systems*. Addison-Wesley, 1987.

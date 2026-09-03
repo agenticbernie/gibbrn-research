@@ -1,7 +1,7 @@
 # AUDIT-11: Final Diligence Decision, Subsystem Reclassification, and the Kill Test
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Date:** September 2026  
 **Final Governance Standard:** Independent Verdict (Unconstrained by Founder Self-Assessment)  
 

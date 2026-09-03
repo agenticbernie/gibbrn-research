@@ -1,7 +1,7 @@
 # AUDIT-09: Cross-Document Consistency and Contradiction Matrix
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Standard:** Corpus-Wide Narrative, Numerical, and Architectural Alignment  
 
 ---

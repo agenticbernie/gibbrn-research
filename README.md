@@ -19,7 +19,7 @@
 
 Specifically, the project researches whether a framework-neutral control layer can preserve the integrity, authority, provenance, validation status, and recoverability of consequential agent state as autonomous systems operate, accumulate experience, and change over time.
 
-This repository hosts the complete **18-Month R&D Technical Dossier**, which has undergone both a rigorous 1517 Fund Adversarial Diligence Audit and an independent Submission-Grade Evidence Verification Pass.
+This repository hosts the complete **18-Month R&D Technical Dossier**, which has undergone both an intensive 1517-oriented Adversarial Diligence Simulation and an independent Submission-Grade Evidence Verification Pass.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -53,7 +53,7 @@ Architectural complexity has been disciplined into **three physical engines**:
 2.  **Engine 2: The Deterministic Effect Gate (Inline Policy & Kernel Sandbox) [PRIMARY WEDGE]**
     - Out-of-process daemon (Rust/Go) intercepting mutating tool requests.
     - Issues short-lived, single-use capability leases (TTL $\le 2000\text{ms}$) mitigating TOCTOU race conditions.
-    - Couples capability checks with **gVisor (runsc) micro-sandboxes** to neutralize parameter smuggling at the OS boundary.
+    - Couples capability checks with **gVisor (runsc) micro-sandboxes** to constrain the blast radius of malicious or unsafe tool parameters at the OS boundary.
 3.  **Engine 3: The Experience Admission Engine (Verifier-Rich Skill Governance)**
     - Narrowed strictly to verifier-rich domains (deterministic Python functions and Bash tool macros).
     - Enforces Git quarantine staging branches and micro-sandbox regression testing before promoting skills to durable memory.
@@ -131,7 +131,7 @@ docs/
 
 ## License & Intellectual Property Notice
 
-This repository contains proprietary pre-seed systems research, architectural specifications, and trade secret formulations. Access and use of all materials are governed by the **[GIBBRN Strict Research and Evaluation License](./LICENSE)**:
+This repository contains pre-publication proprietary research materials, architectural specifications, and experimental protocols. Access and use of all materials are governed by the **[GIBBRN Strict Research and Evaluation License](./LICENSE)**:
 - **Evaluation Only:** Permitted solely for confidential academic peer review and investment technical due diligence.
 - **Strict Anti-AI Training:** Use of this text, schemas, architectures, or metrics (including MDDD) for AI/LLM model training, fine-tuning, distillation, benchmarking, or synthetic data generation is **strictly prohibited**.
 - **No Commercial Use:** Commercial deployment, service integration, or derivative systems implementation requires a separate written commercial license.

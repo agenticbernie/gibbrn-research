@@ -1,7 +1,7 @@
 # AUDIT-08: 1517 Fund Investment Committee Diligence & The 20 Hardest Questions
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Investment Committee Simulation  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Diligence Focus:** Thesis Alignment, Founder Competence Proof Points, and Adversarial Q&A  
 
 ---

@@ -1,7 +1,7 @@
 # AUDIT-05: Architecture and Security Red-Team Evaluation
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Standard:** Systems Architecture Failure Modes, Adversarial Exploitation, and Threat Model Penetration  
 
 ---

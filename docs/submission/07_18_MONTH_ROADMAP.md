@@ -98,9 +98,9 @@ Dossier V2 restructures the 18-month timeline to align strictly with the five ca
 *   **Key Engineering Deliverables:**
     - Replication across Anthropic and Google Tier 2 frontier model families (specific model versions to be frozen at Gate M16 for reproducibility). Open-source replication will use a Tier 3 open-weights model (Llama-family 70B-scale, version frozen at M16).
     - Packaged open-source research prototype + comprehensive Research Report & ADRs.
-    - Instrumented pilot deployments with two external engineering teams.
+    - Target of up to two instrumented external deployment evaluations (contingent on partner availability and workflow match).
 *   **Gate M18 Final Decision:**
-    - **PROCEED TO SEED ROUND:** If Gate M15 passes, pilots validate reduced crash costs, and cross-model replication succeeds.
+    - **PROCEED TO SEED ROUND:** If Gate M15 passes, external deployment evaluations confirm operational value, and cross-model replication succeeds.
     - **PIVOT TO NARROW SECURITY GATE:** If only the Effect Gate delivers defensible commercial value.
     - **STOP / DISSOLVE:** If foundation model provider updates render external state control obsolete.
 
@@ -118,4 +118,4 @@ Table 7.1 establishes the formal conditions under which the research program wil
 | **R2: Replay Fragility** | External environment drift breaks $>50\%$ of replays in hermetic containers. | **Gate M6** | **KILL** live replay; restrict Engine 1 strictly to forensic audit logging. |
 | **R3: Parameter Smuggling** | Injected payloads bypass Effect Gate via authorized tools without containment. | **Gate M9** | **PIVOT** to strict kernel sandbox isolation or abort unrestricted tool execution. |
 | **R4: Admission Economics** | Regression testing consumes $>3\times$ original task cost with $>5\%$ false promotion. | **Gate M12** | **DEFER** autonomous admission; mandate human sign-off for memory updates. |
-| **R5: Survival Failure** | Checkpoint rollback fails to double $\text{MDDD}_{0.90}$ over unmanaged baseline ($p \ge 0.01$). | **Gate M15** | **KILL COMPANY ENTIRELY**; return remaining capital to investors. |
+| **R5: Survival Failure** | Checkpoint rollback fails to double $\text{MDDD}_{0.90}$ over unmanaged baseline ($p \ge 0.01$). | **Gate M15** | **WIND DOWN OR NARROW DIRECTION**; subject to investor governance; cease pursuing broad autonomous runtime thesis. |

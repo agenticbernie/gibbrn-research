@@ -1,7 +1,7 @@
 # AUDIT-01: Corpus-Wide Claim and Epistemic Ledger
 
 **Target Project:** GIBBRN  
-**Auditing Body:** 1517 Fund Adversarial Diligence Committee  
+**Audit Mode:** Independent Adversarial Diligence Audit (1517-Oriented Simulation)  
 **Standard:** Rigorous Epistemic Demarcation (Fact vs. Inference vs. Design Hypothesis vs. Forecast vs. Product Hypothesis)  
 **Severity Rubric:** S0 (Cosmetic) | S1 (Precision) | S2 (Materially Unsupported) | S3 (Scientific Risk) | S4 (Fatal Diligence Blocker)  
 

@@ -102,7 +102,7 @@ Table 5.1 classifies systemic, non-adversarial failure modes in long-lived agent
 
 | Failure Mode ID | Failure Phenomenon | Root Cause | Systemic Consequence | gibbrn Automated Mitigation |
 | :--- | :--- | :--- | :--- | :--- |
-| **SYS-01** | Cascading Markovian Errors | Early minor tool failure alters environment | Success hazard escalates; downstream crash | Automatic checkpoint capture; causal rollback to last valid state $C_k$. |
+| **SYS-01** | Cascading State-Dependent Errors | Early minor tool failure alters environment | Failure hazard escalates; downstream crash | Automatic checkpoint capture; causal rollback to last valid state $C_k$. |
 | **SYS-02** | Epistemic Context Drift | Repeated lossy context window compression | Model invents false history of past actions | Materialized state views projected deterministically from event WAL. |
 | **SYS-03** | Replay Hazard on Crash Recovery | Crashed agent re-runs non-idempotent tool | Duplicated financial charge or double email | Effect receipts with cryptographic idempotency keys replay cached result. |
 | **SYS-04** | Operational Skill Regression | Flawed candidate heuristic committed to memory | Degrades performance on subsequent tasks | Engine 3 automated regression suite in sandbox; immediate causal revocation. |

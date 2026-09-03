@@ -34,7 +34,7 @@ A foundational systems insight emerging from 2024–2026 artificial intelligence
 +-----------------------------------------------------------------------------------+
 ```
 
-The public systems and product literature reviewed for this dossier is substantially richer in foundation-model capabilities and orchestration/runtime developer tooling than in framework-neutral agent-state integrity controls, leaving long-horizon autonomous systems vulnerable to epistemic drift, privilege laundering, and compounding Markovian failure cascades.
+The public systems and product literature reviewed for this dossier is substantially richer in foundation-model capabilities and orchestration/runtime developer tooling than in framework-neutral agent-state integrity controls, leaving long-horizon autonomous systems vulnerable to epistemic drift, privilege laundering, and compounding failure cascades.
 
 ---
 
@@ -62,7 +62,7 @@ The public systems and product literature reviewed for this dossier is substanti
 
 ---
 
-### 2.3 Persistent Memory Poisoning (OWASP ASI06 / MINJA) (`ESTABLISHED`)
+### 2.3 Persistent Memory Poisoning (OWASP ASI06 / MINJA) (`SUPPORTED / DEMONSTRATED IN EVALUATED SETTINGS`)
 
 *   **The Security Threat:** The OWASP GenAI Security Project officially identified **Memory Poisoning** as a critical vulnerability class (**ASI06**) in autonomous agent deployments, in the Official Release v1.0, December 2025 [9].
 *   **Attack Mechanism (MINJA):** S. Dong et al. (NeurIPS 2025, arXiv:2503.03704) [10] demonstrated that attackers can inject persistent, delayed payloads into an agent's long-term retrieval memory via query-only interaction with >85% success across evaluated configurations (medical/EHR, e-commerce, and QA agent settings).
@@ -73,7 +73,7 @@ The public systems and product literature reviewed for this dossier is substanti
 
 ### 2.4 Error Cascades and Trajectory Survival (`EMERGING EVIDENCE`)
 
-*   **Markovian Error Compounding:** Zhu et al. (AgentErrorBench, 2025) [11] analyzed failure trajectories across GAIA, WebShop, and ALFWorld in a dataset of 200 annotated failure cases, showing that multi-step failures are dominated by cascading errors where early, unrecovered minor deviations corrupt environment state.
+*   **Cascading / State-Dependent Error Propagation:** Zhu et al. (AgentErrorBench, arXiv:2509.25370, 2025) [11] analyzed failure trajectories across GAIA, WebShop, and ALFWorld in a dataset of 200 annotated failure cases, showing that multi-step failures are dominated by cascading errors where early, unrecovered minor deviations corrupt environment state.
 *   **Mathematical Modeling:** Trajectory completion over dependency depth $k$ violates memoryless independent trial assumptions ($P \ne p^k$) due to error autocorrelation. The research program models trajectory reliability using **discrete survival analysis** to account for step-dependent conditional hazard rates:
     $$S(k) = \prod_{i=1}^k (1 - h(i))$$
 *   **Systems Implication for gibbrn (`RESEARCH HYPOTHESIS`):** The program tests whether external state checkpoints and causal rollback can bound the empirical failure hazard rate $h(k)$ and extend autonomous operating horizons.
@@ -110,10 +110,11 @@ Table 2.2 documents the empirical standing of every foundational proposition und
 | :--- | :--- | :--- | :--- | :--- |
 | Runtime harness scaffolding is a significant variable on code tasks (exact magnitude uncontrolled across papers) | Yang et al. (NeurIPS 2024) [4], Xia et al. (2024) [5] | **ESTABLISHED SENSITIVITY; CAUSAL ATTRIBUTION PRE-EXPERIMENTAL** | Observed across SWE-bench Lite evaluations; comparative controls not fully isolated | Prioritizes runtime state control over model fine-tuning. |
 | In-context self-reflection is non-monotonic without external grounding | Jie Huang et al. (ICLR 2024) [7], Valmeekam et al. (NeurIPS 2023) [8] | **SUPPORTED** | Confirmed across planning and reasoning benchmarks | Mandates external test-suite validators for experience admission. |
-| Memory injection attacks (MINJA) persistently compromise agent memory | S. Dong et al. (NeurIPS 2025) [10], OWASP ASI06 [9] | **ESTABLISHED** | Confirmed against evaluated frontier model configurations | Decouples memory reads from capability authorization. |
-| Trajectory failures cascade via Markovian error propagation | Zhu et al. (AgentErrorBench 2025) [11] | **EMERGING EVIDENCE** | 200 annotated trajectories across ALFWorld/GAIA/WebShop | Adopts discrete survival analysis and checkpoint rollback. |
+| Memory injection attacks (MINJA) compromise agent memory in evaluated configurations | S. Dong et al. (NeurIPS 2025) [10], OWASP ASI06 [9] | **SUPPORTED / DEMONSTRATED IN EVALUATED SETTINGS** | Confirmed against evaluated frontier model configurations | Decouples memory reads from capability authorization. |
+| Trajectory failures cascade via state-dependent error propagation | Zhu et al. (arXiv:2509.25370, 2025) [11] | **EMERGING EVIDENCE** | 200 annotated trajectories across ALFWorld/GAIA/WebShop | Adopts discrete survival analysis and checkpoint rollback. |
 | Endogenous authority laundering occurs when permissions are in prompt | OWASP [9], Security research preprints [12] | **SUPPORTED** | Confirmed in prompt injection studies | Mandates deterministic out-of-context authority reducers. |
-| Event-sourced causal tracking enables failure attribution | Lamport (1978) [13], Bernstein et al. (1987) [14] | **ESTABLISHED** | Classic distributed systems standard | Adopts append-only event ledger for Causal State Spine. |
+| Event ordering and transactional recovery primitives | Lamport (1978) [13], Bernstein et al. (1987) [14] | **ESTABLISHED SYSTEMS FOUNDATIONS** | Classic distributed systems standards | Foundational guarantees for state sequencing and durability. |
+| Agent failure attribution via an event-sourced Causal State Spine | gibbrn systems design hypothesis | **GIBBRN DESIGN HYPOTHESIS** | Pre-experimental (Target of Core RQ2 at Gate M6) | Evaluates whether causal DAG parent chaining achieves $\ge 80\%$ root-cause attribution. |
 | Hermetic replay fails on open-web mutable APIs | Systems engineering red-team analysis | **ESTABLISHED** | Known distributed systems limitation | Separates hermetic replay from open-world causal audit. |
 | Universal state projection across multiple agent frameworks | gibbrn design hypothesis | **SPECULATIVE** | Unproven (Exploratory track) | High-risk assumption; deferred beyond core M1–M15 gates. |
 

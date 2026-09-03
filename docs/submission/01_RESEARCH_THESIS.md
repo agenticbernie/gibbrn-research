@@ -25,14 +25,14 @@ When deployed across long dependency chains, four compounding failure modes emer
 | 1. Epistemic Drift: Repeated context compression alters the factual record.       |
 | 2. Authority Laundering: Model reflections rewrite permissions and scopes.        |
 | 3. Memory & Skill Poisoning: Flawed heuristics become permanent behaviors.        |
-| 4. Cascading Markovian Errors: Early mistakes cause escalating downstream hazards.|
+| 4. Cascading State Errors: Early mistakes cause escalating downstream hazards. |
 +-----------------------------------------------------------------------------------+
 ```
 
 1.  **Epistemic Drift:** As context windows fill and are repeatedly summarized or retrieved via semantic similarity, subtle negative constraints and empirical execution facts drift. The model begins reasoning over its own imprecise memories rather than ground truth [6]. *(GIBBRN Inference from Dziri et al.'s compositionality findings)*
 2.  **Endogenous Authority Laundering:** When authorization state (e.g., spending limits, file access boundaries, API permissions) is maintained inside prompt context, the model can inadvertently (or via indirect prompt injection) hallucinate that its authority has been elevated, granting itself out-of-scope capabilities without external cryptographic or deterministic validation [7].
 3.  **Memory & Skill Poisoning:** When agents use naive reflection to store "lessons learned" in persistent retrieval stores, flawed, insecure, or adversarial heuristics (e.g., OWASP ASI06 / MINJA memory injection attacks) are committed to long-term memory, subverting future executions weeks or months later [7], [8].
-4.  **Cascading Markovian Errors:** Trajectory failures do not follow memoryless coin flips; early errors alter the environment state and escalate the failure hazard of all subsequent steps. Without external, canonical state checkpoints and rollback, long-horizon completion rates collapse [9]. *(Emerging Evidence; Zhu et al. 2025)*
+4.  **Cascading State-Dependent Errors:** Trajectory failures do not follow memoryless coin flips; early errors alter the environment state and escalate the failure hazard of subsequent steps. Without external, canonical state checkpoints and rollback, long-horizon completion rates collapse [9]. *(Emerging Evidence; Zhu et al., arXiv:2509.25370, 2025)*
 
 ---
 

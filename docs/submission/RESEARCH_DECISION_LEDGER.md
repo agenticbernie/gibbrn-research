@@ -119,7 +119,7 @@
 *   **Date:** September 3, 2026
 *   **Question:** Should an 18-month pre-seed research program attempt to answer eight broad research questions?
 *   **Evidence Examined:** Critical path and scheduling analysis.
-*   **Supporting Evidence:** Eight RQs spread a two-person team across peripheral LoRA fine-tuning and cross-runtime benchmarks, risking failure on the core thesis.
+*   **Supporting Evidence:** Eight RQs would over-extend a lean founder-led research program across peripheral LoRA fine-tuning and cross-runtime benchmarks, risking failure on the core thesis.
 *   **Contradictory Evidence:** More RQs demonstrate broad ambition to investors.
 *   **Evidence Strength:** `SUPPORTED`
 *   **Decision:** **MODIFY**

@@ -18,7 +18,7 @@
 2.  **Subsystem Consolidation (5 $\to$ 3 Engines):** Merged redundant components into three physical engines: the *Causal State Spine*, the *Deterministic Effect Gate*, and the *Experience Admission Engine*.
 3.  **Mathematical Reformulation:** Replaced the naive geometric error compounding formula ($P = p^d$) with formal **discrete survival analysis hazard rate modeling** ($S(k) = \prod (1 - h(i))$).
 4.  **Academic Remediation:** Audited and corrected citations; primary citations verified against source repositories. Key corrections include: Dong et al. (MINJA) classified as NeurIPS 2025 (not 2024); AgentErrorBench attribution corrected to Zhu et al. (2025).
-5.  **Capital Ask Clarification:** Established **\$285,000** as the primary pre-seed ask for a two-person systems research team.
+5.  **Capital Ask Clarification:** Established approximately **\$285,000** as the primary pre-seed ask for an 18-month founder-led systems research program, including budget capacity for part-time research engineering support.
 
 ---
 
@@ -76,8 +76,8 @@ Five causally chained research questions across 13,200 benchmark trajectories:
 
 ### 10. What does the requested capital buy?
 **USD 285,000 over 18 months** (Budget Assumption as of September 2026) funds:
-*   Full-time subsistence for the Principal Systems Researcher (\$90k).
-*   A dedicated half-time Research Systems Engineer (\$54k).
+*   Full-time founder subsistence for the Principal Systems Researcher (\$90k).
+*   Budget allocation for a part-time Research Systems Engineer / contractor (contingent on funding, \$54k).
 *   13,200 benchmark trajectories across frontier models (\$48k API compute; sensitive to token rate shifts).
 *   Dedicated bare-metal gVisor cloud microVM clusters (\$28.8k).
 *   External adversarial red-teaming bounties (\$15k).
@@ -97,8 +97,8 @@ If Gate M15 fails, **we will stop pursuing the broad company thesis and either w
 
 ### 12. What result would justify a subsequent seed round?
 A subsequent institutional Seed round would become defensible if gibbrn demonstrates that on tasks requiring exploratory branching:
-1.  gibbrn-managed agents achieve substantial survival depth gains (e.g., target benchmark scenario: $\text{MDDD}_{0.90} \ge 35$ steps vs. unmanaged baselines $\le 12$, with $>70\%$ completion; *illustrative post-R&D commercialization threshold, not a current empirical expectation*).
-2.  The Effect Gate maintains zero unauthorized mutating executions across 1,000+ red-team attacks.
+1.  gibbrn-managed agents achieve a pre-registered, practically meaningful improvement in survival depth and task completion over unmanaged baselines (Gate M15 target: $\text{MDDD}_{0.90} \ge 2.0\times$ baseline, $p < 0.01$).
+2.  The Effect Gate maintains an observed $\text{UER} = 0$ across $N=1,000$ red-team attacks (zero unauthorized mutating executions observed; one-sided 95% Clopper-Pearson upper bound $< 0.003$).
 3.  External deployment evaluations confirm integration with $<20\text{ms}$ latency overhead and measurable failure-recovery savings.
 
 ---

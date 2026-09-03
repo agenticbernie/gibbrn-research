@@ -15,7 +15,7 @@ In response to the financial diligence audit (`AUDIT_07`), Dossier V2 clarifies 
 ### The Canonical Funding Request:
 > **gibbrn is requesting USD 285,000 in pre-seed research capital to fund an 18-month empirical R&D program.**
 
-*   **The Primary Plan (\$285,000):** Provides full-time subsistence for the Principal Systems Researcher, a dedicated half-time Research Systems Engineer, 13,200 benchmark trajectories across frontier models (\$48,000 API compute), dedicated gVisor cloud sandboxes, external red-team bounties, and a 10% contingency buffer.
+*   **The Primary Plan (\$285,000):** Provides full-time founder subsistence for the Principal Systems Researcher, budget capacity for a part-time Research Systems Engineer / contractor (contingent on funding), 13,200 benchmark trajectories across frontier models (\$48,000 API compute), dedicated gVisor cloud sandboxes, external red-team bounties, and a 10% contingency buffer.
 *   **The Constrained Fallback (\$120,000):** A high-risk, solo-founder survival scenario. It is preserved strictly as an extreme contingency plan, requiring severe scope reductions.
 
 ---
@@ -30,8 +30,8 @@ Table 8.1 details the line-item expenditures for the Primary Plan (\$285,000) al
 
 | Expense Category | Primary Pre-Seed Plan (\$285,000) | Constrained Fallback Plan (\$120,000) | Milestone Gate Supported | What Disappears Under Constrained Plan |
 | :--- | :--- | :--- | :--- | :--- |
-| **Principal Systems Researcher** | \$90,000 (\$5,000/mo) | \$54,000 (\$3,000/mo) | M1–M18 (Continuous) | Researcher living stipend cut by 40%; creates severe personal burnout risk. |
-| **Research Systems Engineer** | \$54,000 (Half-time @ \$3k/mo) | \$0 (Solo Founder) | M4–M18 (Core Engines) | **ELIMINATED.** Solo researcher must write all socket, kernel, and DB code alone. |
+| **Principal Systems Researcher (Founder, Full-Time)** | \$90,000 (\$5,000/mo) | \$54,000 (\$3,000/mo) | M1–M18 (Continuous) | Founder living stipend cut by 40%; creates severe personal burnout risk. |
+| **Research Systems Engineer (Planned Hire / Contractor)** | \$54,000 (Half-time @ \$3k/mo) | \$0 (Solo Founder) | M4–M18 (Core Engines) | **ELIMINATED.** Founder executes all benchmark, harness, and kernel infrastructure solo. |
 | **Foundation Model API Compute** | \$48,000 (13,200 trajectories) | \$24,000 (4,000 trajectories) | M3–M18 (Core RQs) | Benchmark volume cut by 70%; statistical power reduced to $1-\beta = 0.80$. |
 | **Cloud Sandbox & DB Infrastructure**| \$28,800 (\$1,600/mo) | \$14,400 (\$800/mo) | M1–M18 (Continuous) | Dedicated bare-metal gVisor clusters replaced with cheap, noisy shared VMs. |
 | **Adversarial Red-Teaming Bounties** | \$15,000 | \$3,000 | M7–M9 (Gate M9) | External bounty program eliminated; restricted to self-directed red-teaming. |

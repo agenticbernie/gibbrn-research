@@ -4,7 +4,7 @@
 **Target Audience:** 1517 Fund Investment Committee, Distributed Systems Researchers, AI Security Architects  
 **Repository:** `github.com/agenticbernie/gibbrn-research`  
 **Status:** Pre-Seed R&D-Stage Systems Hypothesis (Checkpoint-Gated Empirical Program)  
-**Primary Capital Ask:** **USD 285,000** for 18 Months (Scientifically Credible Two-Person Team)  
+**Primary Capital Ask:** **USD 285,000** for an 18-Month Founder-Led Systems Research Program  
 **License:** Strict Restricted Non-Commercial & Anti-Training License (See [`LICENSE`](./LICENSE))  
 
 ---

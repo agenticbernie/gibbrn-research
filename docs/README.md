@@ -1,0 +1,96 @@
+# GIBBRN Documentation Index & Repository Map
+
+**Project:** gibbrn — Agent State Integrity Layer  
+**Repository:** `github.com/agenticbernie/gibbrn-research`  
+**License:** Strict Restricted Research & Evaluation License (See [`LICENSE`](../LICENSE))  
+**Audience:** 1517 Fund Investment Committee, Distributed Systems Researchers, AI Security Architects  
+
+---
+
+> **"Agents can change. Their integrity must persist."**
+
+---
+
+## Structure of `/docs`
+
+The documentation in this repository is organized into four distinct tiers reflecting the iterative adversarial diligence and evidence verification process:
+
+```
+docs/
+├── submission/         <-- [PRIMARY] Publication-ready, verified 18-month research dossier (13 files)
+├── verification/       <-- Complete audit ledgers from the final evidence verification pass (10 files)
+├── diligence_audit/    <-- Adversarial diligence audit reports from 1517 Fund technical review (12 files)
+└── archive/            <-- Historical working archives preserving complete scientific lineage
+    ├── v2_reconstructed/  (Post-audit reconstructed draft)
+    └── v1_initial/        (Initial exploratory research proposal)
+```
+
+---
+
+## 1. Primary Submission Dossier (`/docs/submission`)
+
+The canonical, publication-ready research dossier. Every externally checkable claim, citation, and benchmark number has undergone a strict evidence verification pass.
+
+| File | Document Title | Focus & Core Contribution |
+| :--- | :--- | :--- |
+| **[`00_README.md`](./submission/00_README.md)** | Dossier Master Overview | Executive summary, systems architecture diagram, milestone schedule, and reading order. |
+| **[`01_RESEARCH_THESIS.md`](./submission/01_RESEARCH_THESIS.md)** | Core Research Thesis | Problem definition, broad thesis vs. initial wedge, the Agentless counter-case, and non-goals. |
+| **[`02_EVIDENCE_LANDSCAPE.md`](./submission/02_EVIDENCE_LANDSCAPE.md)** | Evidence Landscape | Verified literature (Huang et al., Valmeekam et al., MINJA), SWE-bench harness sensitivity, competitive matrix. |
+| **[`03_STATE_SEMANTICS_AND_TRUST_MODEL.md`](./submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** | State Semantics & Trust Model | Four-Class State Taxonomy (Cognitive, Operational, Authoritative, Runtime), human trust roots, Invariants 1–5. |
+| **[`04_ARCHITECTURE.md`](./submission/04_ARCHITECTURE.md)** | Systems Architecture | The Three Physical Engines (Spine, Effect Gate, Admission Engine), gVisor sandboxing, labeled latency targets. |
+| **[`05_SECURITY_AND_FAILURE_MODEL.md`](./submission/05_SECURITY_AND_FAILURE_MODEL.md)** | Security & Threat Model | Hardened security model: parameter smuggling defenses, kernel isolation, TOCTOU leases, failure taxonomy. |
+| **[`06_CORE_RESEARCH_PROGRAM.md`](./submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Five causally chained Core RQs, discrete survival hazard modeling for $\text{MDDD}_\tau$, pre-registration commitment. |
+| **[`07_18_MONTH_ROADMAP.md`](./submission/07_18_MONTH_ROADMAP.md)** | 18-Month R&D Roadmap | Six checkpoint gates (M3–M18) with explicit, binding Kill / Narrow / Pivot criteria. |
+| **[`08_CAPITAL_PLAN.md`](./submission/08_CAPITAL_PLAN.md)** | Capital & Expense Plan | Primary \$285,000 budget vs. \$120,000 fallback, compute modeling across 13,200 trajectories, capital-at-risk. |
+| **[`09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Genuine systems novelty vs. commoditized plumbing, OCAP security lineage, competitor analysis, platform risks. |
+| **[`10_1517_TECHNICAL_BRIEF.md`](./submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Investor Technical Brief | High-density 12-question diligence responses for the 1517 Fund Investment Committee. |
+| **[`RESEARCH_DECISION_LEDGER.md`](./submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Architecture Decision Records covering initial formulation (AD-001–AD-011) and post-diligence decisions (AD-012–AD-021). |
+| **[`DOSSIER_CHANGELOG.md`](./submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability of all 24 modifications from V1 through V2 to Final Submission. |
+
+---
+
+## 2. Verification Audit Ledgers (`/docs/verification`)
+
+The complete verification paper trail generated during the final submission-grade evidence verification pass:
+
+*   [`FINAL_VERIFY_00_SUBMISSION_VERDICT.md`](./verification/FINAL_VERIFY_00_SUBMISSION_VERDICT.md) — Scorecard, blocking issues, and spot-check audit.
+*   [`FINAL_VERIFY_01_CITATION_LEDGER.md`](./verification/FINAL_VERIFY_01_CITATION_LEDGER.md) — Line-by-line verification table for all 19 citations.
+*   [`FINAL_VERIFY_02_FACT_AND_LANGUAGE_LEDGER.md`](./verification/FINAL_VERIFY_02_FACT_AND_LANGUAGE_LEDGER.md) — Audit of absolute claims, competitor statements, and epistemic labels.
+*   [`FINAL_VERIFY_03_NUMBERS_AND_TARGETS.md`](./verification/FINAL_VERIFY_03_NUMBERS_AND_TARGETS.md) — Quantitative classifications, latency budgets, and token arithmetic.
+*   [`FINAL_VERIFY_04_BENCHMARK_AND_STATISTICS.md`](./verification/FINAL_VERIFY_04_BENCHMARK_AND_STATISTICS.md) — MDDD mathematical review and experimental protocols for Core RQ1–RQ5.
+*   [`FINAL_VERIFY_05_COMPETITOR_AND_NOVELTY.md`](./verification/FINAL_VERIFY_05_COMPETITOR_AND_NOVELTY.md) — Steel-man analysis of 5 competitor classes and novelty decomposition.
+*   [`FINAL_VERIFY_06_1517_AND_CAPITAL.md`](./verification/FINAL_VERIFY_06_1517_AND_CAPITAL.md) — 1517 Fund thesis fit, check size compatibility, and burn rate validation.
+*   [`FINAL_VERIFY_07_CANONICAL_FACT_SHEET.md`](./verification/FINAL_VERIFY_07_CANONICAL_FACT_SHEET.md) — Single source of truth for approved figures, citations, and terminology.
+*   [`FINAL_VERIFY_08_PATCHSET.md`](./verification/FINAL_VERIFY_08_PATCHSET.md) — Surgical patch specifications for all documents.
+*   [`FINAL_VERIFY_09_FINAL_CHANGELOG.md`](./verification/FINAL_VERIFY_09_FINAL_CHANGELOG.md) — Detailed changelog recording all 24 applied modifications.
+
+---
+
+## 3. Adversarial Diligence Audits (`/docs/diligence_audit`)
+
+The adversarial technical diligence audit that stress-tested the initial dossier:
+
+*   [`AUDIT_00_EXECUTIVE_VERDICT.md`](./diligence_audit/AUDIT_00_EXECUTIVE_VERDICT.md) — Initial diligence score, critical red flags, and kill test summary.
+*   [`AUDIT_01_CLAIM_LEDGER.md`](./diligence_audit/AUDIT_01_CLAIM_LEDGER.md) — Comprehensive inventory and audit of foundational claims.
+*   [`AUDIT_02_CITATION_AND_SOURCE_CHECK.md`](./diligence_audit/AUDIT_02_CITATION_AND_SOURCE_CHECK.md) — Identification of citation errors and synthetic references in early drafts.
+*   [`AUDIT_03_NUMBERS_MODELS_AND_BENCHMARKS.md`](./diligence_audit/AUDIT_03_NUMBERS_MODELS_AND_BENCHMARKS.md) — Review of token economics, model names, and benchmark suites.
+*   [`AUDIT_04_NOVELTY_AND_COMPETITIVE_LANDSCAPE.md`](./diligence_audit/AUDIT_04_NOVELTY_AND_COMPETITIVE_LANDSCAPE.md) — Critical evaluation of novelty claims against Temporal, DBOS, and Mem0.
+*   [`AUDIT_05_ARCHITECTURE_AND_SECURITY_REDTEAM.md`](./diligence_audit/AUDIT_05_ARCHITECTURE_AND_SECURITY_REDTEAM.md) — Red-team attack vectors (parameter smuggling, TOCTOU, replay divergence).
+*   [`AUDIT_06_EXPERIMENT_AND_STATISTICS_REVIEW.md`](./diligence_audit/AUDIT_06_EXPERIMENT_AND_STATISTICS_REVIEW.md) — Critique of geometric compounding and recommendation of survival analysis.
+*   [`AUDIT_07_ROADMAP_AND_BUDGET_REVIEW.md`](./diligence_audit/AUDIT_07_ROADMAP_AND_BUDGET_REVIEW.md) — Critical path analysis and evaluation of the \$120k vs. \$285k budgets.
+*   [`AUDIT_08_1517_DILIGENCE.md`](./diligence_audit/AUDIT_08_1517_DILIGENCE.md) — Dedicated diligence simulation from the perspective of 1517 Fund.
+*   [`AUDIT_09_CROSS_DOCUMENT_CONSISTENCY.md`](./diligence_audit/AUDIT_09_CROSS_DOCUMENT_CONSISTENCY.md) — Reconciliation of terminology, subsystem counts, and numbers across drafts.
+*   [`AUDIT_10_REQUIRED_REWRITES.md`](./diligence_audit/AUDIT_10_REQUIRED_REWRITES.md) — Specific rewrite directives implemented in V2 and Final Submission.
+*   [`AUDIT_11_FINAL_RESEARCH_DECISION.md`](./diligence_audit/AUDIT_11_FINAL_RESEARCH_DECISION.md) — The Kill Test: why the project should proceed, narrow, or stop.
+
+---
+
+## 4. Historical Working Archives (`/docs/archive`)
+
+Preserves the complete, untampered historical evolution of the research:
+*   [`docs/archive/v2_reconstructed/`](./archive/v2_reconstructed/) — The intermediate V2 files created directly following the diligence audit.
+*   [`docs/archive/v1_initial/`](./archive/v1_initial/) — The initial exploratory research dossier.
+
+---
+
+> **Agents can change. Their integrity must persist.**

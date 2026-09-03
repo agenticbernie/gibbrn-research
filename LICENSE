@@ -1,0 +1,130 @@
+GIBBRN STRICT RESEARCH AND EVALUATION LICENSE
+Version 1.0 (Strict Restricted Non-Commercial & Anti-Training License)
+
+Copyright (c) 2026 gibbrn / Bernie (@agenticbernie). All Rights Reserved.
+
+IMPORTANT: PLEASE READ THIS LICENSE CAREFULLY BEFORE ACCESSING, READING, REVIEWING, 
+CLONING, OR EVALUATING THE ACCOMPANYING DOCUMENTS, SPECIFICATIONS, RESEARCH HYPOTHESES, 
+SYSTEM ARCHITECTURES, BENCHMARK METHODOLOGIES, OR PROPRIETARY SCHEMAS (COLLECTIVELY, 
+THE "RESEARCH MATERIALS").
+
+BY ACCESSING, CLONING, DOWNLOADING, VIEWING, OR USING THE RESEARCH MATERIALS IN ANY 
+MANNER, YOU ("RECIPIENT" OR "LICENSEE") EXPRESSLY AGREE TO BE BOUND BY ALL TERMS AND 
+CONDITIONS OF THIS LICENSE. IF YOU DO NOT AGREE TO ALL TERMS OF THIS LICENSE, YOU MUST 
+IMMEDIATELY CEASE ACCESS, DESTROY ALL COPIES IN YOUR POSSESSION, AND DISCONTINUE ALL 
+USE OF THE RESEARCH MATERIALS.
+
+================================================================================
+1. STRICT LIMITED PERMITTED USE (EVALUATION ONLY)
+================================================================================
+The Copyright Holder grants to Recipient a personal, revocable, non-exclusive, 
+non-transferable, non-assignable, non-sublicensable, limited license to access, 
+read, and evaluate the Research Materials SOLELY for the following permitted purposes:
+  (a) Confidential, non-commercial academic and scientific peer review; and
+  (b) Bona fide investment technical due diligence conducted privately on behalf 
+      of accredited early-stage venture capital investors (specifically including 
+      1517 Fund) or authorized prospective research partners.
+
+No other license, grant of rights, or permission is granted or implied.
+
+================================================================================
+2. ABSOLUTE PROHIBITIONS (ZERO TOLERANCE)
+================================================================================
+The following actions are STRICTLY PROHIBITED under all circumstances, and any 
+occurrence thereof shall constitute willful copyright infringement and breach 
+of contract:
+
+2.1 NO COMMERCIAL USE:
+Recipient shall NOT use, deploy, execute, integrate, commercialize, monetize, or 
+exploit the Research Materials, in whole or in part, or any software, architectures, 
+APIs, or workflows derived therefrom, for any commercial purpose, production 
+environment, enterprise deployment, consulting service, cloud service, SaaS offering, 
+or revenue-generating activity, without a separate, formal, written commercial license 
+executed by the Copyright Holder.
+
+2.2 STRICT PROHIBITION ON MACHINE LEARNING & AI TRAINING (ANTI-AI TRAINING):
+Recipient shall NOT use, process, crawl, scrape, ingest, tokenize, extract, parse, 
+embed, or incorporate any part of the Research Materials (including but not limited 
+to text, system architectures, state decomposition taxonomies, metric definitions 
+including Maximum Dependable Dependency Depth [MDDD], event schemas, security 
+invariants, threat models, benchmark protocols, or prompt specifications) for the 
+purpose of:
+  (a) Training, pre-training, post-training, fine-tuning, distilling, aligning, 
+      adapting, or evaluating any artificial intelligence model, machine learning 
+      model, large language model (LLM), embedding model, neural network, or 
+      autonomous agent;
+  (b) Generating synthetic data, benchmark corpora, or instruction-tuning datasets;
+  (c) Benchmarking third-party models, agent runtimes, or AI security products 
+      against gibbrn specifications without express prior written consent; or
+  (d) Augmenting memory stores, vector databases, retrieval systems, or context 
+      windows of any autonomous agent framework for public or commercial distribution.
+
+2.3 NO DERIVATIVE WORKS OR RE-IMPLEMENTATION:
+Recipient shall NOT create derivative works, clean-room re-implementations, copycat 
+architectures, or functional equivalents based on the proprietary Four-Class State 
+Decomposition, Deterministic Effect Gate, or Experience Admission Engine specifications 
+disclosed in the Research Materials, nor reverse-engineer, decompile, or extract the 
+underlying control mechanisms for competitive purposes.
+
+2.4 NO PATENTING OR PROPRIETARY CLAIMS:
+Recipient shall NOT file, sponsor, or assist in filing any patent application, 
+utility model, copyright registration, or other intellectual property claim 
+embodying, incorporating, or claiming priority from any invention, concept, 
+state taxonomy, metric (including MDDD), or architectural mechanism disclosed in 
+the Research Materials. All prior art rights, inventorship rights, and priority rights 
+are strictly and exclusively reserved by the Copyright Holder.
+
+2.5 NO REDISTRIBUTION, MIRRORING, OR RE-HOSTING:
+Recipient shall NOT publish, republish, mirror, re-host, upload, sublicense, sell, 
+rent, lease, broadcast, transmit, distribute, or publicly disclose any portion of 
+the Research Materials on any website, repository, archive, preprint server, social 
+media platform, or public forum without advance written authorization from the 
+Copyright Holder.
+
+================================================================================
+3. INTELLECTUAL PROPERTY & TITLE
+================================================================================
+All right, title, interest, and intellectual property rights in and to the Research 
+Materials, including all copyrights, patents, trade secrets, trademarks, moral 
+rights, and proprietary methods embodied therein, are and shall remain the exclusive 
+property of the Copyright Holder. No transfer of ownership, title, or interest, nor 
+any express or implied license under any patent, patent application, or trade secret, 
+is granted or implied by this License.
+
+================================================================================
+4. CONFIDENTIALITY & PRE-PUBLICATION STATUS
+================================================================================
+The Research Materials represent proprietary pre-seed technical research, 
+pre-publication scientific hypotheses, and trade secret systems designs. 
+Recipient agrees to maintain the Research Materials in strict confidence, to restrict 
+access solely to individuals with a legitimate need to evaluate the research under 
+the permitted purposes of Section 1, and to exercise reasonable care to prevent 
+unauthorized dissemination, extraction, or disclosure.
+
+================================================================================
+5. NO WARRANTY (AS IS) & LIMITATION OF LIABILITY
+================================================================================
+THE RESEARCH MATERIALS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, 
+WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
+THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, 
+ACCURACY, COMPLETENESS, NON-INFRINGEMENT, OR SYSTEM COMPATIBILITY.
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER, CONTRIBUTORS, OR AFFILIATES BE LIABLE 
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE 
+GOODS OR SERVICES; LOSS OF USE, DATA, REVENUE, OR PROFITS; OR BUSINESS INTERRUPTION) 
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE ACCESS, 
+EVALUATION, OR USE OF THE RESEARCH MATERIALS, EVEN IF ADVISED OF THE POSSIBILITY 
+OF SUCH DAMAGE.
+
+================================================================================
+6. TERMINATION & ENFORCEMENT
+================================================================================
+This License terminates automatically without notice upon any breach of its terms 
+by Recipient. Upon termination, Recipient must immediately destroy all physical 
+and electronic copies of the Research Materials in its possession, custody, or control. 
+The Copyright Holder reserves all rights to seek emergency injunctive relief, monetary 
+damages, statutory damages, and attorney's fees for any breach or unauthorized use of 
+the Research Materials under applicable international copyright conventions and domestic 
+intellectual property laws.

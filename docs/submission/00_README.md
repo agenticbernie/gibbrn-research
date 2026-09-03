@@ -1,6 +1,6 @@
 # GIBBRN — Agent State Integrity Layer (Submission)
 
-### 18-Month Systems Research & Prototype Program (Post-Adversarial Diligence Edition)
+### 18-Month Systems Research & Prototype Program (Primary Submission Candidate)
 **Date:** September 2026 | **Verification Pass:** Submission-Grade  
 **Status:** R&D-Stage Systems Hypothesis (Checkpoint-Gated Empirical Program)  
 **Primary Capital Ask:** **USD 285,000** for 18 Months (Scientifically Credible Plan)  

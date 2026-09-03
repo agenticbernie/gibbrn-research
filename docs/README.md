@@ -17,7 +17,7 @@ The documentation in this repository is organized into four distinct tiers refle
 
 ```
 docs/
-├── submission/         <-- [PRIMARY] Publication-ready, verified 18-month research dossier (13 files)
+├── submission/         <-- [PRIMARY] Primary submission candidate — evidence-verified 18-month research dossier (13 files)
 ├── verification/       <-- Complete audit ledgers from the final evidence verification pass (10 files)
 ├── diligence_audit/    <-- Adversarial diligence audit reports modeled on a 1517-style technical review (12 files)
 └── archive/            <-- Historical working archives preserving complete scientific lineage

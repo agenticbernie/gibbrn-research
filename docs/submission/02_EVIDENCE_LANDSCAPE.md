@@ -58,7 +58,7 @@ The public systems and product literature reviewed for this dossier is substanti
 *   **Empirical Contradictions:** Subsequent rigorous studies directly refuted universal monotonicity:
     - **Jie Huang et al. (ICLR 2024)** [7] demonstrated that without external ground-truth verifiers, large language models do not reliably self-correct reasoning and often degrade their own outputs through ungrounded second-guessing.
     - **Valmeekam et al. (NeurIPS 2023)** [8] demonstrated that LLMs struggle with autonomous plan validation in domain-independent planning problems without external symbolic validators.
-*   **Systems Implication for gibbrn:** Self-reflection cannot serve as the admission gate for durable operational memory. Experience promotion must require external, ground-truth validation (e.g., deterministic test suites, compilers, type checkers).
+*   **Systems Implication for gibbrn (`GIBBRN INFERENCE` $\to$ `DESIGN HYPOTHESIS`):** This motivates testing external, ground-truth validation (e.g., deterministic test suites, compilers, type checkers) as an objective gate for durable operational memory, rather than relying solely on model self-reflection.
 
 ---
 
@@ -67,16 +67,16 @@ The public systems and product literature reviewed for this dossier is substanti
 *   **The Security Threat:** The OWASP GenAI Security Project officially identified **Memory Poisoning** as a critical vulnerability class (**ASI06**) in autonomous agent deployments, in the Official Release v1.0, December 2025 [9].
 *   **Attack Mechanism (MINJA):** S. Dong et al. (NeurIPS 2025, arXiv:2503.03704) [10] demonstrated that attackers can inject persistent, delayed payloads into an agent's long-term retrieval memory via query-only interaction with >85% success across evaluated configurations (medical/EHR, e-commerce, and QA agent settings).
 *   **Temporal Decoupling:** Unlike transient prompt injection—which terminates when the context window is cleared—memory poisoning plants backdoors in persistent vector or relational stores that trigger weeks later during unrelated privileged tasks.
-*   **Systems Implication for gibbrn:** Memory reads cannot be directly piped into privileged tool calls. All tool dispatches must be verified by an independent, deterministic capability gate outside the model's context.
+*   **Systems Implication for gibbrn (`GIBBRN INFERENCE` $\to$ `DESIGN HYPOTHESIS`):** gibbrn therefore treats memory reads as untrusted inputs and proposes gating mutating tool dispatches through an independent, deterministic reference monitor outside the model's context.
 
 ---
 
 ### 2.4 Error Cascades and Trajectory Survival (`EMERGING EVIDENCE`)
 
 *   **Markovian Error Compounding:** Zhu et al. (AgentErrorBench, 2025) [11] analyzed failure trajectories across GAIA, WebShop, and ALFWorld in a dataset of 200 annotated failure cases, showing that multi-step failures are dominated by cascading errors where early, unrecovered minor deviations corrupt environment state.
-*   **Mathematical Modeling:** Trajectory completion over dependency depth $k$ cannot be modeled as independent Bernoulli trials ($P \ne p^k$). It must be analyzed via **discrete survival analysis** where early errors spike the conditional hazard rate of fatal failure:
+*   **Mathematical Modeling:** Trajectory completion over dependency depth $k$ violates memoryless independent trial assumptions ($P \ne p^k$) due to error autocorrelation. The research program models trajectory reliability using **discrete survival analysis** to account for step-dependent conditional hazard rates:
     $$S(k) = \prod_{i=1}^k (1 - h(i))$$
-*   **Systems Implication for gibbrn:** Extending autonomous operating horizons requires bounding the hazard rate $h(k)$ via external state checkpoints and causal rollback.
+*   **Systems Implication for gibbrn (`RESEARCH HYPOTHESIS`):** The program tests whether external state checkpoints and causal rollback can bound the empirical failure hazard rate $h(k)$ and extend autonomous operating horizons.
 
 ---
 
@@ -89,13 +89,13 @@ Table 2.1 analyzes the eight primary commercial and architectural substitutes to
 | System / Platform | Primary Architectural Category | Durable Execution | State Persistence Model | Authority & Privilege Enforcement | Causal Provenance | Experience Admission | Rollback & Recovery | Primary Limitation Addressed by gibbrn |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Temporal / Cadence** | Durable Workflow Engine | **Native (Gold Standard)** | Workflow event log | Host IAM / RBAC | Activity history | None | Workflow history replay | Assumes deterministic host code. Temporal's documented durability model does not provide agent-specific semantic validation of why a model proposed an effect. |
-| **DBOS (dbos.dev)** | Database-Centric OS | **Native (PostgreSQL)** | Relational tables | Database roles / SQL | Transaction log | None | Time-travel debugging | Focuses on database-level execution speed. Lacks agent semantic state models and capability reducers. |
+| **DBOS (dbos.dev)** | Database-Centric OS | **Native (PostgreSQL)** | Relational tables | Database roles / SQL | Transaction log | None | Time-travel debugging | Focuses on database-level execution speed. Public documentation reviewed did not identify native support for agent-specific semantic state models or out-of-process capability reducers. |
 | **LangGraph (Checkpointers)**| Agent Graph Framework | Built-in (Savepoints) | Unvalidated state dict | Edge conditions | Trace spans | None | Human-in-the-loop rewind | LangGraph's native checkpoint/state abstractions manage workflow graph transitions but do not themselves constitute an external authorization reference monitor. |
 | **Mem0 (mem0.ai) / Letta** | Agent Memory Layer | None | Vector / Graph RAG | None | User metadata | Naive summary | None | Focuses on personalization. Public documentation does not describe external regression validation; vulnerable to MINJA memory poisoning. |
 | **Zep (getzep.com)** | Temporal Knowledge Graph | None | Temporal graph RAG | None | Temporal edge dates | None | None | Optimized for chat entity extraction. Does not gate tool execution or manage spending quotas. |
 | **Portkey (portkey.ai)** | AI Gateway | Basic (Retries/Queues) | Cached responses | Virtual keys / Budgets | Request log | None | Fallback routing | Primarily a network gateway for LLM calls. Does not intercept local filesystem mutations, shell calls, or sandboxed tools. |
 | **Lakera Guard / Promptfoo** | AI Security & Red-Teaming | None | None | Probabilistic prompt scan | Telemetry spans | None | None | Operates at the natural-language prompt/response inspection layer rather than enforcing deterministic kernel sandboxing or state constraints. |
-| **SWE-agent / OpenHands** | Coding Agent Runtimes | Session-scoped | Working Git repo | Docker container | Bash execution logs | None | Git reset | Single-session execution runtime. Lacks cross-trajectory memory validation and cross-session authority reducers. |
+| **SWE-agent / OpenHands** | Coding Agent Runtimes | Session-scoped | Working Git repo | Docker container | Bash execution logs | None | Git reset | Single-session execution runtime. Public documentation reviewed did not identify native support for cross-trajectory memory validation or cross-session capability reducers. |
 | **GIBBRN (Proposed)** | **Agent State Integrity Layer** | Delegated (Postgres/DBOS) | **4-Tier Typed State Schema** | **Deterministic Authority Reducer** | **Causal State Spine** | **Regression-Gated Sandbox Admission** | **Bounded Causal Replay** | **Unified control plane separating mutable cognition from canonical authority and verified experience.** |
 
 ---
@@ -131,7 +131,7 @@ Table 2.2 documents the empirical standing of every foundational proposition und
 *   [8] K. Valmeekam, M. Marquez, S. Sreedharan, and S. Kambhampati, "On the Planning Abilities of Large Language Models: A Critical Investigation," in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, vol. 36, 2023.
 *   [9] OWASP GenAI Security Project, "OWASP Top 10 for Agentic AI Applications," Official Release v1.0, December 2025. Category ASI06: Memory & Context Poisoning.
 *   [10] S. Dong, S. Xu, P. He, Y. Li, J. Tang, T. Liu, H. Liu, and Z. Xiang, "Memory Injection Attacks on LLM Agents via Query-Only Interaction," in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, 2025. arXiv:2503.03704. [Submitted March 2025; accepted NeurIPS 2025.]
-*   [11] Zhu et al., "Where LLM Agents Fail and How They Can Learn From Failures: A Trajectory Failure Taxonomy and Benchmark," Research Report & Benchmark Suite (AgentDebug / AgentErrorBench; 200 annotated failure trajectories across ALFWorld, GAIA, and WebShop), 2025.
+*   [11] K. Zhu, Z. Liu, B. Li, M. Tian, Y. Yang, J. Zhang, et al., "Where LLM Agents Fail and How They Can Learn From Failures," *arXiv preprint arXiv:2509.25370*, 2025. Benchmark dataset: AgentErrorBench (200 annotated failure trajectories across ALFWorld, GAIA, and WebShop; ulab-uiuc/AgentDebug).
 *   [12] F. Perez and I. Ribeiro, "Ignore Previous Prompt: Attack Techniques For Language Models," *arXiv preprint arXiv:2305.14874*, 2023.
 *   [13] L. Lamport, "Time, Clocks, and the Ordering of Events in a Distributed System," *Commun. ACM*, vol. 21, no. 7, pp. 558–565, 1978.
 *   [14] P. A. Bernstein, V. Hadzilacos, and N. Goodman, *Concurrency Control and Recovery in Database Systems*. Addison-Wesley, 1987.

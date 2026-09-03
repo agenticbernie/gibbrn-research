@@ -84,7 +84,7 @@ $$\hat{S}(k) = \prod_{i: t_i \le k} \left(1 - \frac{d_i}{n_i}\right) \quad (\tex
 *   **Research Question:** Does an append-only Causal State Spine with Merkle parent chaining materially improve root-cause failure attribution over standard linear telemetry traces?
 *   **Hypothesis ($\mathcal{H}_1$):** Blinded human and automated causal reconstruction rate ($\text{CRR}$) of the earliest fatal divergence step increases from $\le 45\%$ (native OpenTelemetry spans) to $\ge 80\%$ using the Causal State Spine.
 *   **Null Hypothesis ($\mathcal{H}_0$):** Causal DAG parent chaining provides no statistically significant improvement in root-cause localization over timestamped linear trace spans.
-*   **Workload:** 150 failure trajectories from AgentErrorBench (Zhu et al. 2025; 200 annotated failure trajectories across ALFWorld, GAIA, and WebShop) with ground-truth root-cause step labels.
+*   **Workload:** 150 failure trajectories from AgentErrorBench (Zhu et al., arXiv:2509.25370, 2025; 200 annotated failure trajectories across ALFWorld, GAIA, and WebShop) with ground-truth root-cause step labels.
 *   **Blinding & Evaluation:** Double-blinded annotation. Annotators are given trajectory logs with system identifiers removed and are asked to identify the earliest step where an irreversible error state was established. Root-cause localization is scored as correct if the identified step matches the ground-truth label within $\pm 1$ step. Annotation team consists of two independent research engineers; disagreements resolved by a third senior reviewer. Inter-rater reliability target: Cohen’s Kappa $\kappa \ge 0.75$.
 *   **Statistical Methodology:** Wilcoxon signed-rank test ($\alpha = 0.01$).
 *   **Failure Threshold:** $\text{CRR} < 75\%$ at Gate M6.
@@ -132,7 +132,7 @@ Table 6.1 details the sample size and power calculations governing the Core RQ c
 | Core RQ | Primary Benchmark / Dataset | Sample Size ($N$) | Statistical Test | Power ($1 - \beta$) | Significance ($\alpha$) | Confounder Controls |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Core RQ1** | SWE-bench Lite (Multi-file) | 200 tasks | McNemar's Test (Paired) | 0.90 | 0.01 | Fixed prompt seed, identical context window |
-| **Core RQ2** | AgentErrorBench (Zhu et al. 2025) | 150 failure traces | Wilcoxon Signed-Rank | 0.85 | 0.01 | Double-blinded human annotation ($\kappa \ge 0.75$) |
+| **Core RQ2** | AgentErrorBench (Zhu et al. 2025, arXiv:2509.25370) | 150 failure traces | Wilcoxon Signed-Rank | 0.85 | 0.01 | Double-blinded human annotation ($\kappa \ge 0.75$) |
 | **Core RQ3** | gibbrn-auth-bench Red-Team | 1,000 attacks | Fisher's Exact Test | 0.95 | 0.001 | Dynamic injection string randomization |
 | **Core RQ4** | Continual SWE-bench + MINJA | 300 sequential tasks | Two-Way ANOVA | 0.90 | 0.05 | Latin square task order permutation |
 | **Core RQ5** | GAIA Level 3 & Deep SWE-bench | 150 deep tasks | Log-Rank Survival Test | 0.90 | 0.01 | Right-censoring at maximum step cutoffs |

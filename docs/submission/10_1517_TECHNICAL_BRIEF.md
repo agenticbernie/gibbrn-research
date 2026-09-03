@@ -57,7 +57,7 @@ If enterprise computing rejects open-ended autonomous agent loops entirely and c
 ### 8. What exactly will be tested over 18 months?
 Five causally chained research questions across 13,200 benchmark trajectories:
 *   *Core RQ1 (State Classification):* Testing whether 4-tier typed schemas reduce state corruption by $\ge 80\%$ on SWE-bench Lite.
-*   *Core RQ2 (Causal Reconstruction):* Testing whether Merkle DAG event trees achieve $\ge 80\%$ root-cause failure attribution on AgentErrorBench (Zhu et al. 2025).
+*   *Core RQ2 (Causal Reconstruction):* Testing whether Merkle DAG event trees achieve $\ge 80\%$ root-cause failure attribution on AgentErrorBench (Zhu et al., arXiv:2509.25370, 2025).
 *   *Core RQ3 (Authority Integrity):* Testing whether the Deterministic Effect Gate maintains $\text{UER} \le 0.001$ across 1,000 prompt injection attacks.
 *   *Core RQ4 (Experience Admission):* Testing whether micro-sandbox regression testing maintains $\ge 98\%$ retention under MINJA poisoning.
 *   *Core RQ5 (Trajectory Survival):* Testing whether checkpoint rollback doubles $\text{MDDD}_{0.90}$ over unmanaged baselines on GAIA Level 3.

@@ -66,9 +66,9 @@ All project documentation is structured in the [`docs/`](./docs/README.md) direc
 
 ```
 docs/
-├── submission/         <-- [PRIMARY DOSSIER] Publication-ready, verified 18-month research dossier (13 files)
+├── submission/         <-- [PRIMARY DOSSIER] Primary submission candidate — evidence-verified 18-month research dossier (13 files)
 ├── verification/       <-- Complete audit ledgers from the final evidence verification pass (10 files)
-├── diligence_audit/    <-- Adversarial diligence audit reports from 1517 Fund technical review (12 files)
+├── diligence_audit/    <-- 1517-oriented adversarial diligence simulation reports (12 files)
 └── archive/            <-- Historical working archives preserving complete scientific lineage
     ├── v2_reconstructed/  (Post-audit reconstructed draft)
     └── v1_initial/        (Initial exploratory research proposal)
@@ -131,8 +131,8 @@ docs/
 
 ## License & Intellectual Property Notice
 
-This repository contains pre-publication proprietary research materials, architectural specifications, and experimental protocols. Access and use of all materials are governed by the **[GIBBRN Strict Research and Evaluation License](./LICENSE)**:
-- **Evaluation Only:** Permitted solely for confidential academic peer review and investment technical due diligence.
+This repository contains pre-publication research materials, architectural specifications, and experimental protocols. Public viewing and evaluation are permitted; commercial implementation, model training, reproduction, redistribution, and derivative use are strictly subject to the **[GIBBRN Strict Research and Evaluation License](./LICENSE)**:
+- **Public Viewing & Evaluation:** Permitted for non-commercial academic research review, scientific evaluation, and investor technical due diligence.
 - **Strict Anti-AI Training:** Use of this text, schemas, architectures, or metrics (including MDDD) for AI/LLM model training, fine-tuning, distillation, benchmarking, or synthetic data generation is **strictly prohibited**.
 - **No Commercial Use:** Commercial deployment, service integration, or derivative systems implementation requires a separate written commercial license.
 

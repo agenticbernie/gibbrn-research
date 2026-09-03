@@ -58,7 +58,7 @@ If enterprise computing rejects open-ended autonomous agent loops entirely and c
 Five causally chained research questions across 13,200 benchmark trajectories:
 *   *Core RQ1 (State Classification):* Testing whether 4-tier typed schemas reduce state corruption by $\ge 80\%$ on SWE-bench Lite.
 *   *Core RQ2 (Causal Reconstruction):* Testing whether Merkle DAG event trees achieve $\ge 80\%$ root-cause failure attribution on AgentErrorBench (Zhu et al., arXiv:2509.25370, 2025).
-*   *Core RQ3 (Authority Integrity):* Testing whether the Deterministic Effect Gate maintains $\text{UER} \le 0.001$ across 1,000 prompt injection attacks.
+*   *Core RQ3 (Authority Integrity):* Testing whether the Deterministic Effect Gate achieves an observed $\text{UER} = 0$ across $N=1,000$ prompt injection attacks (zero unauthorized mutating executions observed; one-sided 95% Clopper-Pearson upper bound $< 0.003$).
 *   *Core RQ4 (Experience Admission):* Testing whether micro-sandbox regression testing maintains $\ge 98\%$ retention under MINJA poisoning.
 *   *Core RQ5 (Trajectory Survival):* Testing whether checkpoint rollback doubles $\text{MDDD}_{0.90}$ over unmanaged baselines on GAIA Level 3.
 
@@ -67,7 +67,7 @@ Five causally chained research questions across 13,200 benchmark trajectories:
 ### 9. What are the six research checkpoint gates?
 *   **Gate M3 (Foundations):** Interception overhead $\le 30\text{ms}$; state exceptions reduced by $\ge 80\%$.
 *   **Gate M6 (Causal Spine):** Causal failure attribution rate $\text{CRR} \ge 80\%$.
-*   **Gate M9 (Effect Gate - Main Wedge):** Unauthorized-Effect Rate $\text{UER} \le 0.001$; false denials $\le 2.0\%$; latency $\le 15\text{ms}$.
+*   **Gate M9 (Effect Gate - Main Wedge):** Observed $\text{UER} = 0$ across $N=1,000$ red-team attacks (zero unauthorized mutating executions; one-sided 95% upper bound $< 0.003$; operational benchmark tolerance $\le 0.001$); false denials $\le 2.0\%$; latency $\le 15\text{ms}$.
 *   **Gate M12 (Experience Admission):** False-Promotion Rate $\text{FPR} \le 0.02$; downstream retention $\ge 98\%$.
 *   **Gate M15 (Survival - Company Thesis Gate):** $\text{MDDD}_{0.90} \ge 2.0\times$ baseline ($p < 0.01$ Log-Rank test).
 *   **Gate M18 (Final Thesis Gate):** Cross-model replication, target of up to 2 external pilot evaluations (contingent on partner availability and workflow match), and formal proceed/pivot/stop verdict.

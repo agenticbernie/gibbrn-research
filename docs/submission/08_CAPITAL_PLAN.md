@@ -4,7 +4,7 @@
 **Document Track:** Financial Modeling & Capital Allocation (Version 2)  
 **Date:** September 2026 | **Verification Pass:** Submission-Grade  
 **Audience:** Deep-Tech Investors, 1517 Fund Partners, Technical Founders  
-**Primary Capital Ask:** **USD 285,000 for 18 Months** (Scientifically Credible Plan)  
+**Primary Capital Ask:** **USD 285,000 for 18 Months** (Checkpoint-Gated Empirical R&D Plan)  
 
 ---
 
@@ -68,7 +68,7 @@ $$\text{Total Inference Cost} = 10,630\text{M tokens} \times \frac{\$4.50}{1\tex
 ## 4. Compute Sensitivity & Price Volatility Safeguards
 
 1.  **Scenario A: Foundation Model Price Deflation (-50%):** If frontier API token prices fall by 50% (to \$2.25/1M tokens), compute spend drops to \$23,900. The \$24,000 savings will not be taken as profit; it will be automatically redeployed to expand the sample size of Core RQ5 ($\text{MDDD}$ survival analysis) from 150 to 300 deep tasks.
-2.  **Scenario B: Reasoning Token Inflation (+100%):** If models generate substantial hidden internal reasoning tokens, driving effective token volume to 21.2B tokens, compute spend would rise to \$95,000. Our \$28,000 contingency buffer covers a 58% overrun. If inflation exceeds 60%, the team will shift Phase 4 regression runner micro-tests to locally hosted open-weights models (Llama 3.3 70B on our bare-metal nodes), neutralizing API costs.
+2.  **Scenario B: Reasoning Token Inflation (+100%):** If models generate substantial hidden internal reasoning tokens, driving effective token volume to 21.2B tokens, compute spend would rise to \$95,000. Our \$28,000 contingency buffer covers a 58% overrun. If inflation exceeds 60%, the program will shift Phase 4 regression runner micro-tests to locally hosted open-weights models (Llama 3.3 70B on our bare-metal nodes), neutralizing API costs.
 
 ---
 

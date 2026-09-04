@@ -1,8 +1,8 @@
 # 05 — Security Architecture, Threat Model, and Failure Modes (Submission)
 
 **Project Name:** GIBBRN  
-**Document Track:** Security Architecture & Threat Modeling (Version 2)  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Document Track:** Security Architecture & Threat Modeling (Version 3.0)  
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
 **Audience:** AI Security Researchers, Penetration Testers, Systems Engineers, 1517 Fund  
 **Security Standard:** Hardened Adversarial Threat Model (Addressing Red-Team Diligence)  
 

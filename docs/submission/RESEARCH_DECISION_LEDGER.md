@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Historical Architecture Decision Records (ADRs)  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
 **Governance Rule:** Never overwrite historical decisions. Record the continuous evolution of systems hypotheses based on empirical research, adversarial diligence audits, and verification passes.  
 **Allowed Verdicts:** `KEEP` | `MODIFY` | `MERGE` | `DEFER` | `KILL`  
 
@@ -34,6 +34,8 @@
 *   [AD-019: Elevation of the $285,000 Budget as Primary Pre-Seed Ask (MODIFY)](#ad-019-elevation-of-the-285000-budget-as-primary-pre-seed-ask)
 *   [AD-020: Elevation of the Deterministic Effect Gate as Initial Technical Wedge (KEEP & EXPAND)](#ad-020-elevation-of-the-deterministic-effect-gate-as-initial-technical-wedge)
 *   [AD-021: OS-Level Kernel Sandboxing (gVisor) to Block Parameter Smuggling (KEEP & EXPAND)](#ad-021-os-level-kernel-sandboxing-gvisor-to-block-parameter-smuggling)
+*   [AD-022: Decoupling into Three Substrates & Verified Adaptation Engine (ADOPT)](#ad-022-decoupling-into-three-substrates--verified-adaptation-engine)
+*   [AD-023: 24-Month Roadmap, 7 Core RQs, and $400,000 Capital Allocation (ADOPT)](#ad-023-24-month-roadmap-7-core-rqs-and-400000-capital-allocation)
 
 ---
 
@@ -182,3 +184,27 @@
 *   **Confidence:** 98%
 *   **What Changed:** Engine 2 couples capability evaluation with ephemeral **gVisor micro-containers** featuring strict network namespace isolation and unmapped host credential directories.
 *   **Next Experiment:** Latency profiling of warm gVisor container reuse at Gate M3.
+
+---
+
+### AD-022: Decoupling into Three Substrates & Verified Adaptation Engine
+*   **Date:** September 4, 2026
+*   **Question:** How does gibbrn accommodate adaptive agents that continually modify skills and execution harnesses?
+*   **Evidence Examined:** MASkills (arXiv:2609.02094) continual learning in skill-space; HarnessDev (arXiv:2609.01437) harness co-adaptation; CrowdStrike Agentic Identity Provider.
+*   **Supporting Evidence:** If the agent is permitted to mutate its own skills, workflows, and runtime harness, authority and state provenance cannot be co-located with mutable cognition.
+*   **Decision:** **ADOPT (V3 Architecture)**
+*   **Confidence:** 95%
+*   **What Changed:** Formalized the Three-Substrate boundary: (1) Adaptive Cognition (mutable), (2) Execution Substrate (isolation/recovery), (3) Trust Substrate (externally governed). Re-architected Engine 3 as the *Verified Adaptation Engine* and Engine 1 as the *Canonical State & Adaptation Lineage Substrate*. Added Invariants 6 and 7.
+*   **Next Experiment:** Core RQ4 and RQ5 evaluations at Gates M12 and M15.
+
+---
+
+### AD-023: 24-Month Roadmap, 7 Core RQs, and $400,000 Capital Allocation
+*   **Date:** September 4, 2026
+*   **Question:** What timeline and capital plan are required to rigorously evaluate adaptive agent integrity and cross-model replication?
+*   **Evidence Examined:** Need for cross-model transfer evaluations (ATR), IAM provider integration testing, and long-horizon survival analysis across 8 quarters.
+*   **Supporting Evidence:** 18 months was insufficient to evaluate cross-model adaptation portability and live IAM delegation; bottom-up budgeting requires $400k for expanded API inference, infrastructure, and replication.
+*   **Decision:** **ADOPT (V3 Scope & Capital)**
+*   **Confidence:** 96%
+*   **What Changed:** Expanded roadmap to 24 months with 8 binding gates (M3–M24) and 16 lightweight evidence checkpoints. Formulated Core RQ5 (Harness Generalization / ATR) with dual-mode PASS (portable generalization vs. safely bounded specialization) and Core RQ7 (IAM Delegation). Reconciled budget bottom-up to exactly $400,000.
+*   **Next Experiment:** Gate M3 and M6 checkpoint evaluations.

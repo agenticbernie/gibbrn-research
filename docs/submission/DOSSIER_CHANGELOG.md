@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Audit Provenance & Document Lineage (Submission Grade)  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
 **Audience:** Technical Due-Diligence Reviewers, Systems Researchers, 1517 Fund  
 **Purpose:** Comprehensive Traceability of All Architectural, Mathematical, Epistemic, and Citation Modifications from V1 through V2 to Final Submission  
 
@@ -13,8 +13,9 @@
 The GIBBRN technical dossier has undergone a rigorous, three-stage development and verification process:
 
 1.  **Phase 1 (V1 Dossier):** Initial 18-month R&D dossier formulating the Agent State Integrity thesis.
-2.  **Phase 2 (Adversarial Diligence Simulation & V2 Reconstruction):** Independent 1517-oriented diligence simulation (`AUDIT_00`–`AUDIT_11`) followed by complete structural reconstruction: consolidating 5 subsystems into 3 physical engines, eliminating naive geometric failure models in favor of discrete survival analysis, hardening kernel-level sandboxing, and establishing $285,000 as the primary capital ask.
-3.  **Phase 3 (Submission-Grade Evidence Verification Pass):** Independent citation auditing and factual verification pass (`FINAL_VERIFY_00`–`FINAL_VERIFY_09`), correcting critical citation metadata (MINJA year, AgentErrorBench attribution), eliminating ungrounded quantitative claims (the "27.4 percentage point" harness claim reframed to appropriate cross-literature sensitivity), scrubbing self-certifying language ("100% verified"), softening absolute security assertions, and enforcing strict epistemic classification across all numbers and targets.
+2.  **Phase 2 (Adversarial Diligence Simulation & V2 Reconstruction):** Independent 1517-oriented diligence simulation (`AUDIT_00`–`AUDIT_11`) followed by structural reconstruction: consolidating 5 subsystems into 3 physical engines, eliminating naive geometric failure models in favor of discrete survival analysis, hardening kernel-level sandboxing, and establishing pre-seed capital asks.
+3.  **Phase 3 (Submission-Grade Evidence Verification Pass):** Independent citation auditing and factual verification pass (`FINAL_VERIFY_00`–`FINAL_VERIFY_09`), correcting citation metadata (MINJA year, AgentErrorBench attribution), reframing harness sensitivity across literature, softening absolute assertions, and enforcing epistemic standards.
+4.  **Phase 4 (V3 Adaptive Integrity Reconstruction):** Architectural elevation from static state integrity to *Integrity Infrastructure for Adaptive Agents* across three decoupled substrates (Adaptive Cognition, Execution Substrate, Trust Substrate). Integration of September 2026 continual learning literature (MASkills, HarnessDev, CrowdStrike AIP), expansion to a 24-month roadmap with 8 binding gates, 7 Core Research Questions (incorporating ATR and safe specialization), and a reconciled bottom-up $400,000 capital plan (`V3_DELTA_VERIFY_01`–`05`).
 
 ---
 
@@ -61,9 +62,9 @@ The submission-grade dossier consists of the following 12 core documents, comple
 4.  **[`03_STATE_SEMANTICS_AND_TRUST_MODEL.md`](./03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** — Four-Class State Taxonomy (Design Hypothesis), human trust roots, access matrix, Invariants 1–5.
 5.  **[`04_ARCHITECTURE.md`](./04_ARCHITECTURE.md)** — The Three Physical Research Engines (Spine, Effect Gate, Admission Engine) and gVisor sandboxing.
 6.  **[`05_SECURITY_AND_FAILURE_MODEL.md`](./05_SECURITY_AND_FAILURE_MODEL.md)** — Parameter smuggling defenses, kernel isolation, TOCTOU leases, and failure modes.
-7.  **[`06_CORE_RESEARCH_PROGRAM.md`](./06_CORE_RESEARCH_PROGRAM.md)** — Five causally chained Core RQs and discrete survival hazard modeling for $\text{MDDD}_\tau$.
-8.  **[`07_18_MONTH_ROADMAP.md`](./07_18_MONTH_ROADMAP.md)** — Six checkpoint gates (M3–M18) with explicit Kill / Narrow / Pivot criteria.
-9.  **[`08_CAPITAL_PLAN.md`](./08_CAPITAL_PLAN.md)** — Primary \$285,000 budget vs. \$120,000 fallback, compute modeling, and capital-at-risk.
+7.  **[`06_CORE_RESEARCH_PROGRAM.md`](./06_CORE_RESEARCH_PROGRAM.md)** — Seven causally chained Core RQs, discrete survival hazard modeling for $\text{MDDD}_\tau$, and ATR transfer metrics.
+8.  **[`07_24_MONTH_ROADMAP.md`](./07_24_MONTH_ROADMAP.md)** — Eight binding falsification gates (M3–M24) and 16 lightweight evidence checkpoints.
+9.  **[`08_CAPITAL_PLAN.md`](./08_CAPITAL_PLAN.md)** — Reconciled \$400,000 bottom-up budget across 24 months vs. \$150,000 constrained fallback.
 10. **[`09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** — Genuine novelty vs. commoditized plumbing, competitor matrix, and platform risks.
 11. **[`10_1517_TECHNICAL_BRIEF.md`](./10_1517_TECHNICAL_BRIEF.md)** — Executive 12-question diligence response for 1517 Fund.
 12. **[`RESEARCH_DECISION_LEDGER.md`](./RESEARCH_DECISION_LEDGER.md)** — Complete historical ADRs updated with post-diligence decisions (AD-001 through AD-021).

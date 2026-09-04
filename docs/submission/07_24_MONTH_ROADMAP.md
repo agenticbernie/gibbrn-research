@@ -64,12 +64,15 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
     - PROCEED: Target met.
     - STOP: $\text{FPR} > 0.02$ without clear mitigation path.
 
-### Gate M15 (Month 15) — Harness Generalization (ATR)
-*   **Target:** Evaluate whether learned skills/harnesses transfer across boundaries.
-*   **Empirical Hurdle:** Adaptation Transfer Ratio ($\text{ATR}$) $\ge 0.80$ (Core RQ5).
+### Gate M15 (Month 15) — Harness Generalization & Safe Specialization (ATR)
+*   **Target:** Evaluate whether learned adaptations transfer across model/domain boundaries, and whether the system safely bounds non-portable co-adaptation.
+*   **Empirical Hurdle:** Dual-Mode Satisfaction (Core RQ5):
+    - *Mode A (Portable Generalization):* $\text{ATR} \ge 0.80$ (with 95% bootstrap CI lower bound $> 0.60$) on cross-model transfer pairs; OR
+    - *Mode B (Safely Bounded Specialization):* For co-adapted modifications ($\text{ATR} < 0.50$), Engine 3 reliably detects the specificity boundary, prevents unconstrained promotion into global operational state, and isolates the adaptation with zero downstream regression ($\Delta P_{\text{transfer}} \ge 0.0\%$).
 *   **Verdict Matrix:**
-    - PROCEED: Meaningful transfer.
-    - NARROW: $\text{ATR} < 0.50$; restrict scope to heavily co-adapted environments.
+    - PROCEED: Target met (either Mode A or Mode B satisfied).
+    - NARROW: Co-adaptation cannot be reliably bounded across open domains; restrict scope to single-model vertical deployments.
+    - STOP: System promotes co-adapted modifications into general state causing active task regression ($>2\%$ failure rate increase).
 
 ### Gate M18 (Month 18) — Scientific Thesis Gate (Long-Horizon Survival)
 *   **Target:** Verify the integrated 3-substrate architecture significantly extends trajectory survival over deep tasks.

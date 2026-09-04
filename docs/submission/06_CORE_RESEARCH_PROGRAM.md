@@ -132,10 +132,12 @@ Table 6.1 details the sample size and power calculations governing the Core RQ c
 | Core RQ | Primary Benchmark / Dataset | Sample Size ($N$) | Statistical Test | Power ($1 - \beta$) | Significance ($\alpha$) | Confounder Controls |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Core RQ1** | SWE-bench Lite (Multi-file) | 200 tasks | McNemar's Test (Paired) | 0.90 | 0.01 | Fixed prompt seed, identical context window |
-| **Core RQ2** | AgentErrorBench (Zhu et al. 2025, arXiv:2509.25370) | 150 failure traces | Wilcoxon Signed-Rank | 0.85 | 0.01 | Double-blinded human annotation ($\kappa \ge 0.75$) |
+| **Core RQ2** | AgentErrorBench | 150 failure traces | Wilcoxon Signed-Rank | 0.85 | 0.01 | Double-blinded human annotation ($\kappa \ge 0.75$) |
 | **Core RQ3** | gibbrn-auth-bench Red-Team | 1,000 attacks | Fisher's Exact Test | 0.95 | 0.001 | Dynamic injection string randomization |
 | **Core RQ4** | Continual SWE-bench + MINJA | 300 sequential tasks | Two-Way ANOVA | 0.90 | 0.05 | Latin square task order permutation |
-| **Core RQ5** | GAIA Level 3 & Deep SWE-bench | 150 deep tasks | Log-Rank Survival Test | 0.90 | 0.01 | Right-censoring at maximum step cutoffs |
+| **Core RQ5** | Transfer Distribution Matrix | 100 pairs | ATR Ratio Estimation | 0.85 | 0.05 | Controlled hold-out models / domains |
+| **Core RQ6** | GAIA Level 3 & Deep SWE-bench | 150 deep tasks | Log-Rank Survival Test | 0.90 | 0.01 | Right-censoring at maximum step cutoffs |
+| **Core RQ7** | IAM Integration Suite | 200 sessions | Binomial Exceedance | 0.95 | 0.01 | Cryptographic token rotation tests |
 
 > **Note on Statistical Power:** Power values in Table 6.1 are design-time estimates based on expected effect sizes. Formal simulation-based power curves will be generated and archived as part of pre-registration protocols.
 

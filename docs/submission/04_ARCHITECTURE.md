@@ -47,7 +47,9 @@ flowchart TD
 
     subgraph gibbrnControlPlane["Isolated Control Plane (Out-of-Process Daemon)"]
         Gate["ENGINE 2: Deterministic Effect Gate\n- Capability Tokens & Budget Balances\n- Short-Lived Single-Use Leases (TTL <= 2s)\n- TOCTOU Concurrency Arbiter"]
-        Spine["ENGINE 1: Causal State Spine\n- Append-Only PostgreSQL / SQLite WAL\n- Merkle Causal DAG & Provenance\n- Checkpoint Snapshots & Effect Receipts"]
+        Spine["ENGINE 1: Canonical State & Adaptation Lineage\n- Append-Only PostgreSQL / SQLite WAL\n- Merkle Causal DAG & Provenance\n- Checkpoint Snapshots & Effect Receipts"]
+        Admission["ENGINE 3: Verified Adaptation Engine\n- Git Quarantine Staging Branch\n- Micro-Sandbox Regression Runner\n- Validated Operational Knowledge (S_ops)"]
+    end-Only PostgreSQL / SQLite WAL\n- Merkle Causal DAG & Provenance\n- Checkpoint Snapshots & Effect Receipts"]
         Admission["ENGINE 3: Experience Admission\n- Git Quarantine Staging Branch\n- Micro-Sandbox Regression Runner\n- Validated Operational Knowledge (S_ops)"]
     end
 
@@ -74,10 +76,61 @@ flowchart TD
 
 ## 3. Physical Engine Detailed Specifications
 
-### 3.1 Engine 1: The Causal State Spine (Storage & Lineage Substrate)
-*   **Responsibility:** Acts as the immutable source of truth for all agent transitions, causal parent-child dependencies, external-effect receipts, and checkpoint references.
+### 3.1 Engine 1: Canonical State & Adaptation Lineage Substrate
+*   **Responsibility:** Acts as the immutable source of truth for all agent transitions, causal parent-child dependencies, external-effect receipts, checkpoint references, and *adaptation provenance*.
 *   **Physical Storage:** Backed by PostgreSQL 16 (production) or SQLite in WAL mode (edge/local). Does **not** invent a novel database; utilizes standard ACID transactions with optimistic concurrency control.
 *   **Event Structure:**
+    ```json
+    {
+      "event_id": "evt_0192a812",
+      "parent_event_id": "evt_0192a7f0",
+      "trajectory_id": "traj_swe_341",
+      "agent_id": "worker_agent_04",
+      "step_depth": 18,
+      "event_type": "EFFECT_COMMITTED",
+      "timestamp_utc": "2026-09-03T19:20:00.104Z",
+      "adaptation_lineage": {
+          "active_skill_id": "sk_parser_v2",
+          "harness_variant": "hv_3"
+      },
+      "payload_hash": "sha256:4f83b165..."
+    }
+    ```
+*   **Hermetic Replay vs. Causal Auditability:**
+    - *Hermetic Replay:* For sealed environments, the Spine deterministically restores filesystem and database state to checkpoint $C_k$, injecting recorded tool outputs up to step $k$.
+    - *Open-World Causal Audit:* For unmockable open-web APIs, the Spine provides high-fidelity forensic divergence tracking, identifying the exact step where environment state diverged.
+
+### 3.2 Engine 2: The Deterministic Effect Gate (Inline Policy & Kernel Sandbox)
+*   **Responsibility:** Serves as the active reference monitor intercepting all proposed external mutations, connecting agent actions strictly to the Trust Substrate (identity, delegated authority, IAM policies).
+*   **Deployment Topology:** Runs out-of-process as a standalone Rust or Go daemon communicating via Unix domain sockets. This guarantees that if the Python agent harness is compromised via prompt injection or memory corruption, the attacker cannot tamper with the Effect Gate's memory.
+*   **TOCTOU Safeguard:** All capability grants are issued as single-use leases with a maximum TTL $\le 2000\text{ms}$. The lease is atomically verified and burned at the exact millisecond of tool invocation.
+*   **Defense Against Parameter Smuggling:** Tool authorization is strictly coupled with **OS-level kernel containment**:
+    - Every mutating tool executes inside an ephemeral **gVisor (runsc) micro-container**.
+    - Strict Linux seccomp filters block raw socket creation and prevent access to sensitive host directories, neutralizing parameter-level data exfiltration.
+
+### 3.3 Engine 3: Verified Adaptation Engine
+*   **Responsibility:** Governs the transition of transient trajectory successes into permanent, reusable operational knowledge ($\mathcal{S}_{\text{ops}}$) and portable runtime strategies.
+*   **Disciplined Scope Reduction:** Engine 3 focuses explicitly on two empirical adaptation pipelines:
+    1.  *Experience $\to$ Procedural Skill:* Extracting verified Python/Bash macros from raw trajectories and evaluating them against deterministic test matrices.
+    2.  *Harness Variant $\to$ Model Binding:* Identifying whether a learned harness optimization transfers to a hidden task or alternative model.
+*   **Admission Lifecycle:**
+    ```text
+    Raw Trajectory Success (Depth d >= 5)
+                     |
+                     v
+      [Candidate Abstraction / Harness Mutation]
+                     |
+                     v
+    Commit to Git Staging Branch (Status: QUARANTINE)
+                     |
+                     v
+    Execute against Canonical Regression Tasks in gVisor
+                     |
+             +--------+--------+
+             | Passes          | Regresses or Times Out
+             v                 v
+    Signed & Promoted to   Discarded / Quarantined
+      Active Substrate       (Zero Production Impact)
     ```json
     {
       "event_id": "evt_0192a812",

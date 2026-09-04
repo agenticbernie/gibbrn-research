@@ -10,25 +10,25 @@
 
 ## 1. Capital Request Overview
 
-In response to the financial diligence audit (`AUDIT_07`), Dossier V2 clarifies its funding position. We do not present the \$120,000 and \$285,000 figures as interchangeable options.
+In response to the financial diligence audit (`AUDIT_07`), Dossier V2 clarifies its funding position. We do not present the \$150,000 and \$400,000 figures as interchangeable options.
 
 ### The Canonical Funding Request:
 > **gibbrn is requesting USD 285,000 in pre-seed research capital to fund an 18-month empirical R&D program.**
 
-*   **The Primary Plan (\$285,000):** Provides full-time founder subsistence for the Principal Systems Researcher, budget capacity for a part-time Research Systems Engineer / contractor (contingent on funding), 13,200 benchmark trajectories across frontier models (\$48,000 API compute), dedicated gVisor cloud sandboxes, external red-team bounties, and a 10% contingency buffer.
-*   **The Constrained Fallback (\$120,000):** A high-risk, solo-founder survival scenario. It is preserved strictly as an extreme contingency plan, requiring severe scope reductions.
+*   **The Primary Plan (\$400,000):** Provides full-time founder subsistence for the Principal Systems Researcher, budget capacity for a part-time Research Systems Engineer / contractor (contingent on funding), 13,200 benchmark trajectories across frontier models (\$48,000 API compute), dedicated gVisor cloud sandboxes, external red-team bounties, and a 10% contingency buffer.
+*   **The Constrained Fallback (\$150,000):** A high-risk, solo-founder survival scenario. It is preserved strictly as an extreme contingency plan, requiring severe scope reductions.
 
 ---
 
 ## 2. Itemized 18-Month Financial Breakdown
 
-Table 8.1 details the line-item expenditures for the Primary Plan (\$285,000) alongside the Constrained Plan (\$120,000).
+Table 8.1 details the line-item expenditures for the Primary Plan (\$400,000) alongside the Constrained Plan (\$150,000).
 
 ### Table 8.1: Audited 18-Month Expense Model (USD)
 
 > **Note:** All figures in Table 8.1 are BUDGET ASSUMPTIONS as of September 2026. Stipend and contractor rates reflect planned compensation assumptions for a founder-led program with optional part-time research engineering support contingent on funding, and are not binding commitments.
 
-| Expense Category | Primary Pre-Seed Plan (\$285,000) | Constrained Fallback Plan (\$120,000) | Milestone Gate Supported | What Disappears Under Constrained Plan |
+| Expense Category | Primary Pre-Seed Plan (\$400,000) | Constrained Fallback Plan (\$150,000) | Milestone Gate Supported | What Disappears Under Constrained Plan |
 | :--- | :--- | :--- | :--- | :--- |
 | **Principal Systems Researcher (Founder, Full-Time)** | \$90,000 (\$5,000/mo) | \$54,000 (\$3,000/mo) | M1–M18 (Continuous) | Founder living stipend cut by 40%; creates severe personal burnout risk. |
 | **Research Systems Engineer (Planned Hire / Contractor)** | \$54,000 (Half-time @ \$3k/mo) | \$0 (Solo Founder) | M4–M18 (Core Engines) | **ELIMINATED.** Founder executes all benchmark, harness, and kernel infrastructure solo. |
@@ -40,7 +40,7 @@ Table 8.1 details the line-item expenditures for the Primary Plan (\$285,000) al
 | **Academic Dissemination & Travel** | \$5,200 (1 major conference) | \$1,600 (ArXiv only) | M16–M18 (Dissemination)| In-person conference presentation (NeurIPS/ICLR) eliminated; preprints only. |
 | **Subtotal (Direct Research Costs)** | **\$257,000** | **\$105,000** | — | — |
 | **Contingency Reserve (10%)** | \$28,000 | \$15,000 | Price Volatility Buffer | Buffer reduced, leaving zero margin for token price shocks. |
-| **TOTAL CAPITAL REQUIREMENT** | **\$285,000** | **\$120,000** | **18-Month Program** | **Significant reduction in statistical rigor and systems velocity.** |
+| **TOTAL CAPITAL REQUIREMENT** | **\$400,000** | **\$150,000** | **18-Month Program** | **Significant reduction in statistical rigor and systems velocity.** |
 
 ---
 
@@ -76,7 +76,7 @@ $$\text{Total Inference Cost} = 10,630\text{M tokens} \times \frac{\$4.50}{1\tex
 
 Table 8.3 outlines cumulative expenditure and unspent capital preserved across each research gate.
 
-### Table 8.3: Capital Exposure Schedule (Primary Plan: \$285,000)
+### Table 8.3: Capital Exposure Schedule (Primary Plan: \$400,000)
 
 | Checkpoint Gate | Cumulative Months | Monthly Burn Rate | Cumulative Capital Spent | Capital Remaining / Preserved | Falsification Trigger if Gate Fails |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -85,4 +85,4 @@ Table 8.3 outlines cumulative expenditure and unspent capital preserved across e
 | **Gate M9** | Months 7–9 | \$18,000 / mo | \$132,000 | **\$153,000** | Pivot to narrow security proxy if capability tokens leak. |
 | **Gate M12** | Months 10–12 | \$18,000 / mo | \$186,000 | **\$99,000** | Defer autonomous admission if regression testing is too costly. |
 | **Gate M15** | Months 13–15 | \$21,000 / mo | \$249,000 | **\$36,000** | Stop pursuing the broad company thesis; preserve remaining capital subject to governing investment terms if MDDD fails to double. |
-| **Gate M18** | Months 16–18 | \$12,000 / mo | \$285,000 | **\$0** | Final Thesis Verdict (Seed Round vs. Dissolve). |
+| **Gate M18** | Months 16–18 | \$12,000 / mo | \$400,000 | **\$0** | Final Thesis Verdict (Seed Round vs. Dissolve). |

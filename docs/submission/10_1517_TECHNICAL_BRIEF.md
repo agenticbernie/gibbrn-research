@@ -54,13 +54,53 @@ If enterprise computing rejects open-ended autonomous agent loops entirely and c
 
 ---
 
-### 8. What exactly will be tested over 18 months?
-Five causally chained research questions across 13,200 benchmark trajectories:
+### 8. What exactly will be tested over 24 months?
+Seven causally chained research questions across rigorous benchmark trajectories:
 *   *Core RQ1 (State Classification):* Testing whether 4-tier typed schemas reduce state corruption by $\ge 80\%$ on SWE-bench Lite.
-*   *Core RQ2 (Causal Reconstruction):* Testing whether Merkle DAG event trees achieve $\ge 80\%$ root-cause failure attribution on AgentErrorBench (Zhu et al., arXiv:2509.25370, 2025).
-*   *Core RQ3 (Authority Integrity):* Testing whether the Deterministic Effect Gate achieves an observed $\text{UER} = 0$ across $N=1,000$ prompt injection attacks (zero unauthorized mutating executions observed; one-sided 95% Clopper-Pearson upper bound $< 0.003$).
+*   *Core RQ2 (Causal Reconstruction):* Testing whether Merkle DAG event trees achieve $\ge 80\%$ root-cause failure attribution.
+*   *Core RQ3 (Authority Integrity):* Testing whether the Deterministic Effect Gate achieves an observed $\text{UER} = 0$ across $N=1,000$ prompt injection attacks.
 *   *Core RQ4 (Experience Admission):* Testing whether micro-sandbox regression testing maintains $\ge 98\%$ retention under MINJA poisoning.
-*   *Core RQ5 (Trajectory Survival):* Testing whether checkpoint rollback doubles $\text{MDDD}_{0.90}$ over unmanaged baselines on GAIA Level 3.
+*   *Core RQ5 (Adaptation Portability):* Testing whether learned skills/harnesses transfer across models with an Adaptation Transfer Ratio $\text{ATR} \ge 0.80$.
+*   *Core RQ6 (Trajectory Survival):* Testing whether checkpoint rollback doubles $\text{MDDD}_{0.90}$ over unmanaged baselines on GAIA Level 3.
+*   *Core RQ7 (IAM Integration):* Testing whether Trust Substrate integrity holds when bound to live enterprise OIDC roles.
+
+---
+
+### 9. What are the eight research checkpoint gates?
+*   **Gate M3:** Interception overhead $\le 30\text{ms}$; state exceptions reduced by $\ge 80\%$.
+*   **Gate M6:** Causal failure attribution rate $\text{CRR} \ge 80\%$.
+*   **Gate M9 (Main Wedge):** Observed $\text{UER} = 0$ across $N=1,000$ red-team attacks; false denials $\le 2.0\%$.
+*   **Gate M12:** False-Promotion Rate $\text{FPR} \le 0.02$; downstream retention $\ge 98\%$.
+*   **Gate M15:** Harness Generalization transfer achieves $\text{ATR} \ge 0.80$.
+*   **Gate M18 (Scientific Gate):** $\text{MDDD}_{0.90} \ge 2.0\times$ baseline ($p < 0.01$ Log-Rank test).
+*   **Gate M21:** Cross-model replication and IAM integration holds bounds.
+*   **Gate M24 (Company Verdict):** Design partner validation and formal proceed/pivot/stop verdict.
+
+---
+
+### 10. What does the requested capital buy?
+**USD 400,000 over 24 months** (Budget Assumption as of September 2026) funds:
+*   Full-time founder subsistence (\$120k) and part-time Research Engineer (\$72k).
+*   Inference compute for extended benchmark campaigns (\$62k) and infrastructure/observability (\$36k).
+*   Security bounties/red-teaming (\$18k) and hardware/operations (\$24k).
+*   A strategic contingency reserve (\$40k) buffering API volatility and expanding replication.
+
+---
+
+### 11. What result kills the thesis?
+*   **At M9:** If capability tokens and kernel sandboxing fail to stop unauthorized mutating effects ($\text{UER} > 0.001$).
+*   **At M18:** If checkpoint rollback fails to double $\text{MDDD}_{0.90}$ with $p < 0.01$.
+
+If Gate M18 fails, **we will stop pursuing the broad company thesis and either wind down the program or pursue only a narrower direction if supported by evidence and investor governance.** We will not pivot to a generic AI wrapper.
+
+---
+
+### 12. What result would justify a subsequent seed round?
+A subsequent institutional Seed round at M24 would become defensible if gibbrn demonstrates:
+1.  The Effect Gate maintains an observed $\text{UER} = 0$ across $N=1,000$ red-team attacks.
+2.  gibbrn-managed adaptive agents achieve a pre-registered, practically meaningful improvement in survival depth ($\text{MDDD}_{0.90} \ge 2.0\times$ baseline, $p < 0.01$).
+3.  Learned skills and harnesses exhibit cross-model portability ($\text{ATR} \ge 0.80$).
+4.  External deployment evaluations confirm integration with live IAM providers.
 
 ---
 

@@ -88,16 +88,16 @@ Rigid Pipelines (Agentless / Temporal)   Managed Autonomy (gibbrn)      Unmanage
 
 ---
 
-## 4. Falsifiable 18-Month Core Research Objective
+## 4. Falsifiable 24-Month Core Research Objective
 
-The 18-month R&D program funded by this capital request is designed to validate or falsify the following formal proposition:
+The 24-month R&D program funded by this capital request is designed to validate or falsify the following formal proposition:
 
-$$\mathcal{H}_1: \text{On tasks requiring dynamic exploratory branching, a deterministic authority and state-integrity layer}$$
-$$\text{measurably extends empirical trajectory survival depth while maintaining near-zero unauthorized effects,}$$
+$$\mathcal{H}_1: \text{On tasks requiring dynamic exploratory branching and adaptation, a deterministic authority and state-integrity layer}$$
+$$\text{measurably extends empirical trajectory survival depth and adaptation portability, while maintaining near-zero unauthorized effects,}$$
 $$\text{without modifying underlying foundation model weights.}$$
 
 $$\mathcal{H}_0: \text{External state integrity constraints provide no statistically significant improvement in long-horizon}$$
-$$\text{task survival over unmanaged agent loops, or impose latency and execution friction that negates reliability gains.}$$
+$$\text{task survival over unmanaged adaptive loops, or impose latency and execution friction that negates reliability gains.}$$
 
 ---
 

@@ -151,3 +151,17 @@ $$\sigma_{\text{cand}} \xrightarrow{\text{Admit}} \mathcal{S}_{\text{ops}} \iff 
 $$\forall \text{Grant}(a), \quad \text{TTL}(\text{Grant}) \le 2000\text{ms} \quad \land \quad \text{SingleUse}(\text{Grant}) = \text{True}$$
 
 Upon execution dispatch, the token is atomically consumed. If execution does not occur within the TTL window, the grant expires, preventing delayed or replayed execution.
+
+### Invariant 6: Independent Trust Anchor
+*Classification: Core Architectural Boundary (Design Invariant)*
+
+> **Formal Statement:** No component whose behavior is autonomously mutable by the cognitive system may independently expand its own identity, authority, credentials, policy scope, or approval rights.
+
+The Trust Substrate sits explicitly outside the mutability radius. Evolving skills and harnesses may request expanded access, but the authorization binding can only be updated by the Root Trust Anchor (Human Principal / IAM).
+
+### Invariant 7: Adaptation Provenance
+*Classification: Traceability Specification (Design Invariant)*
+
+> **Formal Statement:** Every durable behavioral adaptation must be attributable to a source experience, evaluator, environment, model/harness context, admission decision, and version lineage.
+
+When an agent evolves a new skill or harness policy, the canonical state must record not just the new artifact, but its exact adaptation lineage, answering: *Why does the agent behave this way now?*

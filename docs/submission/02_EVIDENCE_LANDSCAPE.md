@@ -10,27 +10,27 @@
 
 ## 1. Executive Synthesis: The Tripartite Layering of Autonomous Systems
 
-A foundational systems insight emerging from 2024–2026 artificial intelligence research is the physical and computational decoupling of the agent execution stack into three distinct layers:
+A foundational systems insight emerging from 2024–2026 artificial intelligence research is the physical and computational decoupling of the agent execution stack into three distinct layers (substrates):
 
-```
+```text
 +-----------------------------------------------------------------------------------+
-| LAYER 1: COGNITIVE PROCESSOR (Foundation Model)                                  |
-| Properties: Probabilistic, autoregressive token generation, stateless weights.    |
+| LAYER 1: ADAPTIVE COGNITION (Mutable)                                             |
+| Properties: Probabilistic, evolving. Changes skills, memories, and harness policy.|
 | Function: Heuristic reasoning, semantic translation, candidate action proposal.   |
 +-----------------------------------------------------------------------------------+
                                          |
                                          v
 +-----------------------------------------------------------------------------------+
-| LAYER 2: COMPUTATIONAL HARNESS (Framework / Execution Runtime)                    |
-| Properties: Event loop, tool dispatcher, context window memory manager.           |
+| LAYER 2: EXECUTION SUBSTRATE (Framework / Runtime)                                |
+| Properties: Event loop, durable state, recovery, and isolation.                   |
 | Function: Formats prompts, invokes local APIs, manages transient active cache.    |
 +-----------------------------------------------------------------------------------+
                                          |
                                          v
 +-----------------------------------------------------------------------------------+
-| LAYER 3: STATE INTEGRITY & CONTROL PLANE (gibbrn Proposed Wedge)                  |
+| LAYER 3: TRUST SUBSTRATE & INTEGRITY CONTROL (gibbrn Proposed Wedge)              |
 | Properties: Canonical, deterministic, append-only, out-of-process, enforced.      |
-| Function: Capability gates, provenance tracking, sandbox containment, checkpoints.|
+| Function: Capability gates, identity, provenance tracking, sandbox containment.   |
 +-----------------------------------------------------------------------------------+
 ```
 
@@ -40,7 +40,19 @@ The public systems and product literature reviewed for this dossier is substanti
 
 ## 2. Empirical Research Findings Shaping this Dossier
 
-### 2.1 Harness Architecture Sensitivity (Observed Across Literature; Causal Attribution Pre-Experimental) [GIBBRN label]
+### 2.1 Continual Learning via Skill-Space (MASkills) [ESTABLISHED EVIDENCE]
+Recent studies indicate that continual learning is moving from "memory" retrieval toward procedural skill-space optimization. The MASkills framework (arXiv:2609.02094, 2026) demonstrates that assigning credit to reusable skills—and hierarchically inducing or pruning them over time—yields concrete performance improvements. This suggests that procedural skill stores will become the practical middle layer for continual learning, strengthening the thesis for verified external skill substrates over pure model weight updates.
+
+### 2.2 Harness Co-adaptation and Portability Deficits (HarnessDev) [SUPPORTED]
+Self-improving harnesses exist but do not transfer cleanly. Research such as HarnessDev (arXiv:2609.01437, 2026) shows that agents can iteratively evolve their execution infrastructures, but these gains are highly co-adapted to the specific model, domain, and task distribution. Evolutionary gains remain unstable and transfer only partially to hidden tasks. This establishes *harness generalization* as a distinct and unsolved systems problem.
+
+### 2.3 Agent Identity as Enterprise Infrastructure [EMERGING EVIDENCE]
+Agent identity is crossing from academic safety discussions into deployed enterprise security infrastructure. The introduction of the CrowdStrike Agentic Identity Provider (Sept 2026) and legislative efforts like the Stop Rogue AI Act signal a convergence between agent security and IAM. Autonomous agents will increasingly require distinct authenticated identities, scoped delegation, continuous authorization, and action provenance—trust anchors that the cognitive system cannot unilaterally control.
+
+### 2.4 Exploratory Future Validity: 3D-Aware World Action Models [EMERGING]
+Embodied world models are shifting from pixel-level video prediction to predicting action-conditioned spatial state transitions (e.g., Spatially Aware World Action Model via Geometric Latent Diffusion, arXiv:2609.02531). While not in the core 24-month scope, this evolution raises the future applicability question of whether agent state integrity constraints generalize to agents whose mutable world model encodes physical, geometric state.
+
+### 2.5 Harness Architecture Sensitivity (Observed Across Literature; Causal Attribution Pre-Experimental) [GIBBRN label] (Observed Across Literature; Causal Attribution Pre-Experimental) [GIBBRN label]
 
 *   **Literature Observation:** Research across SWE-bench evaluations (Yang et al., NeurIPS 2024 [4]; Xia et al., 2024 [5]) demonstrates that different agentic scaffolding architectures yield substantially different resolution rates on the same coding benchmark with similar models — differences on the order of tens of percentage points have been observed in the literature (e.g., Agentless achieving 32% resolve on SWE-bench Lite with GPT-4o [5]; SWE-agent achieving a different resolution profile with a custom agent-computer interface [4]).
 
@@ -108,6 +120,10 @@ Table 2.2 documents the empirical standing of every foundational proposition und
 
 | Claim / Phenomenon | Source Literature | Evidence Status | Replicated / Confirmed | gibbrn Architectural Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| Continual learning progresses faster in procedural skill-space than weight updates | MASkills (arXiv:2609.02094, Sept 2026) [15] | **ESTABLISHED EVIDENCE** | Evaluated on HotpotQA, LoCoMo, GAIA | Justifies Engine 3 (Verified Adaptation Engine) for skills. |
+| Self-evolved harnesses are strongly co-adapted and lack domain/model portability | HarnessDev (arXiv:2609.01437, Sept 2026) [16] | **SUPPORTED** | Evaluated across 2,207 downstream instances | Introduces RQ5 (Harness Generalization) and ATR metric. |
+| Agent identity, scoped delegation, and IAM convergence | CrowdStrike AIP (Sept 2026), Stop Rogue AI Act [17], [18] | **EMERGING INFRASTRUCTURE** | Initial enterprise productization phase | Enforces Invariant 6 (Independent Trust Anchor) for IAM isolation. |
+| Geometry-aware spatial world-action models | Geometric Latent Diffusion (arXiv:2609.02531, Sept 2026) [19] | **EMERGING** | SOTA on RoboCasa and LIBERO-Plus | Defines post-M24 external validity exploratory track. |
 | Runtime harness scaffolding is a significant variable on code tasks (exact magnitude uncontrolled across papers) | Yang et al. (NeurIPS 2024) [4], Xia et al. (2024) [5] | **ESTABLISHED SENSITIVITY; CAUSAL ATTRIBUTION PRE-EXPERIMENTAL** | Observed across SWE-bench Lite evaluations; comparative controls not fully isolated | Prioritizes runtime state control over model fine-tuning. |
 | In-context self-reflection is non-monotonic without external grounding | Jie Huang et al. (ICLR 2024) [7], Valmeekam et al. (NeurIPS 2023) [8] | **SUPPORTED** | Confirmed across planning and reasoning benchmarks | Mandates external test-suite validators for experience admission. |
 | Memory injection attacks (MINJA) compromise agent memory in evaluated configurations | S. Dong et al. (NeurIPS 2025) [10], OWASP ASI06 [9] | **SUPPORTED / DEMONSTRATED IN EVALUATED SETTINGS** | Confirmed against evaluated frontier model configurations | Decouples memory reads from capability authorization. |
@@ -136,3 +152,8 @@ Table 2.2 documents the empirical standing of every foundational proposition und
 *   [12] F. Perez and I. Ribeiro, "Ignore Previous Prompt: Attack Techniques For Language Models," *arXiv preprint arXiv:2305.14874*, 2023.
 *   [13] L. Lamport, "Time, Clocks, and the Ordering of Events in a Distributed System," *Commun. ACM*, vol. 21, no. 7, pp. 558–565, 1978.
 *   [14] P. A. Bernstein, V. Hadzilacos, and N. Goodman, *Concurrency Control and Recovery in Database Systems*. Addison-Wesley, 1987.
+*   [15] MASkills: Continual Skills Optimization for Multi-Agent LLM Systems, *arXiv preprint arXiv:2609.02094*, Sept 2026.
+*   [16] HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?, *arXiv preprint arXiv:2609.01437*, Sept 2026.
+*   [17] CrowdStrike Holdings, Inc., "Introducing CrowdStrike Agentic Identity Provider," Press Release, Sept 2, 2026.
+*   [18] Axios, "House bill targets rogue AI agents security," Sept 3, 2026.
+*   [19] Spatially Aware World Action Model via Geometric Latent Diffusion, *arXiv preprint arXiv:2609.02531*, Sept 2026.

@@ -1,7 +1,7 @@
 # 07: Core Research Program (24-Month Scientific Execution)
 
-**Document Track:** R&D Timeline & Binding Falsification Gates (Version 3)  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Document Track:** R&D Timeline & Binding Falsification Gates (Version 3.0)  
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
 **Audience:** Deep-Tech Investors, 1517 Fund Partners, Technical Founders  
 
 ## 1. The 16-Checkpoint / 8-Gate Methodology
@@ -75,7 +75,7 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 *   **Target:** Verify the integrated 3-substrate architecture significantly extends trajectory survival over deep tasks.
 *   **Empirical Hurdle:** $\text{MDDD}_{0.90}(\text{gibbrn}) \ge 2.0\times$ unmanaged baseline with $p < 0.01$ (Core RQ6).
 *   **Verdict Matrix:**
-    - PROCEED: Thesis mathematically validated on core datasets.
+    - PROCEED: Pre-registered empirical thesis criterion satisfied on the core evaluation suite.
     - STOP/PIVOT: Failure to outperform static Agentless pipelines.
 
 ### Gate M21 (Month 21) — Cross-Model Replication & Delegation Integration
@@ -87,7 +87,7 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 
 ### Gate M24 (Month 24) — Company Thesis Verdict
 *   **Target:** Real-world execution with $\le 2$ external design partners.
-*   **Empirical Hurdle:** Demonstrable ROI on secure adaptive deployments.
+*   **Empirical Hurdle:** Demonstrable ROI (e.g. measurable reduction in integration cost or incident recovery time compared to unmanaged agents) on secure adaptive deployments.
 *   **Final Verdict Matrix:**
     - **PROCEED:** Raise Seed capital to scale the platform.
     - **NARROW/PIVOT:** Target highly specific verticals if general autonomy fails.

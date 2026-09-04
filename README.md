@@ -1,10 +1,10 @@
 # GIBBRN — Agent State Integrity Layer
 
-### 18-Month Systems Research & Prototype Program
+### 24-Month Systems Research & Prototype Program
 **Target Audience:** 1517 Fund Investment Committee, Distributed Systems Researchers, AI Security Architects  
-**Repository:** `github.com/agenticbernie/gibbrn-research`  
+**Repository:** `github.com/agenticbernie/gibbrn-research-research`  
 **Status:** Pre-Seed R&D-Stage Systems Hypothesis (Checkpoint-Gated Empirical Program)  
-**Primary Capital Ask:** **USD 285,000** for an 18-Month Founder-Led Systems Research Program  
+**Primary Capital Ask:** **USD 285,000** for an 24-Month Founder-Led Systems Research Program  
 **License:** Strict Restricted Non-Commercial & Anti-Training License (See [`LICENSE`](./LICENSE))  
 
 ---
@@ -19,7 +19,7 @@
 
 Specifically, the project researches whether a framework-neutral control layer can preserve the integrity, authority, provenance, validation status, and recoverability of consequential agent state as autonomous systems operate, accumulate experience, and change over time.
 
-This repository hosts the complete **18-Month R&D Technical Dossier**, which has undergone both an intensive 1517-oriented Adversarial Diligence Simulation and an independent Submission-Grade Evidence Verification Pass.
+This repository hosts the complete **24-Month R18-Month R&D Technical DossierD Technical Dossier**, which has undergone both an intensive 1517-oriented Adversarial Diligence Simulation and an independent Submission-Grade Evidence Verification Pass.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -54,7 +54,7 @@ Architectural complexity has been disciplined into **three physical engines**:
     - Out-of-process daemon (Rust/Go) intercepting mutating tool requests.
     - Issues short-lived, single-use capability leases (TTL $\le 2000\text{ms}$) mitigating TOCTOU race conditions.
     - Couples capability checks with **gVisor (runsc) micro-sandboxes** to constrain the blast radius of malicious or unsafe tool parameters at the OS boundary.
-3.  **Engine 3: The Experience Admission Engine (Verifier-Rich Skill Governance)**
+3.  **Engine 3: The Verified Adaptation Engine (Verifier-Rich Skill Governance)**
     - Narrowed strictly to verifier-rich domains (deterministic Python functions and Bash tool macros).
     - Enforces Git quarantine staging branches and micro-sandbox regression testing before promoting skills to durable memory.
 
@@ -66,7 +66,7 @@ All project documentation is structured in the [`docs/`](./docs/README.md) direc
 
 ```
 docs/
-├── submission/         <-- [PRIMARY DOSSIER] Primary submission candidate — evidence-verified 18-month research dossier (13 files)
+├── submission/         <-- [PRIMARY DOSSIER] Primary submission candidate — evidence-verified 24-month research dossier (13 files)
 ├── verification/       <-- Complete audit ledgers from the final evidence verification pass (10 files)
 ├── diligence_audit/    <-- 1517-oriented adversarial diligence simulation reports (12 files)
 └── archive/            <-- Historical working archives preserving complete scientific lineage
@@ -85,7 +85,7 @@ docs/
 | **[04](./docs/submission/04_ARCHITECTURE.md)** | Systems Architecture | Three Physical Engines, gVisor sandboxing, dataflow diagrams, labeled latency budgets. |
 | **[05](./docs/submission/05_SECURITY_AND_FAILURE_MODEL.md)** | Security & Threat Model | Hardened security model: parameter smuggling defenses, kernel isolation, TOCTOU leases. |
 | **[06](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Five causally chained Core RQs, discrete survival hazard modeling for $\text{MDDD}_\tau$, pre-registration. |
-| **[07](./docs/submission/07_24_MONTH_ROADMAP.md)** | 24-Month R&D Roadmap | Six milestone gates (M3–M18) with explicit Kill / Narrow / Pivot criteria. |
+| **[07](./docs/submission/07_24_MONTH_ROADMAP.md)** | 24-Month R&D Roadmap | Eight binding falsification gates (M3–M18) with explicit Kill / Narrow / Pivot criteria. |
 | **[08](./docs/submission/08_CAPITAL_PLAN.md)** | Capital & Expense Model | Primary \$285,000 budget vs. \$120,000 fallback, compute modeling, and capital-at-risk. |
 | **[09](./docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Genuine novelty vs. plumbing, OCAP security lineage, competitor analysis, platform risk. |
 | **[10](./docs/submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Technical Brief | High-density 12-question diligence summary for the 1517 Fund Investment Committee. |

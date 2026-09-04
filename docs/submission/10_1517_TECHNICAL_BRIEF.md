@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Executive Investor Diligence & Systems Brief  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
 **Target:** 1517 Fund Investment Committee  
 **Standard:** 12 Direct Diligence Responses (Post-Adversarial Diligence)  
 
@@ -15,7 +15,7 @@
 
 ### 2. What changed after the latest research cycle and adversarial audit?
 1.  **Separation of Thesis from Initial Wedge:** Broad "Agent Operating System" claims were abandoned in favor of a sharp, high-value wedge: the **Deterministic Effect Gate**.
-2.  **Subsystem Consolidation (5 $\to$ 3 Engines):** Merged redundant components into three physical engines: the *Causal State Spine*, the *Deterministic Effect Gate*, and the *Experience Admission Engine*.
+2.  **Subsystem Consolidation (5 $\to$ 3 Engines):** Merged redundant components into three physical engines: the *Causal State Spine*, the *Deterministic Effect Gate*, and the *Verified Adaptation Engine*.
 3.  **Mathematical Reformulation:** Replaced the naive geometric error compounding formula ($P = p^d$) with formal **discrete survival analysis hazard rate modeling** ($S(k) = \prod (1 - h(i))$).
 4.  **Academic Remediation:** Audited and corrected citations; primary citations verified against source repositories. Key corrections include: Dong et al. (MINJA) classified as NeurIPS 2025 (not 2024); AgentErrorBench attribution corrected to Zhu et al. (2025).
 5.  **Capital Ask Clarification:** Established approximately **\$285,000** as the primary pre-seed ask for an 18-month founder-led systems research program, including budget capacity for part-time research engineering support.
@@ -59,7 +59,7 @@ Seven causally chained research questions across rigorous benchmark trajectories
 *   *Core RQ1 (State Classification):* Testing whether 4-tier typed schemas reduce state corruption by $\ge 80\%$ on SWE-bench Lite.
 *   *Core RQ2 (Causal Reconstruction):* Testing whether Merkle DAG event trees achieve $\ge 80\%$ root-cause failure attribution.
 *   *Core RQ3 (Authority Integrity):* Testing whether the Deterministic Effect Gate achieves an observed $\text{UER} = 0$ across $N=1,000$ prompt injection attacks.
-*   *Core RQ4 (Experience Admission):* Testing whether micro-sandbox regression testing maintains $\ge 98\%$ retention under MINJA poisoning.
+*   *Core RQ4 (Verified Adaptation):* Testing whether micro-sandbox regression testing maintains $\ge 98\%$ retention under MINJA poisoning.
 *   *Core RQ5 (Adaptation Portability):* Testing whether learned skills/harnesses transfer across models with an Adaptation Transfer Ratio $\text{ATR} \ge 0.80$.
 *   *Core RQ6 (Trajectory Survival):* Testing whether checkpoint rollback doubles $\text{MDDD}_{0.90}$ over unmanaged baselines on GAIA Level 3.
 *   *Core RQ7 (IAM Integration):* Testing whether Trust Substrate integrity holds when bound to live enterprise OIDC roles.
@@ -101,45 +101,6 @@ A subsequent institutional Seed round at M24 would become defensible if gibbrn d
 2.  gibbrn-managed adaptive agents achieve a pre-registered, practically meaningful improvement in survival depth ($\text{MDDD}_{0.90} \ge 2.0\times$ baseline, $p < 0.01$).
 3.  Learned skills and harnesses exhibit cross-model portability ($\text{ATR} \ge 0.80$).
 4.  External deployment evaluations confirm integration with live IAM providers.
-
----
-
-### 9. What are the six research checkpoint gates?
-*   **Gate M3 (Foundations):** Interception overhead $\le 30\text{ms}$; state exceptions reduced by $\ge 80\%$.
-*   **Gate M6 (Causal Spine):** Causal failure attribution rate $\text{CRR} \ge 80\%$.
-*   **Gate M9 (Effect Gate - Main Wedge):** Observed $\text{UER} = 0$ across $N=1,000$ red-team attacks (zero unauthorized mutating executions; one-sided 95% upper bound $< 0.003$; operational benchmark tolerance $\le 0.001$); false denials $\le 2.0\%$; latency $\le 15\text{ms}$.
-*   **Gate M12 (Experience Admission):** False-Promotion Rate $\text{FPR} \le 0.02$; downstream retention $\ge 98\%$.
-*   **Gate M15 (Survival - Company Thesis Gate):** $\text{MDDD}_{0.90} \ge 2.0\times$ baseline ($p < 0.01$ Log-Rank test).
-*   **Gate M18 (Final Thesis Gate):** Cross-model replication, target of up to 2 external pilot evaluations (contingent on partner availability and workflow match), and formal proceed/pivot/stop verdict.
-
----
-
-### 10. What does the requested capital buy?
-**USD 285,000 over 18 months** (Budget Assumption as of September 2026) funds:
-*   Full-time founder subsistence for the Principal Systems Researcher (\$90k).
-*   Budget allocation for a part-time Research Systems Engineer / contractor (contingent on funding, \$54k).
-*   13,200 benchmark trajectories across frontier models (\$48k API compute; sensitive to token rate shifts).
-*   Dedicated bare-metal gVisor cloud microVM clusters (\$28.8k).
-*   External adversarial red-teaming bounties (\$15k).
-*   Tooling, legal formation, trademark, and conference dissemination (\$21.2k).
-*   A 10% contingency reserve (\$28k) buffering against token price shocks.
-
----
-
-### 11. What result kills the thesis?
-*   **At M3:** If synchronous proxy interception adds $>50\text{ms}$ latency.
-*   **At M9:** If capability tokens and kernel sandboxing fail to stop unauthorized mutating effects ($\text{UER} > 0.001$).
-*   **At M15:** If checkpoint rollback fails to double $\text{MDDD}_{0.90}$ with $p < 0.01$.
-
-If Gate M15 fails, **we will stop pursuing the broad company thesis and either wind down the program or pursue only a narrower direction if supported by evidence and investor governance.** We will not pivot to a generic AI wrapper.
-
----
-
-### 12. What result would justify a subsequent seed round?
-A subsequent institutional Seed round would become defensible if gibbrn demonstrates that on tasks requiring exploratory branching:
-1.  gibbrn-managed agents achieve a pre-registered, practically meaningful improvement in survival depth and task completion over unmanaged baselines (Gate M15 target: $\text{MDDD}_{0.90} \ge 2.0\times$ baseline, $p < 0.01$).
-2.  The Effect Gate maintains an observed $\text{UER} = 0$ across $N=1,000$ red-team attacks (zero unauthorized mutating executions observed; one-sided 95% Clopper-Pearson upper bound $< 0.003$).
-3.  External deployment evaluations confirm integration with $<20\text{ms}$ latency overhead and measurable failure-recovery savings.
 
 ---
 

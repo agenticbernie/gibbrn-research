@@ -17,7 +17,7 @@ The documentation in this repository is organized into four distinct tiers refle
 
 ```
 docs/
-├── submission/         <-- [PRIMARY] Primary submission candidate — evidence-verified 18-month research dossier (13 files)
+├── submission/         <-- [PRIMARY] Primary submission candidate — evidence-verified 24-month research dossier (13 files)
 ├── verification/       <-- Complete audit ledgers from the final evidence verification pass (10 files)
 ├── diligence_audit/    <-- Adversarial diligence audit reports modeled on a 1517-style technical review (12 files)
 └── archive/            <-- Historical working archives preserving complete scientific lineage
@@ -40,7 +40,7 @@ The canonical, publication-ready research dossier. Every externally checkable cl
 | **[`04_ARCHITECTURE.md`](./submission/04_ARCHITECTURE.md)** | Systems Architecture | The Three Physical Engines (Spine, Effect Gate, Admission Engine), gVisor sandboxing, labeled latency targets. |
 | **[`05_SECURITY_AND_FAILURE_MODEL.md`](./submission/05_SECURITY_AND_FAILURE_MODEL.md)** | Security & Threat Model | Hardened security model: parameter smuggling defenses, kernel isolation, TOCTOU leases, failure taxonomy. |
 | **[`06_CORE_RESEARCH_PROGRAM.md`](./submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Five causally chained Core RQs, discrete survival hazard modeling for $\text{MDDD}_\tau$, pre-registration commitment. |
-| **[`07_18_MONTH_ROADMAP.md`](./submission/07_18_MONTH_ROADMAP.md)** | 18-Month R&D Roadmap | Six checkpoint gates (M3–M18) with explicit, binding Kill / Narrow / Pivot criteria. |
+| **[`07_24_MONTH_ROADMAP.md`](./submission/07_24_MONTH_ROADMAP.md)** | 18-Month R&D Roadmap | Six checkpoint gates (M3–M18) with explicit, binding Kill / Narrow / Pivot criteria. |
 | **[`08_CAPITAL_PLAN.md`](./submission/08_CAPITAL_PLAN.md)** | Capital & Expense Plan | Primary \$285,000 budget vs. \$120,000 fallback, compute modeling across 13,200 trajectories, capital-at-risk. |
 | **[`09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Genuine systems novelty vs. commoditized plumbing, OCAP security lineage, competitor analysis, platform risks. |
 | **[`10_1517_TECHNICAL_BRIEF.md`](./submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Investor Technical Brief | High-density 12-question diligence responses for the 1517 Fund Investment Committee. |

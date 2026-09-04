@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Core Research Thesis & Problem Formulation  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
 **Audience:** Distributed Systems Researchers, AI Security Architects, 1517 Fund  
 **Evidence Standard:** Epistemic demarcation required for all claims. Established | Emerging | GIBBRN Inference | Design Hypothesis | Engineering Target  
 
@@ -38,7 +38,7 @@ When deployed across long dependency chains, four compounding failure modes emer
 
 ## 2. Updated Project Positioning: Research Thesis vs. Initial Wedge
 
-To maintain disciplined systems boundaries, this dossier formally bifurcates the project into its **broad 18-month research thesis** and its **concrete initial technical wedge**:
+To maintain disciplined systems boundaries, this dossier formally bifurcates the project into its **broad 24-month research thesis** and its **concrete initial technical wedge**:
 
 ### 2.1 The Broad Research Thesis: Agent State Integrity
 > **gibbrn investigates whether a framework-neutral control layer can preserve the integrity, authority, provenance, validation status, and recoverability of consequential agent state as autonomous agents operate and change over time.**
@@ -50,7 +50,7 @@ To maintain disciplined systems boundaries, this dossier formally bifurcates the
 > **Which agent state may safely remain probabilistic and model-maintained, and which state must remain canonical, deterministic, provenance-preserving, validated, versioned, and externally enforced?**
 
 ### 2.2 The Initial Technical Wedge: Deterministic Authority and Effect Integrity
-While the long-term research investigates full state integrity, the immediate 18-month engineering wedge is focused on a razor-sharp enterprise problem:
+While the long-term research investigates full state integrity, the immediate 24-month engineering wedge is focused on a razor-sharp enterprise problem:
 
 > **gibbrn is researching how autonomous agents can change their cognitive reasoning without silently changing what they are allowed to do in the external world.**
 

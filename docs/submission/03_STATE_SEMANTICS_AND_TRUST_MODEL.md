@@ -1,8 +1,8 @@
 # 03 — Agent State Semantics, Access Control, and Trust Model (Submission)
 
 **Project Name:** GIBBRN  
-**Document Track:** State Formalization & Trust Architecture (Version 2)  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Document Track:** State Formalization & Trust Architecture (Version 3.0)  
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
 **Audience:** Formal Methods Researchers, Distributed Systems Engineers, 1517 Fund  
 **Formal Standard:** Design Invariants (Clearly Separated from Empirical Proofs)  
 
@@ -10,7 +10,7 @@
 
 ## 1. The Four-Class Agent State Taxonomy (Design Hypothesis)
 
-To prevent the dangerous conflation of scratchpad thoughts with authoritative privileges, gibbrn formalizes a **Four-Class State Taxonomy**. We present this taxonomy not as established natural law, but as a **falsifiable systems design hypothesis** to be tested across the 18-month research program.
+To prevent the dangerous conflation of scratchpad thoughts with authoritative privileges, gibbrn formalizes a **Four-Class State Taxonomy**. We present this taxonomy not as established natural law, but as a **falsifiable systems design hypothesis** to be tested across the 24-month research program.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -102,7 +102,7 @@ gibbrn does not declare itself an arbitrary root of trust. The root trust anchor
 
 ## 4. Formal Software Design Invariants
 
-We define five core design invariants that gibbrn implements in software. These are formal specifications of the target implementation, not claimed laws of physics.
+We define seven core design invariants that gibbrn implements in software. These are formal specifications of the target implementation, not claimed laws of physics.
 
 ### Invariant 1: Non-Laundering of Authority
 *Classification: Core Architectural Specification (Design Invariant)*
@@ -134,7 +134,7 @@ $$\mathcal{G}(a, \mathcal{S}_{\text{auth}}, \mathcal{S}_{\text{safe}}) = \begin{
 \text{DENY}, & \text{otherwise}
 \end{cases}$$
 
-### Invariant 4: Externally Grounded Experience Admission
+### Invariant 4: Externally Grounded Verified Adaptation
 *Classification: Research Hypothesis (To be evaluated in Core RQ4)*
 
 > **Formal Statement:** A newly discovered operational procedure $\sigma_{\text{cand}}$ cannot be admitted into canonical operational state $\mathcal{S}_{\text{ops}}$ based on model self-evaluation.
@@ -157,7 +157,7 @@ Upon execution dispatch, the token is atomically consumed. If execution does not
 
 > **Formal Statement:** No component whose behavior is autonomously mutable by the cognitive system may independently expand its own identity, authority, credentials, policy scope, or approval rights.
 
-The Trust Substrate sits explicitly outside the mutability radius. Evolving skills and harnesses may request expanded access, but the authorization binding can only be updated by the Root Trust Anchor (Human Principal / IAM).
+The Trust Substrate sits explicitly outside the mutability radius. Evolving skills and harnesses may request expanded access, but the authorization binding can only be updated by the Root Trust Anchor (Human Principal / IAM). In other words, authorized mutation is permitted, but autonomous elevation is not.
 
 ### Invariant 7: Adaptation Provenance
 *Classification: Traceability Specification (Design Invariant)*

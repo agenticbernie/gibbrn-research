@@ -1,8 +1,8 @@
 # 06 — Core Research Program and Experimental Methodology (Submission)
 
 **Project Name:** GIBBRN  
-**Document Track:** Experimental Science & Benchmark Methodology  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Document Track:** Empirical Protocol (Version 3.0)
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification
 **Audience:** Empirical AI Researchers, Benchmark Methodologists, 1517 Fund  
 **Methodological Standard:** Five Causally Chained Core Questions with Survival Analysis  
 
@@ -25,7 +25,7 @@ Core RQ3: Authority and Effect Integrity (PRIMARY INITIAL WEDGE)
 Can canonical authority eliminate unauthorized external mutations without high false denials?
                          |
                          v
-Core RQ4: Validated Experience Admission (VERIFIER-RICH DOMAINS)
+Core RQ4: Validated Verified Adaptation (VERIFIER-RICH DOMAINS)
 Can regression-tested experience admission prevent poisoned or regressive memory updates?
                          |
                          v
@@ -102,9 +102,9 @@ $$\hat{S}(k) = \prod_{i: t_i \le k} \left(1 - \frac{d_i}{n_i}\right) \quad (\tex
 
 ---
 
-### Core RQ4 — Validated Experience Admission in Verifier-Rich Domains
+### Core RQ4 — Validated Verified Adaptation in Verifier-Rich Domains
 *   **Research Question:** In verifier-rich domains (Python scripting and Bash tool macros), can automated micro-sandbox regression testing prevent memory poisoning and performance degradation in continual learning loops?
-*   **Hypothesis ($\mathcal{H}_1$):** Under continuous exposure to poisoned and low-quality demonstrations (MINJA-style queries), gibbrn Experience Admission maintains downstream benchmark accuracy ($<2\%$ regression), whereas naive append-and-retrieve vector memory degrades by $\ge 20\%$.
+*   **Hypothesis ($\mathcal{H}_1$):** Under continuous exposure to poisoned and low-quality demonstrations (MINJA-style queries), gibbrn Verified Adaptation maintains downstream benchmark accuracy ($<2\%$ regression), whereas naive append-and-retrieve vector memory degrades by $\ge 20\%$.
 *   **Null Hypothesis ($\mathcal{H}_0$):** Automated micro-sandbox regression testing admits poisoned heuristics ($\text{FPR} > 0.02$) or is too computationally expensive ($>3\times$ baseline token cost).
 *   **Workload:** 300 sequential software tasks with 15% embedded MINJA adversarial injection patterns (45 out of 300 tasks replaced with MINJA-style queries following Dong et al., NeurIPS 2025, inserted at uniformly random positions).
 *   **Harness Controls:** Latin square task order randomization across 3 distinct random seeds.

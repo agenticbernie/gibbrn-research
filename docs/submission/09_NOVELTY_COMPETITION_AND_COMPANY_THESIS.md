@@ -1,8 +1,8 @@
 # 09 — Novelty Decomposition, Competitive Positioning, and Company Thesis (Submission)
 
 **Project Name:** GIBBRN  
-**Document Track:** Systems Novelty, Commercial Strategy & Defensibility (Version 2)  
-**Date:** September 2026 | **Verification Pass:** Submission-Grade  
+**Document Track:** Systems Novelty, Commercial Strategy & Defensibility (Version 3.0)  
+**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
 **Audience:** Deep-Tech Investors, 1517 Fund Investment Committee, Systems Researchers  
 **Demarcation Standard:** Clean Separation of Research Novelty, Engineering, and Market Moats  
 
@@ -25,10 +25,10 @@ In response to `AUDIT_04`, Dossier V2 explicitly abandons inflated claims of "pa
 +-----------------------------------------------------------------------------------+
 | 2. POTENTIALLY NOVEL SYSTEMS SEMANTICS (Core gibbrn Research Contributions):       |
 |    - The Four-Class State Taxonomy separating mutable cognition from authority    |
-|    - Out-of-Context Deterministic Authority Reducer eliminating authority wash   |
-|    - Regression-Gated Experience Admission converting transient memory to tested  |
+|    - Deterministic Effect Gate eliminating authority wash   |
+|    - Regression-Gated Verified Adaptation converting transient memory to tested  |
 |      operational code inside sealed micro-sandboxes                               |
-|    -> VERDICT: Genuine systems research novelty. Target of 18-month program.      |
+|    -> VERDICT: Genuine systems research novelty. Target of 24-month program.      |
 +-----------------------------------------------------------------------------------+
 ```
 
@@ -68,7 +68,7 @@ Table 9.1 systematically contrasts gibbrn with its four primary architectural al
 
 ## 4. Analysis of Potential Commercial Moats
 
-If the 18-month research program succeeds, what becomes defensible?
+If the 24-month research program succeeds, what becomes defensible?
 
 1.  **The Curated Operational Regression Suite (High Value Data Moat):**
     Building automated test harnesses that accurately verify whether an extracted agent skill works across diverse codebases without side effects is extraordinarily difficult. A proprietary corpus of 10,000+ validated operational procedures and regression validators constitutes an authentic data and evaluation moat.
@@ -85,7 +85,7 @@ The dossier acknowledges three primary platform risks:
 
 ### Platform Risk 1: Foundation Model Native Self-Correction
 *   *The Threat:* Model providers (OpenAI, Anthropic, Google) develop internal post-training architectures that maintain 100% state consistency across 100+ steps, rendering external state management redundant.
-*   *The Counter-Reality:* While model reasoning will improve, **authority cannot safely be internal to the model.** An enterprise will never allow a model to be the sole root of trust for its own spending limits and credentials, just as an operating system never allows user-space applications to manage their own kernel page tables.
+*   *The Counter-Reality:* While model reasoning will improve, **authority cannot safely be internal to the model.** For consequential deployments, making the model the sole root of trust creates an unacceptable circular authorization assumption for its own spending limits and credentials, just as an operating system never allows user-space applications to manage their own kernel page tables.
 
 ### Platform Risk 2: Cloud Hyperscaler Commoditization
 *   *The Threat:* AWS Bedrock or Azure AI introduces coarse-grained state-locking middleware that "good enough" solves the problem for enterprise customers.

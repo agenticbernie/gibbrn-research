@@ -75,4 +75,10 @@ The following is the corrected reference list to propagate to all V2 files:
 
 ---
 
+## CORRECTION NOTE (September 2026 review — history preserved, do not delete above)
+
+Row **C17** in this ledger incorrectly confirmed arXiv:2305.14874 as the Perez & Ribeiro prompt-injection paper. Direct re-check shows **arXiv:2305.14874 is an unrelated paper ("From Words to Wires")**. The correct citation is **F. Perez and I. Ribeiro, "Ignore Previous Prompt: Attack Techniques For Language Models," arXiv:2211.09527, Nov 2022** (ML Safety Workshop, NeurIPS 2022; PromptInject; goal hijacking and prompt leaking on GPT-3). The C17 "✅ confirmed" verdict is therefore **superseded** for this row; the supported scope is narrowed to handcrafted goal-hijacking/prompt-leaking, with the authority-laundering framing remaining a GIBBRN inference. Canonical correction lives in `docs/submission/02_EVIDENCE_LANDSCAPE.md` [12]. This ledger's other rows were not line-by-line re-audited in this pass.
+
+---
+
 > **Agents can change. Their integrity must persist.**

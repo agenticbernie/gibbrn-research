@@ -19,15 +19,22 @@ Platform/infra engineers shipping agents with shell, API, or database access; De
 A specified architecture (three engines: Causal State Spine; Deterministic Effect Gate wedge — out-of-process interceptor + short-lived single-use leases + gVisor micro-sandboxes; Verified Adaptation Engine for verifier-rich Python/Bash skills), a 7-question falsifiable protocol suite (RQ1–RQ7), and 8 binding gates (M3–M24). Evidence for the *problem* comes from cited literature (reflection limits, MINJA, HarnessDev portability deficit); evidence for the *solution* does not yet exist — that is what the program buys.
 
 ## 5. What is still unknown?
-Whether checkpoint/rollback doubles survival depth (MDDD₀.₉₀ ≥2.0×); whether regression-gated skill admission runs fast/cheap enough; whether developers adopt an out-of-process daemon; whether adaptations transfer or must be bounded (ATR); whether IAM-bound integrity holds live. Each has a pre-registered kill/narrow threshold.
+Whether checkpoint/rollback doubles survival depth (MDDD₀.₉₀ ≥2.0×); whether regression-gated skill admission runs fast/cheap enough; whether developers adopt an out-of-process daemon; whether adaptations transfer or must be bounded (ATR); whether IAM-bound integrity holds live. Each maps to a proposed kill/narrow threshold in Table 6.2 — frozen at pre-registration before data collection; nothing is preregistered yet.
 
 ## 6. What is the first experiment (Days 1–90, proposed)?
-Minimal interceptor + overhead distribution; RQ1 paired sample (200 SWE-bench Lite tasks); first 200-attack RQ3 pilot slice with Clopper-Pearson bounds; 5–8 discovery interviews; Gate M3 evidence package. Full plan in `08_CAPITAL_PLAN.md` §8.
+Phase 1 (State Semantics + minimal interceptor): out-of-process interceptor for a defined set of synchronous file-write and shell-tool operations (supported-ops list + known bypass paths documented; not all-syscall control); overhead distribution (median + p95); RQ1 paired sample (200 SWE-bench Lite tasks); first 200-attack RQ3 pilot slice with Clopper-Pearson/Wilson bounds; first tranche of 5–8 discovery interviews (of 10–15 total by day 90); Gate M3 evidence package. Full plan in `08_CAPITAL_PLAN.md` §8.
 
-## 7. Why could the founder execute this? (To be supplied)
-Founder identity, background, commitment, and relevant systems/security experience are not documented in this repository. The founder should attach a short founder note before outreach. Nothing about education or employment history is stated or implied here.
+## 7. Founder note — Bernie Nguyen
+
+> I'm Bernie Nguyen, a Ho Chi Minh City–based engineer with an Information Technology engineering degree. I interned as a backend developer at CommandOSS and now work as a community developer across build-in-public, agentic AI, and Web3.
+>
+> Two experiences drive gibbrn. While using AI coding agents, I watched context compaction silently drop agreed requirements and constraints. During my internship, a coding agent edited other engineers' configuration while fixing an unrelated problem — colleagues reminded me of the change. Memory-poisoning research convinced me agent memory is an attack surface worth taking seriously; tracing state through LangGraph and AutoGen showed me debugging without lineage is painful. I haven't reproduced such an incident myself, and I don't claim every state model is broken.
+>
+> My work is public: [ourdash](https://github.com/agenticbernie/ourdash), a typed Python SDK for Dash at v0.1.0 with deliberately narrow scope, and [AeroTwin AI](https://github.com/agenticbernie/aerotwin-ai), where I led backend, system design, and architecture for a local-first airline Ops copilot — Top 5 shortlisted in its Aviation track at Agentic AI Build Week 2026, per the team; parts of that repo remain planning or handoff, not production.
+>
+> I spend 4–6 hours daily on gibbrn (6–10 on some rest days), alongside other commitments. Unproven: whether external integrity controls extend agent survival under adversarial pressure — what this program tests, with kill criteria I will honor.
 
 ## 8. What does the capital buy?
-**USD 400,000 / 24 months** (primary) or **USD 150,000 / 12-month pilot** (M3–M12 fallback, preliminary): founder compensation ($120k proposed), contingent engineering ($72k), compute ($62k), infra ($36k), hardware ($24k), red-team/evaluation ($18k), legal/IP ($9k), dissemination ($7k), reserve ($52k). Each gate publishes pre-registered evidence (Table 6.2); failures trigger Narrow/Pivot/Stop with unspent funds subject to investor governance (separate agreement required; no return promised). 1517 fit: R&D/idea-through-Seed, deep-tech/sci-fi, "who over what"; first checks $50k–$1M per 1517fund.com.
+**USD 400,000 / 24 months** (primary) or **USD 150,000 / 12-month pilot** (M3–M12 fallback, preliminary): founder compensation ($120k proposed), contingent engineering ($72k), compute ($62k), infra ($36k), hardware ($24k), red-team/evaluation ($18k), legal/IP ($9k), dissemination ($7k), reserve ($52k). Each gate publishes evidence per its to-be-preregistered protocol (planning map in Table 6.2; no protocol preregistered as of this dossier); failures trigger Narrow/Pivot/Stop with unspent funds subject to investor governance (separate agreement required; no return promised). 1517 fit: R&D/idea-through-Seed, deep-tech/sci-fi, "who over what"; first checks $50k–$1M per 1517fund.com.
 
 > **Agents can change. Their integrity must persist.**

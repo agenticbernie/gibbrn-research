@@ -65,20 +65,20 @@ Seven causally chained research questions across rigorous benchmark trajectories
 *   *Core RQ3 (Authority Integrity):* Testing whether the Deterministic Effect Gate achieves zero observed unauthorized effects across a $N=1,000$ red-team pilot (95% one-sided upper $\approx 0.003$; confirmatory $N \approx 3{,}000$ required before any "$\le 0.001$" claim), with three-arm controls (unmanaged / conventional-controls / gibbrn).
 *   *Core RQ4 (Verified Adaptation):* Testing whether micro-sandbox regression testing maintains $\ge 98\%$ retention under MINJA poisoning.
 *   *Core RQ5 (Adaptation Portability & Safe Specialization):* Testing whether learned skills and harness policies achieve $\text{ATR} \ge 0.80$ on cross-model transfer, or whether the Verified Adaptation Engine safely bounds domain/model-specific co-adaptation to prevent downstream regressions.
-*   *Core RQ6 (Trajectory Survival):* Testing whether checkpoint rollback doubles $\text{MDDD}_{0.90}$ over unmanaged baselines on GAIA Level 3.
+*   *Core RQ6 (Trajectory Survival):* Testing whether checkpoint rollback doubles $\text{MDDD}_{0.90}$ vs the conventional-controls arm on GAIA Level 3 (point ≥2.0×, CI lower >1.5×, success parity, practicality review; Table 6.2).
 *   *Core RQ7 (IAM Integration):* Testing whether Trust Substrate integrity holds when bound to **mock** enterprise IAM (OIDC/OAuth, cloud role delegation, CrowdStrike-style scoped manifests simulated); live-provider validation deferred to M24.
 
-*First experiment (Days 1–90, proposed):* minimal interceptor + overhead distribution, RQ1 paired sample, first 200-attack RQ3 pilot slice, 5–8 discovery interviews, Gate M3 evidence package. Full plan in `08_CAPITAL_PLAN.md` §8; no results claimed.*
+*First experiment (Days 1–90, proposed; Phase 1: State Semantics + minimal interceptor):* minimal out-of-process interceptor for a defined set of synchronous file-write and shell-tool operations (supported-ops list + known bypass paths documented; not all-syscall control), overhead distribution (median + p95), RQ1 paired sample, first 200-attack RQ3 pilot slice, first tranche of 5–8 discovery interviews (of 10–15 total by day 90), Gate M3 evidence package. Full plan in `08_CAPITAL_PLAN.md` §8; no results claimed.*
 
 ---
 
 ### 9. What are the eight research checkpoint gates?
 *   **Gate M3:** Interception overhead $\le 30\text{ms}$; state exceptions reduced by $\ge 80\%$.
 *   **Gate M6:** Causal failure attribution rate $\text{CRR} \ge 80\%$.
-*   **Gate M9 (Main Wedge):** Zero observed unauthorized effects across the $N=1,000$ pilot (95% upper $\approx 0.003$); false denials $\le 2.0\%$. Single failure → Narrow/Pivot; $>0.001$ or FDR breach → STOP.
+*   **Gate M9 (Main Wedge):** Zero observed unauthorized effects across the $N=1,000$ pilot (95% upper $\approx 0.003$); false denials $\le 2.0\%$ with non-straddling interval ($N_{\text{benign}}=500$ planning assumption); median ≤30ms with tail within proposed bound. Single failure → Narrow/Pivot; $>0.001$ or confirmed FDR/latency breach → STOP. Full disjoint rules in Table 6.2.
 *   **Gate M12:** False-Promotion Rate $\text{FPR} \le 0.02$; downstream retention $\ge 98\%$.
 *   **Gate M15:** Dual-mode satisfaction on Harness Generalization (either portable transfer $\text{ATR} \ge 0.80$, or verified safe specialization bounding co-adaptation with zero downstream regressions).
-*   **Gate M18 (Scientific Gate):** $\text{MDDD}_{0.90} \ge 2.0\times$ baseline ($p < 0.01$ Log-Rank test).
+*   **Gate M18 (Scientific Gate):** $\text{MDDD}_{0.90} \ge 2.0\times$ vs conventional-controls arm ($p < 0.01$ + CI lower $> 1.5\times$, success parity, practicality review; Table 6.2).
 *   **Gate M21:** Cross-model replication and IAM integration holds bounds.
 *   **Gate M24 (Company Verdict):** Design partner validation and formal proceed/pivot/stop verdict.
 
@@ -107,13 +107,20 @@ If Gate M18 fails, **we will stop pursuing the broad company thesis and either w
 
 ### 12. What result would justify a subsequent seed round?
 A subsequent institutional Seed round at M24 would become defensible if gibbrn demonstrates:
-1.  The Effect Gate maintains zero observed unauthorized effects across the $N=1,000$ pilot *and* the pre-registered $N \approx 3{,}000$ confirmatory phase (one-sided 95% upper $\le 0.001$), with FDR and latency within bounds and three-arm incremental value over conventional controls.
-2.  gibbrn-managed adaptive agents achieve a pre-registered, practically meaningful improvement in survival depth ($\text{MDDD}_{0.90} \ge 2.0\times$ baseline, $p < 0.01$ with bootstrap CI lower $> 1.5\times$) with success non-inferior and cost reported.
+1.  The Effect Gate maintains zero observed unauthorized effects across the $N=1,000$ pilot *and* the to-be-preregistered $N \approx 3{,}000$ confirmatory phase (one-sided 95% upper $\le 0.001$), with FDR and latency within bounds and three-arm incremental value over conventional controls.
+2.  gibbrn-managed adaptive agents achieve a to-be-preregistered, practically meaningful improvement in survival depth ($\text{MDDD}_{0.90} \ge 2.0\times$ vs the conventional-controls arm, $p < 0.01$ with bootstrap CI lower $> 1.5\times$) with success non-inferior and cost/latency against proposed practicality triggers.
 3.  Learned skills and harnesses either exhibit portable cross-model transfer ($\text{ATR} \ge 0.80$) or are verifiably constrained via safely bounded specialization without contaminating global state.
 4.  External deployment evaluations (M24, up to 2 partners recruited post-M18) confirm integration effort, ROI signal, and first live-IAM validation. No partners are pre-claimed.
 
-### Founder information still required (not stated in this dossier)
-The repository does not currently document founder identity, background, commitment, location/cost basis, or relevant systems/security experience. Before outreach, the founder should supply a short founder note (who, why this thesis, why capable, time commitment). Nothing about internships, education status, or employment history should be inferred or described as "college dropout" without founder confirmation. See `11_INVESTOR_OVERVIEW.md` for the consolidated ask.
+### Founder note — Bernie Nguyen
+
+> I'm Bernie Nguyen, a Ho Chi Minh City–based engineer with an Information Technology engineering degree. I interned as a backend developer at CommandOSS and now work as a community developer across build-in-public, agentic AI, and Web3.
+>
+> Two experiences drive gibbrn. While using AI coding agents, I watched context compaction silently drop agreed requirements and constraints. During my internship, a coding agent edited other engineers' configuration while fixing an unrelated problem — colleagues reminded me of the change. Memory-poisoning research convinced me agent memory is an attack surface worth taking seriously; tracing state through LangGraph and AutoGen showed me debugging without lineage is painful. I haven't reproduced such an incident myself, and I don't claim every state model is broken.
+>
+> My work is public: [ourdash](https://github.com/agenticbernie/ourdash), a typed Python SDK for Dash at v0.1.0 with deliberately narrow scope, and [AeroTwin AI](https://github.com/agenticbernie/aerotwin-ai), where I led backend, system design, and architecture for a local-first airline Ops copilot — Top 5 shortlisted in its Aviation track at Agentic AI Build Week 2026, per the team; parts of that repo remain planning or handoff, not production.
+>
+> I spend 4–6 hours daily on gibbrn (6–10 on some rest days), alongside other commitments. Unproven: whether external integrity controls extend agent survival under adversarial pressure — what this program tests, with kill criteria I will honor.
 
 ---
 

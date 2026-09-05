@@ -54,7 +54,7 @@
 | MEMGPT / Packer2023 | C. Packer et al., "MemGPT: Towards LLMs as Operating Systems," arXiv:2310.08560, 2023. | ✅ VERIFIED |
 | AUTOGEN / Wu2023 | C. Wu et al., "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework," arXiv:2308.08155, 2023. | ✅ VERIFIED |
 | FAITHFATE / Dziri2023 | N. Dziri et al., "Faith and Fate: Limits of Transformers on Compositionality," *Proc. NeurIPS*, 2023. | ✅ VERIFIED |
-| PROMPTINJECT / Perez2023 | F. Perez and I. Ribeiro, "Ignore Previous Prompt: Attack Techniques For Language Models," arXiv:2305.14874, 2023. | ✅ VERIFIED (exact title is "Ignore Previous Prompt") |
+| PROMPTINJECT / Perez2022 | F. Perez and I. Ribeiro, "Ignore Previous Prompt: Attack Techniques For Language Models," arXiv:2211.09527, Nov 2022 (ML Safety Workshop, NeurIPS 2022). | ⚠️ CORRECTED Sept 2026 — earlier revisions listed arXiv:2305.14874, which is an unrelated paper |
 | LAMPORT1978 | L. Lamport, "Time, Clocks, and the Ordering of Events in a Distributed System," *Commun. ACM*, vol. 21, no. 7, pp. 558–565, July 1978. | ✅ VERIFIED — classic |
 | BERNSTEIN1987 | P. A. Bernstein, V. Hadzilacos, and N. Goodman, *Concurrency Control and Recovery in Database Systems*, Addison-Wesley, 1987. | ✅ VERIFIED — classic |
 

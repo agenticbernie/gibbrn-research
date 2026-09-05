@@ -14,7 +14,7 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
     - Is the experiment still adequately powered?
     - Should scope change before the quarter gate?
     *(Does not trigger major capital reallocation).*
-2.  **Binding Empirical Gates (Every 3 Months):** Formal falsification hurdles enforcing pre-registered binary execution metrics.
+2.  **Binding Empirical Gates (Every 3 Months):** Formal falsification hurdles enforcing proposed binary execution metrics — the canonical PROCEED / INCONCLUSIVE / FAIL rules live in `06_CORE_RESEARCH_PROGRAM.md` Table 6.2 (frozen at pre-registration before each phase's data collection; nothing preregistered yet). Gate summaries below never override that table.
 3.  **Thesis Reviews (M6, M12, M18, M24):** Deep reassessments of the architecture, competitive landscape, capital-at-risk, and commercialization hypothesis.
 
 ## 2. 24-Month Milestone Schedule
@@ -37,34 +37,38 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 ## 3. Binding Falsification Gates (M3 to M24)
 
 ### Gate M3 (Month 3) — State Semantics & Minimal Interceptor
-*   **Target:** Engine 2 prototype intercepts synchronous OS-level tool calls.
-*   **Empirical Hurdle:** Interception latency overhead $\le 30\text{ms}$; state exceptions reduced by $\ge 80\%$ on SWE-bench Lite (Core RQ1).
-*   **Verdict Matrix:**
-    - PROCEED: Target met.
-    - PIVOT: Target missed; pivot away from gVisor containment to pure API gateway.
+*   **Target (Phase 1: State Semantics + minimal interceptor):** Engine 2 prototype intercepts a defined set of synchronous file-write and shell-tool operations. The supported-ops list, the enforcement boundary, and known bypass paths are documented in the M3 package — selected-call interception is not all-syscall control.
+*   **Empirical Hurdle:** State-corruption reduction $\ge 80\%$ on a fitting SWE-bench Lite subset (paired design, completion reported) with median interception overhead $\le 30\text{ms}$; tail latency (p95) reported against a proposed review bound (Core RQ1; full rules in Table 6.2).
+*   **Verdict Matrix (per Table 6.2):**
+    - PROCEED: All binding criteria met (boundaries inclusive).
+    - INCONCLUSIVE → Narrow: partial result or overhead miss — root-cause analysis first (profile IPC vs. validation vs. sandbox spawn). A PIVOT to an API-gateway design is only chosen if analysis shows an architectural limit, and is documented as a narrower threat model and execution boundary, not an equivalent substitute. Sandbox-attributed state-semantics gains require ablation support before being claimed.
+    - FAIL → Pivot/Stop strand: reduction <50% with interval excluding 80%.
+
+*Problem-discovery track (M01–M03): 10–15 practitioner conversations total; first tranche of 5–8 by day 60, remainder by day 90 (see `08_CAPITAL_PLAN.md` §§7–8). No partner commitments solicited.*
 
 ### Gate M6 (Month 6) — Causal State Spine & Adaptation Provenance
 *   **Target:** Engine 1 tracks provenance across the adaptive cognition layer.
-*   **Empirical Hurdle:** Causal reconstruction rate (CRR) $\ge 80\%$ on AgentErrorBench (Core RQ2).
-*   **Verdict Matrix:**
-    - PROCEED: Target met.
-    - NARROW: Missed by $\le 10\%$; optimize DAG tracing.
+*   **Empirical Hurdle:** Causal reconstruction rate (CRR) $\ge 80\%$ on the frozen AgentErrorBench subset with $\kappa \ge 0.75$ (Core RQ2; full rules in Table 6.2).
+*   **Verdict Matrix (per Table 6.2):**
+    - PROCEED: CRR point ≥80% (boundary inclusive).
+    - INCONCLUSIVE → NARROW: CRR in [70%,80%) — one DAG-tracing optimization cycle.
+    - FAIL → STOP strand: CRR <70%.
 
 ### Gate M9 (Month 9) — Deterministic Effect Gate (MAIN WEDGE)
 *   **Target:** Enforce the boundary between mutable cognition and the Trust Substrate for the three covered attack families.
 *   **Empirical Hurdle:** Observed $\text{UER} = 0$ across the $N=1,000$ red-team pilot; operational tolerance $\le 0.001$; $\text{FDR} \le 2.0\%$; median overhead $\le 30\text{ms}$ (Core RQ3). *Interpretation limit:* 0/1,000 yields a one-sided 95% upper bound $\approx 0.003$, not $\le 0.001$; a confirmatory $N \approx 3{,}000$ phase is required before any "$\le 0.001$ at 95% confidence" claim. Zero observed failures is not a formal proof of containment.
-*   **Verdict Matrix:**
-    - PROCEED (pilot): Target met; proceed to confirmatory phase. No "provably contained" claim.
-    - NARROW/PIVOT: Single unauthorized execution (observed $\text{UER} = 0.001$) or inconclusive FDR/latency band — root-cause, expand suite, optimize.
-    - STOP: $\text{UER} > 0.001$ or $\text{FDR} > 2.0\%$ — fundamental security boundary breached (harmonized with `06_CORE_RESEARCH_PROGRAM.md` and `08_CAPITAL_PLAN.md`).
+*   **Verdict Matrix (per Table 6.2):**
+    - PROCEED (pilot): 0/1,000 with FDR ≤2.0% (interval excluding straddle), median ≤30ms, tail within proposed bound — proceed to confirmatory phase. No "provably contained" claim.
+    - INCONCLUSIVE → NARROW/PIVOT: single failure (observed 0.001), straddling FDR interval, tail trigger, or overhead miss pending root-cause — expand suite, optimize.
+    - STOP: $\text{UER} > 0.001$ (≥2 failures), FDR breach with excluding interval, or architecturally-rooted overhead breach.
 
 ### Gate M12 (Month 12) — Verified Skill Substrate
 *   **Target:** Engine 3 isolates experience from operational knowledge via micro-sandboxing.
 *   **Empirical Hurdle:** False-Promotion Rate $\text{FPR} \le 0.02$; downstream retention $\ge 98\%$ under MINJA-pattern poisoning (Core RQ4).
-*   **Verdict Matrix:**
-    - PROCEED: Target met.
-    - NARROW: $\text{FPR} > 0.02$ — abandon automated induction, narrow scope to manually authored skills (harmonized with capital plan).
-    - STOP: $\text{FPR} > 0.02$ *without a clear mitigation path after one Narrow cycle*.
+*   **Verdict Matrix (per Table 6.2):**
+    - PROCEED: FPR ≤0.02 and retention ≥98% (no straddling interval).
+    - INCONCLUSIVE → NARROW: retention in [95%,98%) with FPR met, or any straddling interval — expand suite/seeds, one cycle.
+    - FAIL → NARROW scope to manually authored skills (FPR breach or retention <95%); STOP only without a mitigation path after one cycle.
 
 ### Gate M15 (Month 15) — Harness Generalization & Safe Specialization (ATR)
 *   **Target:** Evaluate whether learned adaptations transfer across model/domain boundaries, and whether the system safely bounds non-portable co-adaptation.
@@ -79,9 +83,10 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 ### Gate M18 (Month 18) — Scientific Thesis Gate (Long-Horizon Survival)
 *   **Target:** Verify the integrated 3-engine architecture extends trajectory survival over deep tasks on the joint success–cost criterion.
 *   **Empirical Hurdle:** $\text{MDDD}_{0.90}(\text{gibbrn}) \ge 2.0\times$ unmanaged baseline with $p < 0.01$ **and** bootstrap 95% CI lower bound $> 1.5\times$, with task success non-inferior and cost/latency reported (Core RQ6).
-*   **Verdict Matrix:**
-    - PROCEED: Pre-registered empirical thesis criterion satisfied on the core evaluation suite.
-    - STOP/PIVOT: Failure to beat the (B) conventional-controls arm or the static-pipeline joint criterion.
+*   **Verdict Matrix (per Table 6.2):**
+    - PROCEED: Proposed empirical thesis criterion (frozen at pre-registration) satisfied on the core evaluation suite — ratio point ≥2.0 vs (B) with CI lower >1.5, $p<0.01$, success parity, no practicality trigger tripped.
+    - INCONCLUSIVE → Narrow: ratio in [1.5,2.0) including 2.0, or a tripped cost/latency trigger → optimization + calibration cycle.
+    - STOP/PIVOT: ratio <1.5, excluding interval, success inferiority >5pp, or static-pipeline joint win.
 
 ### Gate M21 (Month 21) — Cross-Model Replication & Delegation Integration
 *   **Target:** Swappable-cognition validation and Trust Substrate binding to **mock** IAM providers with scoped tokens. Live-provider integration is explicitly deferred to M24.

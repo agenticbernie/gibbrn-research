@@ -86,7 +86,7 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 *   **Verdict Matrix (per Table 6.2):**
     - PROCEED: Proposed empirical thesis criterion (frozen at pre-registration) satisfied on the core evaluation suite — ratio point ≥2.0 vs (B) with CI lower >1.5, $p<0.01$, success parity, no practicality trigger tripped.
     - INCONCLUSIVE → Narrow: ratio in [1.5,2.0) including 2.0, or a tripped cost/latency trigger → optimization + calibration cycle.
-    - STOP/PIVOT: ratio <1.5, excluding interval, success inferiority >5pp, or static-pipeline joint win.
+    - STOP/PIVOT: ratio <1.5, CI upper <2.0 with adequate power, success inferiority >5pp, or static-pipeline joint win.
 
 ### Gate M21 (Month 21) — Cross-Model Replication & Delegation Integration
 *   **Target:** Swappable-cognition validation and Trust Substrate binding to **mock** IAM providers with scoped tokens. Live-provider integration is explicitly deferred to M24.

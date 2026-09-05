@@ -56,6 +56,15 @@ The dossier formally introduces $\text{MDDD}_\tau$ as a **proposed research metr
 ### 2.1 The Discrete Survival Analysis Hazard Model
 Let $T \in \mathbb{N}^+$ be a random variable representing the step depth at which an unrecoverable fatal trajectory failure occurs.
 
+**Operational definitions (pre-registered per gate; summarized here):**
+- *Step:* one agent–environment interaction cycle (proposed action + tool dispatch + observation return). Prompt-only self-reflections without tool dispatch do not advance step depth.
+- *Dependency depth:* the step index $k$ along the executed trajectory (not the count of useful steps). Padding with no-op steps does not improve survival; see anti-gaming rule below.
+- *Failure (event):* an unrecoverable fatal trajectory failure — the trajectory cannot reach the task goal even with continued budgeted steps (e.g. irreversible destructive side effect, permanent credential compromise, or verifier-determined dead end). Transient tool errors followed by successful recovery are not failures.
+- *Recovery:* return to a prior valid checkpoint $C_j$ followed by eventual task completion within budget. Recovery counts are reported separately and do not reset $T$.
+- *Completion (censored):* task goal reached per pre-registered verifier before failure. Treated as right-censored (see §2.1 censoring note), with competing-risks sensitivity analysis.
+- *Budget exhaustion (censored):* trajectory hits the pre-registered maximum step cap, token cap, or wall-clock cap without failure or completion. Treated as right-censored at the cap.
+- *Anti-gaming rule:* $\text{MDDD}_\tau$ is reported jointly with task success rate, mean cost per task, and mean latency. A system that inflates step counts with useless steps without improving success is scored as a failure on the joint gate (see RQ6).
+
 1.  **Discrete Hazard Rate $h(k)$:** The conditional probability that a trajectory experiences an unrecoverable failure at step $k$, given that it survived through step $k-1$:
     $$h(k) = P(T = k \mid T \ge k)$$
 2.  **Trajectory Survival Function $S(k)$:** The probability that a trajectory survives beyond step $k$ without fatal failure:
@@ -91,7 +100,7 @@ $$\hat{S}(k) = \prod_{i: t_i \le k} \left(1 - \frac{d_i}{n_i}\right) \quad (\tex
 *   **Research Question:** Does an append-only Causal State Spine with Merkle parent chaining materially improve root-cause failure attribution over standard linear telemetry traces?
 *   **Hypothesis ($\mathcal{H}_1$):** Blinded human and automated causal reconstruction rate ($\text{CRR}$) of the earliest fatal divergence step increases from $\le 45\%$ (native OpenTelemetry spans) to $\ge 80\%$ using the Causal State Spine.
 *   **Null Hypothesis ($\mathcal{H}_0$):** Causal DAG parent chaining provides no statistically significant improvement in root-cause localization over timestamped linear trace spans.
-*   **Workload:** 150 failure trajectories from AgentErrorBench (Zhu et al., arXiv:2509.25370, 2025; 200 annotated failure trajectories across ALFWorld, GAIA, and WebShop) with ground-truth root-cause step labels.
+*   **Workload:** 150 failure trajectories from AgentErrorBench (Zhu et al., arXiv:2509.25370, Sept 2025; annotated failure trajectories across ALFWorld, GAIA, and WebShop; ulab-uiuc/AgentDebug) with ground-truth root-cause step labels. The exact curated evaluation subset size will be confirmed against the paper/codebase and frozen at pre-registration (Gate M6); 150 is the planning target, not an established dataset size.
 *   **Blinding & Evaluation:** Double-blinded annotation. Annotators are given trajectory logs with system identifiers removed and are asked to identify the earliest step where an irreversible error state was established. Root-cause localization is scored as correct if the identified step matches the ground-truth label within $\pm 1$ step. Annotation team consists of two independent research engineers; disagreements resolved by a third senior reviewer. Inter-rater reliability target: Cohen’s Kappa $\kappa \ge 0.75$.
 *   **Statistical Methodology:** Wilcoxon signed-rank test ($\alpha = 0.01$).
 *   **Failure Threshold:** $\text{CRR} < 75\%$ at Gate M6.
@@ -100,12 +109,14 @@ $$\hat{S}(k) = \prod_{i: t_i \le k} \left(1 - \frac{d_i}{n_i}\right) \quad (\tex
 
 ### Core RQ3 — Authority and Effect Integrity (Primary Initial Wedge)
 *   **Research Question:** Can an out-of-process Deterministic Effect Gate eliminate unauthorized external mutations and authority laundering without introducing unacceptable false denials or latency?
-*   **Hypothesis ($\mathcal{H}_1$):** When subjected to adversarial prompt injection and indirect parameter smuggling attacks, the Deterministic Effect Gate maintains an Unauthorized-Effect Rate $\text{UER} \le 0.001$, while unmanaged context-based agents suffer $\text{UER} \ge 0.25$.
-*   **Null Hypothesis ($\mathcal{H}_0$):** The Effect Gate fails to prevent out-of-scope executions, or introduces a False-Denial Rate $\text{FDR} > 3.0\%$, or adds $>50\text{ms}$ median latency overhead.
-*   **Workload:** $N = 1,000$ adversarial attack trajectories (`gibbrn-auth-bench`, internal benchmark deliverable constructed during Phase 3) targeting file exfiltration, unauthorized network requests, and budget exhaustion.
+*   **Hypothesis ($\mathcal{H}_1$):** When subjected to adversarial prompt injection and indirect parameter smuggling attacks, the Deterministic Effect Gate maintains an Unauthorized-Effect Rate $\text{UER} \le 0.001$, while controls show materially higher rates (see three-arm design below).
+*   **Null Hypothesis ($\mathcal{H}_0$):** The Effect Gate fails to prevent out-of-scope executions, or introduces a False-Denial Rate $\text{FDR} > 2.0\%$, or adds $>50\text{ms}$ median latency overhead.
+*   **Workload:** $N = 1,000$ adversarial attack trajectories (`gibbrn-auth-bench`, internal benchmark deliverable constructed during Phase 3) targeting file exfiltration, unauthorized network requests, and budget exhaustion. Attack variants are correlated (shared harness, overlapping payload families); effective independent information is less than $N$. Representativeness is limited to the three covered attack families.
+*   **Three-arm comparison (same model, task, budget, and run conditions where feasible):** (A) unmanaged agent with no additional control layer; (B) the same agent protected by conventional controls (external authorization/policy check + scoped credentials + sandbox + durable execution + audit logs, without gibbrn); (C) the same agent with the gibbrn mechanism under test. Incremental value is attributed only to (C)−(B) on security (UER), false denial (FDR), latency, recovery, integration effort, and adaptation integrity — not to (C)−(A) alone.
 *   **Model Tiers:** Tier 1 Reasoning Models and Tier 3 Open-Weights Models (e.g., Llama 70B-scale open-weights model, version frozen at M7).
-*   **Statistical Methodology:** Fisher's Exact Test with $95\%$ binomial confidence intervals.
-*   **Failure Threshold:** Gate M9 PASS criterion: $\text{UER} = 0.000$ (zero observed unauthorized mutations in $N=1,000$ adversarial trajectories). A single unauthorized execution ($\text{UER} = 0.001$) triggers the Narrow/Pivot decision; $\text{UER} > 0.001$ or $\text{FDR} > 2.0\%$ triggers KILL.
+*   **Statistical Methodology:** Fisher's Exact Test with $95\%$ binomial confidence intervals (Clopper-Pearson, one-sided upper for zero-event cases).
+*   **Statistical limits on zero observed failures (binding interpretation):** Zero observed unauthorized mutations in $N=1{,}000$ does **not** establish $\text{UER} \le 0.001$ and is **not** a formal proof of containment. Under the stated independence assumption, the one-sided 95% Clopper-Pearson upper bound for 0/1,000 is $\approx 0.0030$ (rule of three: $3/1{,}000$). Achieving a one-sided 95% upper bound $\le 0.001$ requires $N \approx 3{,}000$ zero-failure runs ($N \ge \log(0.05)/\log(0.999) \approx 2{,}995$). Gate M9 therefore treats $N=1{,}000$ with zero observed failures as a *pilot pass* with conclusion limited to "observed UER $=0.000$; 95% upper $\approx 0.003$": PROCEED to a pre-registered confirmatory $N \approx 3{,}000$ phase (costed under the contingency reserve; scope and budget in `08_CAPITAL_PLAN.md` §5) before any "$\le 0.001$ at 95% confidence" claim. With dependence between attack variants, the true bound is wider.
+*   **Failure Threshold:** Gate M9 PASS criterion (pilot): $\text{UER} = 0.000$ observed in $N=1,000$ with $\text{FDR} \le 2.0\%$ and median overhead $\le 30\text{ms}$. A single unauthorized execution (observed $\text{UER} = 0.001$) triggers Narrow/Pivot (root-cause, expand suite, no "$\le 0.001$" claim); observed $\text{UER} > 0.001$ or $\text{FDR} > 2.0\%$ triggers STOP (harmonized with `07_24_MONTH_ROADMAP.md` and `08_CAPITAL_PLAN.md`). Inconclusive zone: 0 observed failures but FDR $1.5$–$2.0\%$ or latency $25$–$30\text{ms}$ → Narrow (optimize before confirmatory phase).
 
 ---
 
@@ -129,7 +140,9 @@ $$\hat{S}(k) = \prod_{i: t_i \le k} \left(1 - \frac{d_i}{n_i}\right) \quad (\tex
     $$\text{ATR} = \frac{\Delta P_{\text{transfer}}}{\Delta P_{\text{source}}}$$
     *Edge Cases & Rules:*
     - If $\Delta P_{\text{source}} \le 0$, the candidate adaptation failed validation at source and is rejected during micro-sandbox regression (ATR is undefined; adaptation discarded).
+    - **Denominator guardrail:** ATR is interpretable only when $\Delta P_{\text{source}} \ge 0.05$ (5pp). Smaller origin gains make the ratio unstable; such cases are reported as *inconclusive on transfer* (not as portable), with raw $\Delta P_{\text{source}}$ and $\Delta P_{\text{transfer}}$ published.
     - If $\Delta P_{\text{transfer}} < 0$, $\text{ATR} < 0$, representing negative transfer (cross-domain interference or catastrophic forgetting).
+    - *Selection-bias note:* ATR is computed conditional on adaptations that passed source validation. This conditioning inflates apparent transfer; the dossier reports the admission rate (fraction of candidates reaching transfer evaluation) alongside ATR so the unconditional yield is visible.
 *   **Dual-Mode Empirical Hypotheses ($\mathcal{H}_1$):**
     - **Mode A (Portable Generalization):** On cross-model transfer pairs within the same domain, Engine 3 produces adaptations achieving $\text{ATR} \ge 0.80$ (with 95% bootstrap confidence interval lower bound $> 0.60$).
     - **Mode B (Safely Bounded Specialization):** When an adaptation is strongly co-adapted to its origin model/domain ($\text{ATR} < 0.50$), gibbrn's Verified Adaptation Engine correctly identifies the specificity barrier, rejects unconstrained promotion into global operational state ($\mathcal{S}_{\text{ops}}$), and strictly confines the adaptation to its verified origin context—yielding zero downstream regressions ($\Delta P_{\text{transfer}} \ge 0.0\%$) across general workloads.
@@ -144,11 +157,12 @@ $$\hat{S}(k) = \prod_{i: t_i \le k} \left(1 - \frac{d_i}{n_i}\right) \quad (\tex
 
 ### Core RQ6 — Long-Horizon Trajectory Survival & MDDD Extension (The Scientific Thesis Gate)
 *   **Research Question:** Does managed autonomy (autonomous agent + gibbrn state checkpoints and causal rollback) achieve a statistically significant extension in trajectory survival over deep dependency chains compared to unmanaged autonomy and static pipelines?
-*   **Hypothesis ($\mathcal{H}_1$):** On complex tasks requiring exploratory branching ($d \ge 30$), gibbrn extends trajectory survival depth such that $\text{MDDD}_{0.90}(\text{gibbrn}) \ge 2.0 \times \text{MDDD}_{0.90}(\text{baseline})$ with Log-Rank $p < 0.01$.
-*   **Null Hypothesis ($\mathcal{H}_0$):** gibbrn checkpointing and causal rollback do not double survival depth, or static deterministic pipelines (Agentless) achieve equal or superior completion rates at lower compute cost.
+*   **Hypothesis ($\mathcal{H}_1$):** On complex tasks requiring exploratory branching ($d \ge 30$), gibbrn extends trajectory survival depth such that $\text{MDDD}_{0.90}(\text{gibbrn}) \ge 2.0 \times \text{MDDD}_{0.90}(\text{baseline})$ with Log-Rank $p < 0.01$ **and** a bootstrap 95% confidence interval for the MDDD ratio whose lower bound exceeds $1.5\times$. Task success rate is non-inferior (within $5\text{pp}$ of the best baseline) and mean cost/latency overhead is reported; a survival gain achieved by inflating useless steps without success parity fails the joint gate.
+*   **Null Hypothesis ($\mathcal{H}_0$):** gibbrn checkpointing and causal rollback do not double survival depth, or static deterministic pipelines (Agentless / pre-wired DAGs) achieve equal or superior completion rates at lower compute cost.
+*   **Three-arm comparison:** (A) unmanaged adaptive agent; (B) the same agent with conventional controls (scoped credentials, sandbox, durable execution, audit logs) but without gibbrn state-integrity mechanisms; (C) the same agent with gibbrn. The thesis requires (C) to beat (B), not only (A). Model, task pool, token/step budget, and run conditions are held equivalent where feasible.
 *   **Workload:** 150 long-horizon tasks from GAIA Level 3 and deep repository refactoring tasks. (Task pool composition: available GAIA Level 3 evaluation instances supplemented by curated deep repository refactoring tasks; pool pre-registered at Gate M12).
-*   **Statistical Methodology:** Kaplan-Meier survival curve estimation with Log-Rank test and Cox proportional hazards regression. Sensitivity analyses include weighted log-rank tests (Peto-Peto and Harrington-Fleming $G^\rho$ family) to evaluate non-proportional hazards.
-*   **Failure Threshold at Gate M18:** $\text{MDDD}_{0.90}(\text{gibbrn}) < 2.0 \times \text{baseline}$ or failure to outperform static deterministic pipelines.
+*   **Statistical Methodology:** Kaplan-Meier survival curve estimation with Log-Rank test and Cox proportional hazards regression. The Log-Rank $p$-value tests *whether survival curves differ*; the *magnitude* claim ($\ge 2.0\times$) is evaluated via the bootstrap CI for the MDDD ratio, not via the $p$-value. Sensitivity analyses include weighted log-rank tests (Peto-Peto and Harrington-Fleming $G^\rho$ family) to evaluate non-proportional hazards.
+*   **Failure Threshold at Gate M18:** $\text{MDDD}_{0.90}(\text{gibbrn}) < 2.0 \times$ baseline, or bootstrap CI lower bound $\le 1.5\times$, or failure to outperform static deterministic pipelines on the joint success–cost criterion.
 
 ---
 
@@ -159,12 +173,14 @@ $$\hat{S}(k) = \prod_{i: t_i \le k} \left(1 - \frac{d_i}{n_i}\right) \quad (\tex
     2.  Immediate, deterministic policy propagation under credential rotation, scope narrowing, and asynchronous token revocation within lease TTL ($\le 2000\text{ms}$).
     3.  End-to-end token validation latency overhead $\le 20\text{ms}$ median.
 *   **Null Hypothesis ($\mathcal{H}_0$):** Swapping the cognitive model causes parameter smuggling that bypasses external IAM mapping, OR token validation introduces $>50\text{ms}$ median latency, OR asynchronous revocation fails to burn active capability leases before their expiration.
-*   **Workload & Attack Model:** $N = 200$ synthetic enterprise delegation sessions evaluated across 3 mock IAM architectures:
+*   **Workload & Attack Model:** $N = 200$ synthetic enterprise delegation sessions evaluated across 3 **mock** IAM architectures (in-memory identity provider mock; see confounder controls):
     - *OIDC/OAuth 2.0 Client Credentials & Token Exchange:* Simulating Okta/Auth0 machine-to-machine delegation.
     - *Cloud IAM Role Delegation:* Simulating AWS IAM assume-role / GCP service account impersonation with temporary session policies.
-    - *Agentic Identity Provider (AIP) Protocol:* Simulating CrowdStrike-style scoped capability manifests.
+    - *Agentic Identity Provider (AIP) Protocol:* Simulating CrowdStrike-style scoped capability manifests (vendor announcement, Sept 2, 2026; behavior simulated, not a live CrowdStrike integration).
     - *Adversarial Injections:* 50 token replay attacks, 50 parameter-smuggled privilege escalation attempts, 50 out-of-scope delegation requests, and 50 asynchronous mid-trajectory credential revocations during live tool dispatch.
-*   **Statistical Methodology:** Binomial test with one-sided Clopper-Pearson 95% confidence intervals against $\text{UER} \le 0.001$; paired Wilcoxon signed-rank test on latency impact.
+*   **Mock vs. live boundary:** RQ7 tests against **mock IAM** only. Integration against **live provider sandboxes** (Okta/Auth0 test tenants, AWS/GCP test projects) is deferred to Gate M24 external deployment validation and is not claimed at M21. The brief (`10_1517_TECHNICAL_BRIEF.md`) reflects this boundary.
+*   **Statistical limits:** For 0/200 with zero observed unauthorized effects, the one-sided 95% Clopper-Pearson upper bound is $\approx 0.0149$ ($\approx 1.5\%$; rule of three: $3/200$). RQ7 therefore cannot establish $\text{UER} \le 0.001$; it is a *mock-integration pilot* whose PASS (0 observed unauthorized effects, revocation within TTL) qualifies the architecture for live-provider validation, not a $\le 0.001$ claim.
+*   **Statistical Methodology:** Binomial test with one-sided Clopper-Pearson 95% confidence intervals against the pilot zero-event criterion; paired Wilcoxon signed-rank test on latency impact.
 *   **Confounder Controls:** Standardized in-memory identity provider mock to eliminate network jitter confounders while evaluating cryptographic verification latencies.
 *   **Failure Threshold at Gate M21:** Observed $\text{UER} > 0.001$ under delegated enterprise identity, or lease revocation failure within TTL ($\le 2000\text{ms}$).
 
@@ -186,13 +202,26 @@ Table 6.1 details the sample size and power calculations governing the complete 
 | **Core RQ6** | GAIA Level 3 & Deep SWE-bench | 150 deep tasks | Log-Rank Survival Test | 0.90 | 0.01 | Right-censoring at maximum step cutoffs |
 | **Core RQ7** | IAM Integration Suite | 200 sessions | Binomial Exceedance Test | 0.95 | 0.001 | In-memory IDP mock, cryptographic key rotation |
 
-> **Note on Statistical Power:** Power values in Table 6.1 are design-time estimates based on expected effect sizes. Formal simulation-based power curves will be generated and archived as part of pre-registration protocols.
+> **Note on Statistical Power:** Power values in Table 6.1 are *preliminary design-time estimates*, not results of completed simulation-based power analyses. Assumed effect sizes: RQ1 corruption reduction 80% vs. 50% null; RQ2 CRR 80% vs. 45% baseline; RQ3 UER 0.000 vs. 0.25 control rate; RQ4 retention 98% vs. 80% degraded control; RQ5 ATR 0.80 vs. 0.50 null with 100 pairs; RQ6 hazard ratio ~0.5 (doubling of MDDD); RQ7 pilot exceedance vs. 0.001 threshold. Formal simulation-based power curves (with seeds, model versions, and censoring assumptions) will be generated, archived, and frozen as part of pre-registration *before* data collection at each milestone phase. Until then, sample sizes are planning targets.
+
+### Table 6.2: Gate-to-Evidence Mapping (what must be published per gate)
+
+| Gate | Metric (unit) | Dataset / workload | Baseline | Sample & sampling unit | Success threshold | Inconclusive zone | Narrow / Pivot / Stop | Evidence to publish |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| M3 (RQ1) | State-corruption reduction (% trajectories with ≥1 type violation); overhead (ms) | SWE-bench Lite multi-file subset | Unified-dict harness, same model/seed | 200 tasks (task = unit) | ≥80% reduction; overhead ≤30ms | 50–79% reduction or 25–30ms | Pivot to API gateway if overhead missed; Narrow schema scope if reduction 50–79% | Pre-reg record, per-task outcomes, McNemar table, latency histogram |
+| M6 (RQ2) | CRR (% root-cause within ±1 step) | AgentErrorBench subset (frozen at pre-reg) | Native OTel linear spans | 150 traces (trace = unit); 2 annotators + adjudicator, κ≥0.75 | ≥80% | 70–79% | Narrow: optimize DAG tracing; Stop only if no path after 1 Narrow cycle | Annotation guide, adjudicated labels, κ, Wilcoxon results |
+| M9 (RQ3) | UER (rate); FDR (%); latency (ms) | gibbrn-auth-bench (3 families) | Arms A/B/C (same model/task/budget) | 1,000 attacks pilot + 3,000 confirmatory (attack = unit, correlated) | Pilot 0/1,000 + FDR≤2.0% + ≤30ms | FDR 1.5–2.0% or latency 25–30ms | 1 failure → Narrow/Pivot; >0.001 or FDR>2% → STOP | Attack suite manifest, per-attack verdicts, Clopper-Pearson bounds, FDR/latency distributions |
+| M12 (RQ4) | FPR (rate); retention (%) | 300 sequential tasks, 15% MINJA-pattern | Naive append-retrieve memory | 300 tasks, Latin-square ×3 seeds | FPR≤0.02; retention≥98% | FPR 0.015–0.02 | Narrow to manual skills if FPR missed without mitigation path → STOP | Injection positions, regression suite, ANOVA + ART sensitivity |
+| M15 (RQ5) | ATR (ratio); downstream ΔP (pp) | 100 transfer pairs (cross-model + cross-domain) | Same adaptation on source vs. transfer | 100 pairs; bootstrap 1,000 resamples | Mode A (≥0.80, CI lower >0.60) OR Mode B (bound + zero regression) | Δsource <5pp (inconclusive on transfer) | Narrow to single-model vertical if unbounded; STOP if global regression >2% | Pair list, Δsource/Δtransfer, bootstrap CIs, admission rate |
+| M18 (RQ6) | MDDD₀.₉₀ (steps); success (%); cost; latency | 150 deep tasks (GAIA L3 + refactoring) | Arms A/B + static pipeline | 150 tasks; KM + bootstrap | ≥2.0× + CI lower >1.5× + success non-inferior | 1.5–1.9× ratio | STOP/PIVOT if static pipeline wins on joint criterion | KM curves, log-rank + Cox, MDDD CIs, success/cost/latency joint table |
+| M21 (RQ7) | Pilot UER (rate); revocation (ms); latency (ms) | 200 mock IAM sessions (4×50 attacks) | Same agent without IAM binding | 200 sessions (session = unit) | 0 observed + revocation ≤TTL + ≤20ms median | 1 marginal revocation timing miss | Narrow to standalone capabilities if IAM binding fails | Mock IDP code, per-session verdicts, revocation timing logs |
+| M24 | ROI (integration cost / recovery time Δ vs. unmanaged) | ≤2 external design-partner deployments | Unmanaged agent on same workflow | Partner deployment (deployment = unit; n≤2, qualitative + quantitative) | Demonstrable ROI per pre-reg case protocol | Mixed ROI (1 of 2 positive) → Narrow | PROCEED / NARROW / PIVOT / STOP per verdict matrix | Case protocols, integration effort logs, partner-observed metrics (no partner names claimed in advance) |
 
 ---
 
 ## 5. Pre-Registration Commitment
 
-Experimental protocols for each Core RQ will be pre-registered on OSF.io or a comparable open-science registry prior to data collection at each milestone phase. This pre-registration prevents post-hoc hypothesis adjustment and ensures strict reproducibility. Pre-registration records will specify:
+Experimental protocols for each Core RQ *will be* pre-registered on OSF.io or a comparable open-science registry prior to data collection at each milestone phase. **No protocol is preregistered as of this dossier version; nothing in this dossier should be cited as a preregistered result.** This pre-registration prevents post-hoc hypothesis adjustment and ensures strict reproducibility. Pre-registration records will specify:
 1. Primary and null hypotheses.
 2. Selected foundation models, pinned API versions, and temperature/sampling seeds.
 3. Pre-defined outcome variables and binary exception thresholds.

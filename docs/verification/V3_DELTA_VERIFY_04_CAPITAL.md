@@ -11,3 +11,9 @@
 - **Deduplication Audit:** Resolved regex replacement artifacts; eliminated duplicate file content in `08_CAPITAL_PLAN.md`.
 
 **Status:** V3 DELTA VERIFIED
+
+---
+
+## ADDENDUM (September 5, 2026 review — do not delete)
+
+Line-item reconciliation above still holds ($400,000 total). `08_CAPITAL_PLAN.md` has since been hardened without changing the ask: compensation relabeled as proposed (no "subsistence" claim), $150,000 fallback marked preliminary with cut/keep/evidence detail, §5 planning arithmetic disclosed (no vendor quotes), §6 governance disclaimer (gates are not disbursement tranches), §7 problem discovery, §8 30–90-day plan. V2 "13,200 trajectory" figure retired in favor of a 6,000–9,000 planning range with per-gate actuals.

@@ -2,9 +2,9 @@
 
 ### 24-Month Systems Research & Prototype Program
 **Target Audience:** 1517 Fund Investment Committee, Distributed Systems Researchers, AI Security Architects  
-**Repository:** `github.com/agenticbernie/gibbrn-research-research`  
+**Repository:** `github.com/agenticbernie/gibbrn-research`  
 **Status:** Pre-Seed R&D-Stage Systems Hypothesis (Checkpoint-Gated Empirical Program)  
-**Primary Capital Ask:** **USD 285,000** for an 24-Month Founder-Led Systems Research Program  
+**Primary Capital Ask:** **USD 400,000** for a 24-Month Founder-Led Systems Research Program  
 **License:** Strict Restricted Non-Commercial & Anti-Training License (See [`LICENSE`](./LICENSE))  
 
 ---
@@ -19,7 +19,7 @@
 
 Specifically, the project researches whether a framework-neutral control layer can preserve the integrity, authority, provenance, validation status, and recoverability of consequential agent state as autonomous systems operate, accumulate experience, and change over time.
 
-This repository hosts the complete **24-Month R18-Month R&D Technical DossierD Technical Dossier**, which has undergone both an intensive 1517-oriented Adversarial Diligence Simulation and an independent Submission-Grade Evidence Verification Pass.
+This repository hosts the complete **24-Month R&D Technical Dossier**, which has undergone both a 1517-oriented Adversarial Diligence Simulation and a Submission-Grade Evidence Verification Pass.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -66,9 +66,9 @@ All project documentation is structured in the [`docs/`](./docs/README.md) direc
 
 ```
 docs/
-├── submission/         <-- [PRIMARY DOSSIER] Primary submission candidate — evidence-verified 24-month research dossier (13 files)
-├── verification/       <-- Complete audit ledgers from the final evidence verification pass (10 files)
-├── diligence_audit/    <-- 1517-oriented adversarial diligence simulation reports (12 files)
+├── submission/         <-- [PRIMARY DOSSIER] Canonical V3 24-month research dossier (14 files; verification in progress — see docs/submission/00_README.md)
+├── verification/       <-- Audit ledgers (V2 + V3 delta). Reports marked SUPERSEDED are historical; do not cite as current.
+├── diligence_audit/    <-- 1517-oriented adversarial diligence simulation reports (12 files; historical simulation, not an independent audit)
 └── archive/            <-- Historical working archives preserving complete scientific lineage
     ├── v2_reconstructed/  (Post-audit reconstructed draft)
     └── v1_initial/        (Initial exploratory research proposal)
@@ -81,16 +81,17 @@ docs/
 | **[00](./docs/submission/00_README.md)** | Dossier Master Overview | Executive summary, systems architecture, checkpoint schedule, and reading orders. |
 | **[01](./docs/submission/01_RESEARCH_THESIS.md)** | Core Research Thesis | Problem formulation, thesis vs. initial wedge, the Agentless counter-case, non-goals. |
 | **[02](./docs/submission/02_EVIDENCE_LANDSCAPE.md)** | Evidence Landscape | Verified primary literature, SWE-bench harness sensitivity findings, competitive matrix. |
-| **[03](./docs/submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** | State Semantics & Trust Model | Four-Class State Taxonomy (Cognitive, Operational, Authoritative, Runtime), Invariants 1–5. |
+| **[03](./docs/submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** | State Semantics & Trust Model | Four-Class State Taxonomy (Cognitive, Operational, Authoritative, Runtime), Invariants 1–7. |
 | **[04](./docs/submission/04_ARCHITECTURE.md)** | Systems Architecture | Three Physical Engines, gVisor sandboxing, dataflow diagrams, labeled latency budgets. |
 | **[05](./docs/submission/05_SECURITY_AND_FAILURE_MODEL.md)** | Security & Threat Model | Hardened security model: parameter smuggling defenses, kernel isolation, TOCTOU leases. |
-| **[06](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Five causally chained Core RQs, discrete survival hazard modeling for $\text{MDDD}_\tau$, pre-registration. |
-| **[07](./docs/submission/07_24_MONTH_ROADMAP.md)** | 24-Month R&D Roadmap | Eight binding falsification gates (M3–M18) with explicit Kill / Narrow / Pivot criteria. |
-| **[08](./docs/submission/08_CAPITAL_PLAN.md)** | Capital & Expense Model | Primary \$285,000 budget vs. \$120,000 fallback, compute modeling, and capital-at-risk. |
-| **[09](./docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Genuine novelty vs. plumbing, OCAP security lineage, competitor analysis, platform risk. |
+| **[06](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Seven causally chained Core RQs (RQ1–RQ7), discrete survival hazard modeling for $\text{MDDD}_\tau$, pre-registration. |
+| **[07](./docs/submission/07_24_MONTH_ROADMAP.md)** | 24-Month R&D Roadmap | Eight binding falsification gates (M3–M24) with explicit Narrow / Pivot / Stop criteria. |
+| **[08](./docs/submission/08_CAPITAL_PLAN.md)** | Capital & Expense Model | Primary \$400,000 budget vs. \$150,000 fallback, compute modeling, and capital-at-risk. |
+| **[09](./docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Potential research contributions vs. plumbing, OCAP security lineage, competitor analysis, platform risk. |
 | **[10](./docs/submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Technical Brief | High-density 12-question diligence summary for the 1517 Fund Investment Committee. |
-| **[ADRs](./docs/submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Historical records AD-001–AD-011 and post-diligence decisions AD-012–AD-021. |
-| **[Changelog](./docs/submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability of all 24 modifications from V1 through V2 to Final Submission. |
+| **[11](./docs/submission/11_INVESTOR_OVERVIEW.md)** | Investor Overview (One Page) | Problem, thesis, wedge, evidence plan, and ask in one page. |
+| **[ADRs](./docs/submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Historical records AD-001–AD-011 and post-diligence decisions AD-012–AD-023 (AD-017/AD-019 superseded). |
+| **[Changelog](./docs/submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 (CHG-001–CHG-031). |
 
 ---
 
@@ -116,7 +117,8 @@ The program operates on a **16-checkpoint / 8-gate** schedule (lightweight check
 ## Recommended Reading Order
 
 ### For Deep-Tech Investors (1517 Fund Investment Committee):
-1.  **[`docs/submission/10_1517_TECHNICAL_BRIEF.md`](./docs/submission/10_1517_TECHNICAL_BRIEF.md)** — High-density 12-question diligence summary.
+1.  **[`docs/submission/11_INVESTOR_OVERVIEW.md`](./docs/submission/11_INVESTOR_OVERVIEW.md)** — One-page overview: problem, thesis, wedge, evidence plan, ask.
+2.  **[`docs/submission/10_1517_TECHNICAL_BRIEF.md`](./docs/submission/10_1517_TECHNICAL_BRIEF.md)** — High-density 12-question diligence summary.
 2.  **[`docs/submission/01_RESEARCH_THESIS.md`](./docs/submission/01_RESEARCH_THESIS.md)** — Core problem, thesis vs. wedge, counter-case, and non-goals.
 3.  **[`docs/submission/08_CAPITAL_PLAN.md`](./docs/submission/08_CAPITAL_PLAN.md)** — \$400,000 budget model and capital-at-risk schedule.
 4.  **[`docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** — Competitors, defensibility, and platform risk.

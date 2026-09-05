@@ -17,7 +17,7 @@ The documentation in this repository is organized into four distinct tiers refle
 
 ```
 docs/
-├── submission/         <-- [PRIMARY] Primary submission candidate — evidence-verified 24-month research dossier (13 files)
+├── submission/         <-- [PRIMARY] Canonical V3 24-month research dossier (14 files; verification in progress)
 ├── verification/       <-- Complete audit ledgers from the final evidence verification pass (10 files)
 ├── diligence_audit/    <-- Adversarial diligence audit reports modeled on a 1517-style technical review (12 files)
 └── archive/            <-- Historical working archives preserving complete scientific lineage
@@ -29,23 +29,24 @@ docs/
 
 ## 1. Primary Submission Dossier (`/docs/submission`)
 
-The canonical, publication-ready research dossier. Every externally checkable claim, citation, and benchmark number has undergone a strict evidence verification pass.
+The canonical, in-progress V3 research dossier. Externally checkable claims carry epistemic labels and sources; open verification items (unconfirmed citations, pre-registration, statistical calibration) are marked inline. Verification reports marked SUPERSEDED are historical.
 
 | File | Document Title | Focus & Core Contribution |
 | :--- | :--- | :--- |
 | **[`00_README.md`](./submission/00_README.md)** | Dossier Master Overview | Executive summary, systems architecture diagram, milestone schedule, and reading order. |
 | **[`01_RESEARCH_THESIS.md`](./submission/01_RESEARCH_THESIS.md)** | Core Research Thesis | Problem definition, broad thesis vs. initial wedge, the Agentless counter-case, and non-goals. |
 | **[`02_EVIDENCE_LANDSCAPE.md`](./submission/02_EVIDENCE_LANDSCAPE.md)** | Evidence Landscape | Verified literature (Huang et al., Valmeekam et al., MINJA), SWE-bench harness sensitivity, competitive matrix. |
-| **[`03_STATE_SEMANTICS_AND_TRUST_MODEL.md`](./submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** | State Semantics & Trust Model | Four-Class State Taxonomy (Cognitive, Operational, Authoritative, Runtime), human trust roots, Invariants 1–5. |
-| **[`04_ARCHITECTURE.md`](./submission/04_ARCHITECTURE.md)** | Systems Architecture | The Three Physical Engines (Spine, Effect Gate, Admission Engine), gVisor sandboxing, labeled latency targets. |
+| **[`03_STATE_SEMANTICS_AND_TRUST_MODEL.md`](./submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** | State Semantics & Trust Model | Four-Class State Taxonomy (Cognitive, Operational, Authoritative, Runtime), human trust roots, Invariants 1–7. |
+| **[`04_ARCHITECTURE.md`](./submission/04_ARCHITECTURE.md)** | Systems Architecture | The Three Physical Engines (Causal State Spine, Deterministic Effect Gate, Verified Adaptation Engine), gVisor sandboxing, labeled latency targets. |
 | **[`05_SECURITY_AND_FAILURE_MODEL.md`](./submission/05_SECURITY_AND_FAILURE_MODEL.md)** | Security & Threat Model | Hardened security model: parameter smuggling defenses, kernel isolation, TOCTOU leases, failure taxonomy. |
-| **[`06_CORE_RESEARCH_PROGRAM.md`](./submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Five causally chained Core RQs, discrete survival hazard modeling for $\text{MDDD}_\tau$, pre-registration commitment. |
-| **[`07_24_MONTH_ROADMAP.md`](./submission/07_24_MONTH_ROADMAP.md)** | 18-Month R&D Roadmap | Six checkpoint gates (M3–M18) with explicit, binding Kill / Narrow / Pivot criteria. |
-| **[`08_CAPITAL_PLAN.md`](./submission/08_CAPITAL_PLAN.md)** | Capital & Expense Plan | Primary \$285,000 budget vs. \$120,000 fallback, compute modeling across 13,200 trajectories, capital-at-risk. |
-| **[`09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Genuine systems novelty vs. commoditized plumbing, OCAP security lineage, competitor analysis, platform risks. |
+| **[`06_CORE_RESEARCH_PROGRAM.md`](./submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Seven causally chained Core RQs (RQ1–RQ7), discrete survival hazard modeling for $\text{MDDD}_\tau$, pre-registration commitment. |
+| **[`07_24_MONTH_ROADMAP.md`](./submission/07_24_MONTH_ROADMAP.md)** | 24-Month R&D Roadmap | 16 evidence checkpoints and eight binding falsification gates (M3–M24) with explicit Narrow / Pivot / Stop criteria. |
+| **[`08_CAPITAL_PLAN.md`](./submission/08_CAPITAL_PLAN.md)** | Capital & Expense Plan | Primary \$400,000 budget (24 months) vs. \$150,000 constrained fallback (12 months), compute assumptions, capital-at-risk. |
+| **[`09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Potential research contributions vs. commoditized plumbing, OCAP security lineage, competitor analysis, platform risks. |
 | **[`10_1517_TECHNICAL_BRIEF.md`](./submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Investor Technical Brief | High-density 12-question diligence responses for the 1517 Fund Investment Committee. |
-| **[`RESEARCH_DECISION_LEDGER.md`](./submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Architecture Decision Records covering initial formulation (AD-001–AD-011) and post-diligence decisions (AD-012–AD-021). |
-| **[`DOSSIER_CHANGELOG.md`](./submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability of all 24 modifications from V1 through V2 to Final Submission. |
+| **[`11_INVESTOR_OVERVIEW.md`](./submission/11_INVESTOR_OVERVIEW.md)** | Investor Overview (One Page) | Problem, thesis, wedge, evidence plan, and ask in one page. |
+| **[`RESEARCH_DECISION_LEDGER.md`](./submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Architecture Decision Records covering initial formulation (AD-001–AD-011) and post-diligence decisions (AD-012–AD-023; AD-017/AD-019 superseded). |
+| **[`DOSSIER_CHANGELOG.md`](./submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 (CHG-001–CHG-031). |
 
 ---
 

@@ -3,7 +3,9 @@
 **Project:** GIBBRN Dossier V2  
 **Purpose:** Single authoritative reference for every fact, number, and claim approved for use in SUBMISSION_*.md files  
 **Audit Date:** September 2026  
-**Status:** All items in this sheet have been verification-checked. Items marked ⚠️ carry explicit caveats that must appear when used.  
+**Status:** All items in this sheet have been verification-checked. Items marked ⚠️ carry explicit caveats that must appear when used.
+
+> **SUPERSEDED SCOPE NOTICE (September 5, 2026 — do not delete):** This sheet describes the **V2 scope** (USD 285,000 / 18 months / 5 RQs) and is retained as history. The current canonical scope is **V3: USD 400,000 / 24 months / 7 RQs (RQ1–RQ7) / 16 checkpoints / 8 gates (M3–M24) / $150,000 fallback** (see `docs/submission/00_README.md`, AD-022/AD-023, changelog CHG-025). Do not cite V2 figures from this sheet as current. Engine 3 canonical name is now "Verified Adaptation Engine" (not "Experience Admission Engine").  
 
 ---
 

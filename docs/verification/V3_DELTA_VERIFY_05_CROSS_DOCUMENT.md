@@ -14,3 +14,13 @@
 - **Decision Ledger & Provenance:** Added AD-022 and AD-023 to `RESEARCH_DECISION_LEDGER.md` and added Phase 4 to `DOSSIER_CHANGELOG.md`.
 
 **Status:** V3 DELTA VERIFIED
+
+---
+
+## SUPERSEDED NOTICE (September 5, 2026 review — do not delete; preserves audit trail)
+
+**Finding:** The "Universal Variable Propagation" claim above was inaccurate at time of writing. Direct file reads (Sept 2026) showed legacy values retained on canonical surfaces: root `README.md` (USD 285,000; $120,000 fallback; "Five causally chained Core RQs"; "M3–M18"; garbled "24-Month R18-Month R&D Technical DossierD Technical Dossier"; duplicate `gibbrn-research-research` slug) and `docs/README.md` ($285,000/$120,000; "Five causally chained Core RQs"; "18-Month R&D Roadmap / Six checkpoint gates (M3–M18)"). Engine naming also still varied across files.
+
+**Correction applied:** Both READMEs corrected to USD 400,000 / $150,000, 7 RQs, 8 gates (M3–M24); `00_README.md` rewritten with canonical scope and engine names; changelog CHG-030 records the fix.
+
+**Limitation of this report:** This file is retained as a historical record of an incorrect verification. Do not cite its "VERIFIED" status as current. Current canonical scope: USD 400,000 / 24 months; $150,000 / 12-month fallback; 7 RQs; 16 checkpoints / 8 gates M3–M24.

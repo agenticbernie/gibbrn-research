@@ -18,7 +18,7 @@ In response to the rapid emergence of adaptive agent architectures (e.g., contin
 
 ```text
 +-----------------------------------------------------------------------------------+
-| ENGINE 1: CANONICAL STATE & ADAPTATION LINEAGE SUBSTRATE                          |
+| ENGINE 1: CAUSAL STATE SPINE (Canonical State & Adaptation Lineage Substrate)     |
 | - High-throughput Merkle DAG event-spine (Rust/gRPC) replacing scattered context. |
 | - Records exact adaptation lineage (e.g., skill.created, harness.bound).          |
 +-----------------------------------------------------------------------------------+
@@ -27,7 +27,7 @@ In response to the rapid emergence of adaptive agent architectures (e.g., contin
 | - Runs out-of-process as a synchronous interceptor proxy.                         |
 | - Couples capability tokens with gVisor/seccomp kernel containment.              |
 +-----------------------------------------------------------------------------------+
-| ENGINE 3: VERIFIED ADAPTATION ENGINE                                              |
+| ENGINE 3: VERIFIED ADAPTATION ENGINE (Verifier-Rich Skill & Harness Governance)   |
 | - Manages two critical adaptation pipelines: Experience -> Skill (regression-     |
 |   gated induction) and Harness Variant -> Model Binding (portability checks).     |
 +-----------------------------------------------------------------------------------+
@@ -75,7 +75,7 @@ flowchart TD
 
 ## 3. Physical Engine Detailed Specifications
 
-### 3.1 Engine 1: Canonical State & Adaptation Lineage Substrate
+### 3.1 Engine 1: Causal State Spine (Canonical State & Adaptation Lineage Substrate)
 *   **Responsibility:** Acts as the immutable source of truth for all agent transitions, causal parent-child dependencies, external-effect receipts, checkpoint references, and *adaptation provenance*.
 *   **Physical Storage:** Backed by PostgreSQL 16 (production) or SQLite in WAL mode (edge/local). Does **not** invent a novel database; utilizes standard ACID transactions with optimistic concurrency control.
 *   **Event Structure:**
@@ -107,7 +107,7 @@ flowchart TD
     - Every mutating tool executes inside an ephemeral **gVisor (runsc) micro-container**.
     - Strict Linux seccomp filters block raw socket creation and prevent access to sensitive host directories, neutralizing parameter-level data exfiltration.
 
-### 3.3 Engine 3: Verified Adaptation Engine
+### 3.3 Engine 3: Verified Adaptation Engine (Verifier-Rich Skill & Harness Governance)
 *   **Responsibility:** Governs the transition of transient trajectory successes into permanent, reusable operational knowledge ($\mathcal{S}_{\text{ops}}$) and portable runtime strategies.
 *   **Disciplined Scope Reduction:** Engine 3 focuses explicitly on two empirical adaptation pipelines:
     1.  *Experience $\to$ Procedural Skill:* Extracting verified Python/Bash macros from raw trajectories and evaluating them against deterministic test matrices.

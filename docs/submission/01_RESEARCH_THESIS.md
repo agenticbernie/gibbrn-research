@@ -63,7 +63,9 @@ The initial wedge treats foundation model outputs strictly as **untrusted action
 An authentic scientific proposal must confront the strongest argument against its own existence.
 
 ### The "Deterministic Pipeline + Frontier Model" Counter-Case:
-> *Enterprises will never deploy open-ended, self-directed autonomous agents for consequential production workflows. Instead, production systems will converge on deterministic, hard-coded DAGs (e.g., the Agentless paradigm [10], Temporal workflows, or microservices) where foundation models are called only as narrow, stateless extraction functions.*
+> *Enterprises will never deploy open-ended, self-directed autonomous agents for consequential production workflows. Instead, production systems will converge on deterministic, hard-coded DAGs (e.g., the Agentless paradigm [10], pre-wired Temporal workflows used as fixed DAGs, or microservices) where foundation models are called only as narrow, stateless extraction functions.*
+
+*Clarification on Temporal:* Temporal's documented model separates deterministic workflow orchestration code from non-deterministic activities (LLM calls, tool executions recorded in Event History), so Temporal *can* execute LLM-driven dynamic branching at runtime (Temporal, "Of course you can build dynamic AI agents," Nov 2025; OpenAI Codex and Replit Agent cited as production users). gibbrn does not claim Temporal lacks dynamic branching. The counter-case concerns *pre-wired static DAGs operated as fixed pipelines* — whether implemented on Temporal, Step Functions, or hand-rolled code — versus tasks that require runtime exploratory branching. What Temporal's durability model does not by itself provide, per public documentation reviewed, is agent-specific semantic validation of whether an LLM-proposed side effect reflects laundered in-context authority.
 
 In that world:
 - Agents never execute open-ended 50-step exploratory tool loops.
@@ -80,9 +82,12 @@ $$\text{Static Deterministic DAGs} \quad \subset \quad \mathbf{gibbrn\;(Managed\
 Rigid Pipelines (Agentless / Temporal)   Managed Autonomy (gibbrn)      Unmanaged Loops (LangGraph / AutoGen)
 ---------------------------------------+-----------------------------+---------------------------------------
 - Cannot handle novel branching        - Dynamic reasoning allowed   - Dynamic reasoning allowed
-- Zero authority laundering risk       - Deterministic effect gate   - Severe authority laundering risk
+- Minimal authority laundering risk    - Deterministic effect gate   - Severe authority laundering risk
+  within fixed scopes*                   - Causal state checkpoints    - Uncontained compounding crashes
 - Brittle in changing environments     - Causal state checkpoints    - Uncontained compounding crashes
 ```
+
+*Static pipelines reduce — but do not eliminate — authority risk: misconfigured IAM scopes, overly broad tool permissions, or human error in DAG wiring can still authorize unintended effects. The reduction holds only within fixed, pre-approved scopes and does not generalize to open-ended branching.
 
 **The Falsification Test:** If empirical research demonstrates that real-world software engineering, DevOps, and multi-system IT tasks can be solved with equal or higher reliability by static pipelines without dynamic branching, **the gibbrn thesis is falsified, and the company should not exist.**
 

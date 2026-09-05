@@ -2,7 +2,9 @@
 
 **Project:** GIBBRN Dossier V2  
 **Scope:** All claims about 1517 Fund, investor facts, and capital-related assertions  
-**Audit Date:** September 2026  
+**Audit Date:** September 2026
+
+> **SCOPE NOTICE (September 5, 2026 — do not delete):** This ledger audited the **V2 capital scope** (USD 285,000 / 18 months). It is retained as history. Current scope is **V3: USD 400,000 / 24 months; $150,000 fallback** (`docs/submission/08_CAPITAL_PLAN.md`). 1517 official-site facts reconfirmed Sept 2026: first checks $50,000 (idea/R&D) to $1,000,000 (deep-tech seed), average ~$400,000 pre-seed; R&D/idea through Seed; "who over what" (dropouts, students, renegade scientists, deep-tech). No official video requirement found; Loom videos appear only as optional Medici-grant supporting material. Cite 1517fund.com as primary source, not secondary aggregators.  
 
 ---
 

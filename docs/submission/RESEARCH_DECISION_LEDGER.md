@@ -119,6 +119,8 @@
 
 ### AD-017: Pruning of Eight Research Questions to Five Causally Chained Core RQs
 *   **Date:** September 3, 2026
+*   **Status:** HISTORICAL — SUPERSEDED by AD-023 (7 Core RQs, 24-month scope). Preserved without rewriting; do not cite as current scope.
+*   **Date:** September 3, 2026
 *   **Question:** Should an 18-month pre-seed research program attempt to answer eight broad research questions?
 *   **Evidence Examined:** Critical path and scheduling analysis.
 *   **Supporting Evidence:** Eight RQs would over-extend a lean founder-led research program across peripheral LoRA fine-tuning and cross-runtime benchmarks, risking failure on the core thesis.
@@ -146,6 +148,8 @@
 ---
 
 ### AD-019: Elevation of the $285,000 Budget as Primary Pre-Seed Ask
+*   **Date:** September 3, 2026
+*   **Status:** HISTORICAL — SUPERSEDED by AD-023 ($400,000 / 24-month primary; $150,000 fallback). Preserved without rewriting; do not cite as current ask.
 *   **Date:** September 3, 2026
 *   **Question:** Should gibbrn present $120,000 and $285,000 as equal funding options to 1517 Fund?
 *   **Evidence Examined:** Single-point-of-failure analysis and token compute recalculations.

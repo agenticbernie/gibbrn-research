@@ -10,3 +10,9 @@
 - **MDDD Survival Hazard Model:** Retained discrete survival analysis with Kaplan-Meier right-censoring and competing-risks sensitivity modeling.
 
 **Status:** V3 DELTA VERIFIED
+
+---
+
+## ADDENDUM (September 5, 2026 review — do not delete)
+
+Protocols above are retained; the following statistical limits were added to `06_CORE_RESEARCH_PROGRAM.md` after this report: three-arm (A/B/C) comparisons required for RQ3/RQ6; 0/1,000 → 95% upper ≈0.003 (confirmatory $N \approx 3{,}000$ for ≤0.001); 0/200 → upper ≈0.015 (mock-IAM pilot only, live deferred to M24); ATR denominator guardrail ($\Delta P_{\text{source}} \ge 5\text{pp}$) with selection-bias disclosure; MDDD bootstrap-CI requirement plus joint success/cost gate; power values labeled preliminary with effect-size assumptions; Table 6.2 gate-evidence mapping; "not yet preregistered" disclaimer.

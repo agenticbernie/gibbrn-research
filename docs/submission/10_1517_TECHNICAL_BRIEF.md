@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Executive Investor Diligence & Systems Brief  
-**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.2 (36-Month Systems Research & Prototype Program)  
 **Target:** 1517 Fund Investment Committee  
 **Standard:** 12 Direct Diligence Responses (Post-Adversarial Diligence; V4-Evidence Update)
 
@@ -22,7 +22,7 @@ North star (retained): *Agents can change. Their integrity must persist.*
 2.  **Evidence:** September 6–8, 2026 delta — 13 newly verified evidence entries, prioritizing primary sources, across 7 clusters (persistent identity, procedural abstraction, verifier-gated execution, objective operationalization, multi-agent coordination, security-context continuity, decision-sufficient state). Full per-source establish / not-establish / implication analysis in `02_EVIDENCE_LANDSCAPE.md` §3.
 3.  **Architecture discipline kept:** still **three physical engines** — Causal & Continuity State Spine; Deterministic Effect Gate / Consequence Integrity Pipeline (+ Tool Network Authority Broker design response); Procedural Skill Compilation & Verified Adaptation Engine. Goal Contract, migration, team-state, world-state, governance are conceptual layers, not new daemons.
 4.  **Program shape:** 7 RQs / 8 gates → **12 RQs across 3 arcs / 12 quarterly gates / ~24 checkpoints**, with four major thesis gates (M9, M18, M24, M36). Year 3 is conditional on M24. New RQs carry candidate metrics with thresholds TBD at pilot calibration — no fabricated numbers.
-5.  **Capital honesty:** **no new 36-month ask is introduced.** The V3 $400k/$150k figures are preserved as history; the V4 rebasing is explicitly unresolved pending founder authorization (`08_CAPITAL_PLAN.md` §9).
+5.  **Capital rebase (V4.2, founder-authorized):** **$450k current financing through M24**; **~$700k modeled program capitalization**; **~$250k M24-conditional Year-3 extension**. V3 $400k/$150k figures retained as history only (`08_CAPITAL_PLAN.md` Appendices H1–H3).
 
 ---
 
@@ -94,8 +94,19 @@ Twelve research questions across three arcs (full protocols: `06_CORE_RESEARCH_P
 ---
 
 ### 10. What does the requested capital buy?
-**V4 capital status: the 36-month ask is explicitly unresolved pending founder-approved rebasing — no new number is introduced here.** For historical context only [HISTORICAL — V3; V4 REBASING PENDING]: USD 400,000 over 24 months funded founder compensation ($120k), contingent engineering ($72k), compute ($62k), infra ($36k), hardware ($24k), red-team ($18k), legal/IP ($9k), dissemination ($7k), reserve ($52k; 13.0%). The V4 rebasing must bottom-up cost 12 RQs / 12 gates / ~24 checkpoints including RQ7-expanded, RQ8, and conditional RQ9–RQ12 workloads. See `08_CAPITAL_PLAN.md` §9.
-*   Gates are founder-proposed review points, not investor-agreed disbursement tranches; any gated release or return mechanics require a separate agreement. No capital preservation or return is promised.
+**GIBBRN is currently seeking USD 450,000 to finance the research program through Month 24** — Year 1 (Act Safely) and Year 2 (Change Safely), Gates M3–M24, ending at the Objective & Evaluation Integrity / Arc-III-readiness major gate. The modeled full 36-month program requires approximately USD 700,000 in total capitalization; the remaining approximately USD 250,000 is expected to be raised and deployed only if the Month-24 scientific and Arc-III-readiness gates justify Year-3 expansion. GIBBRN is not raising $700,000 now.
+
+What the $450k buys, gate by gate (evidence per gate; binding rules in Table 6.2):
+*   **M3 ($~55k cumulative):** typed-state separation verdict (≥80% corruption reduction?) + interceptor overhead envelope + supported-ops/bypass documentation.
+*   **M6:** causal-reconstruction verdict (CRR ≥80%?) + lineage-instrument (LRA) baseline for RQ7/RQ8 design.
+*   **M9 ★ (wedge):** consequence-integrity pilot (0/1,000 + per-family bounds + fault-injection axis) qualifying the $N\approx3{,}000$ confirmatory phase.
+*   **M12:** verified-admission verdict (FPR ≤0.02, retention ≥98%) + abstraction-metric baseline (yield/transfer/compression).
+*   **M15:** portability-or-safe-bounding verdict (ATR ≥0.80 or bounded specialization).
+*   **M18 ★ (scientific):** joint CIF/depth/completion/cost/latency verdict (C vs B) with simulation-backed power.
+*   **M21:** migration-continuity verdict (conformance probes + negative cases; single-runtime fallback if failed).
+*   **M24 ★ (Year-2/readiness):** objective-integrity verdict (contract + fidelity) + Arc III readiness review + design-partner validation start.
+
+Bottom-up composition of the $450k (Stage 1): founder $120k; engineering $70k; stats/annotation $25k; compute $55k; infra $36k; security/evaluation $35k; hardware $18k; legal/ops $14k; dissemination $9k; partner prep $8k; contingency $60k (full split in `08_CAPITAL_PLAN.md` Table 8.2). Gates are founder-proposed scientific review points, not investor-agreed disbursement tranches; any gated release, escrow, or return mechanics require a separate agreement. No capital preservation or return is promised.
 
 ---
 

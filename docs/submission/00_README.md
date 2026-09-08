@@ -1,10 +1,10 @@
 # Dossier Master Overview
 
 **Date:** September 2026  
-**Dossier Version:** 4.1  
+**Dossier Version:** 4.2  
 **Status:** V4 Canonical — 36-Month / 12 RQs / 12 Gates / ~24 Evidence Checkpoints  
 **Canonical scope:** 36-month systems research and prototype program; 12 Research Questions (RQ1–RQ12) across 3 Research Arcs; 12 quarterly binding gates (M3–M36) with four major thesis gates (M9, M18, M24, M36); approximately 24 lightweight evidence checkpoints.
-**Capital status:** V3 historical ask (USD 400,000 / 24 months; USD 150,000 / 12-month fallback) is preserved as history. The V4 36-month capital model is **explicitly unresolved and requires founder-approved rebasing** — see `08_CAPITAL_PLAN.md`. No new funding number is introduced in V4.
+**Capital status (V4.2, founder-authorized):** **Current Financing Target USD 450,000** (M0–M24) · **Modeled 36-Month Capitalization ~USD 700,000** · **Conditional Year-3 Extension ~USD 250,000** (M24-gated) — see `08_CAPITAL_PLAN.md`. V3 figures ($400,000 / $150,000) retained as history only.
 
 This directory contains the canonical, static version of the **gibbrn** research dossier, structured for external review.
 
@@ -49,7 +49,7 @@ The V3 question — *which agent state may safely remain probabilistic and model
 *   `05_SECURITY_AND_FAILURE_MODEL.md`: Threat model including security-context discontinuity, endpoint/network authority confusion, consequence mismatch, objective/evaluator capture; expanded failure taxonomy.
 *   `06_CORE_RESEARCH_PROGRAM.md`: The 12 falsifiable Research Questions (RQ1–RQ12), research goals G1–G8, MDID survival metric, pre-registration commitment. RQ1–RQ7 protocols retained; RQ8–RQ12 define candidate metrics with thresholds TBD at pilot calibration — no fabricated numeric gates.
 *   `07_36_MONTH_ROADMAP.md`: The ~24-checkpoint, 12-gate empirical timeline (M3–M36) with four major thesis gates (M9, M18, M24, M36).
-*   `08_CAPITAL_PLAN.md`: V3 USD 400,000 / 24-month model preserved as history; V4 36-month rebasing explicitly flagged as requiring founder authorization. Research sequencing and capital-at-risk logic updated structurally; no new ask invented.
+*   `08_CAPITAL_PLAN.md`: V4.2 rebased financing ($450k current through M24; ~$700k program; ~$250k M24-conditional Year-3) with bottom-up categories, stage split, capital-at-risk, and reserve policy; V3 $400k/$150k retained as flagged history.
 *   `09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`: Potential contributions, competitor analysis, platform risks, sharpened company thesis (continuity + consequence-integrity substrate).
 *   `10_1517_TECHNICAL_BRIEF.md`: The high-density technical summary for the 1517 Fund Investment Committee.
 *   `11_INVESTOR_OVERVIEW.md`: One-page investor overview (problem, thesis, wedge, evidence plan, capital status).

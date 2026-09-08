@@ -4,7 +4,7 @@
 
 **Program:** 36-Month Systems Research & Prototype Program — 3 arcs, 12 RQs, 12 quarterly gates (M3–M36), ~24 checkpoints; four major thesis gates (M9, M18, M24, M36). Year 3 is conditional on M24.
 
-**Status:** Pre-prototype, checkpoint-gated R&D proposal. No measured results, customers, partners, or revenue are claimed. Full protocols: `06_CORE_RESEARCH_PROGRAM.md`; gates: `07_36_MONTH_ROADMAP.md`; capital status: `08_CAPITAL_PLAN.md` §9 (V4 rebasing pending); diligence brief: `10_1517_TECHNICAL_BRIEF.md`.
+**Status:** Pre-prototype, checkpoint-gated R&D proposal. No measured results, customers, partners, or revenue are claimed. Full protocols: `06_CORE_RESEARCH_PROGRAM.md`; gates: `07_36_MONTH_ROADMAP.md`; financing: `08_CAPITAL_PLAN.md` (V4.2 rebase); diligence brief: `10_1517_TECHNICAL_BRIEF.md`.
 
 ---
 
@@ -37,7 +37,13 @@ Phase 1 (State / identity / Goal Contract semantics + minimal interceptor): out-
 > I spend 4–6 hours daily on gibbrn (6–10 on some rest days), alongside other commitments. Unproven: whether external integrity controls extend agent survival under adversarial pressure — what this program tests, with kill criteria I will honor.
 
 ## 8. What does the capital buy?
-**V4 capital status: 36-month rebasing pending founder authorization — no new ask quoted here** (see `08_CAPITAL_PLAN.md` §9). Historical context only [HISTORICAL — V3; V4 REBASING PENDING]: **USD 400,000 / 24 months** (primary) or **USD 150,000 / 12-month pilot** (M3–M12 fallback, preliminary): founder compensation ($120k proposed), contingent engineering ($72k), compute ($62k), infra ($36k), hardware ($24k), red-team/evaluation ($18k), legal/IP ($9k), dissemination ($7k), reserve ($52k). Each gate publishes evidence per its to-be-preregistered protocol (planning map in Table 6.2; no protocol preregistered as of this dossier); failures trigger Narrow/Pivot/Stop with unspent funds subject to investor governance (separate agreement required; no return promised). 1517 fit: R&D/idea-through-Seed, deep-tech/sci-fi, "who over what"; first checks $50k–$1M per 1517fund.com.
+**Current Financing Target:** **$450,000 through M24** — Year 1 + Year 2, Gates M3–M24, ending at the Objective-Integrity / Arc-III-readiness major gate.
+
+**Modeled Full Program Capitalization:** **~$700,000 over 36 months.**
+
+**Conditional Year-3 Extension:** **~$250,000, activated only if M24 evidence justifies Arc III** (RQ9–RQ12, external validation, M36-A scientific + M36-B company verdicts).
+
+High-level Stage-1 use of funds ($450k): founder $120k; engineering $70k; stats/annotation $25k; compute $55k; infra $36k; security/evaluation $35k; hardware $18k; legal/ops $14k; dissemination $9k; partner prep $8k; contingency $60k (full bottom-up model: `08_CAPITAL_PLAN.md` §§2–§4). Each gate publishes evidence per its to-be-preregistered protocol (planning map in Table 6.2; no protocol preregistered as of this dossier); failures trigger Narrow/Pivot/Stop with unspent funds subject to investor governance (separate agreement required; no return promised). Gates are scientific review points, not financing tranches. 1517 fit: R&D/idea-through-Seed, deep-tech/sci-fi, "who over what"; first checks $50k–$1M per 1517fund.com.
 
 ## 9. Three-year progression
 

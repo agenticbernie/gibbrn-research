@@ -4,7 +4,7 @@
 **Target Audience:** 1517 Fund Investment Committee, Distributed Systems Researchers, AI Security Architects  
 **Repository:** `github.com/agenticbernie/gibbrn-research`  
 **Status:** Pre-Seed R&D-Stage Systems Hypothesis (Checkpoint-Gated Empirical Program)  
-**Capital Status:** V3 historical ask USD 400,000 / 24 months (USD 150,000 fallback) preserved as history; V4 36-month rebasing explicitly pending founder authorization — no new number quoted (see [`docs/submission/08_CAPITAL_PLAN.md`](./docs/submission/08_CAPITAL_PLAN.md) §9)  
+**Capital Status (V4.2, founder-authorized):** **Current Financing Target USD 450,000** (M0–M24) · **Modeled 36-Month Capitalization ~USD 700,000** · **Conditional Year-3 Extension ~USD 250,000** subject to the M24 evidence/Arc-III-readiness gates (see [`docs/submission/08_CAPITAL_PLAN.md`](./docs/submission/08_CAPITAL_PLAN.md))  
 **License:** Strict Restricted Non-Commercial & Anti-Training License (See [`LICENSE`](./LICENSE))
 
 ---
@@ -100,12 +100,12 @@ docs/
 | **[05](./docs/submission/05_SECURITY_AND_FAILURE_MODEL.md)** | Security & Threat Model | Hardened security model plus V4 threats (context discontinuity, endpoint confusion, mismatch, capture). |
 | **[06](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Twelve RQs (RQ1–RQ12) across 3 arcs, G1–G8 goals, survival analysis for $\text{MDID}_\tau$, pre-registration. |
 | **[07](./docs/submission/07_36_MONTH_ROADMAP.md)** | 36-Month R&D Roadmap | ~24 checkpoints and twelve binding gates (M3–M36); four major thesis gates (M9/M18/M24/M36). |
-| **[08](./docs/submission/08_CAPITAL_PLAN.md)** | Capital & Expense Model | V3 $400k history preserved; V4 36-month rebasing explicitly unresolved (no new ask). |
+| **[08](./docs/submission/08_CAPITAL_PLAN.md)** | Capital & Expense Model | V4.2 rebase: $450k current target (M0–M24), ~$700k program, ~$250k conditional Year-3; V3 $400k/$150k retained as history. |
 | **[09](./docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Potential research contributions vs. plumbing, OCAP lineage, CONTINUITY precedent, platform risk. |
 | **[10](./docs/submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Technical Brief | High-density 12-question diligence summary for the 1517 Fund Investment Committee. |
 | **[11](./docs/submission/11_INVESTOR_OVERVIEW.md)** | Investor Overview (One Page) | Problem, thesis, wedge, evidence plan, and capital status in one page. |
-| **[ADRs](./docs/submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Historical records AD-001–AD-023 (AD-017/AD-019 superseded) plus V4 transition and V4.1 review AD-024–AD-046. |
-| **[Changelog](./docs/submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-057). |
+| **[ADRs](./docs/submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Historical records AD-001–AD-023 (AD-017/AD-019 superseded) plus V4 transition and V4.1 review AD-024–AD-047. |
+| **[Changelog](./docs/submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-058). |
 
 ---
 
@@ -142,7 +142,7 @@ The program operates on a **~24-checkpoint / 12-gate** schedule (lightweight che
 1.  **[`docs/submission/11_INVESTOR_OVERVIEW.md`](./docs/submission/11_INVESTOR_OVERVIEW.md)** — One-page overview: problem, thesis, wedge, evidence plan, capital status.
 2.  **[`docs/submission/10_1517_TECHNICAL_BRIEF.md`](./docs/submission/10_1517_TECHNICAL_BRIEF.md)** — High-density 12-question diligence summary.
 2.  **[`docs/submission/01_RESEARCH_THESIS.md`](./docs/submission/01_RESEARCH_THESIS.md)** — Core problem, thesis vs. wedge, counter-case, and non-goals.
-3.  **[`docs/submission/08_CAPITAL_PLAN.md`](./docs/submission/08_CAPITAL_PLAN.md)** — V3 budget history and V4 rebasing status (no new ask quoted).
+3.  **[`docs/submission/08_CAPITAL_PLAN.md`](./docs/submission/08_CAPITAL_PLAN.md)** — Rebased financing model: $450k through M24, ~$700k program, ~$250k conditional Year-3.
 4.  **[`docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** — Competitors, defensibility, and platform risk.
 5.  **[`docs/submission/DOSSIER_CHANGELOG.md`](./docs/submission/DOSSIER_CHANGELOG.md)** — Complete audit provenance and modification history.
 
@@ -153,7 +153,7 @@ The program operates on a **~24-checkpoint / 12-gate** schedule (lightweight che
 4.  **[`docs/submission/05_SECURITY_AND_FAILURE_MODEL.md`](./docs/submission/05_SECURITY_AND_FAILURE_MODEL.md)** — Hardened security architecture and threat mitigations.
 5.  **[`docs/submission/06_CORE_RESEARCH_PROGRAM.md`](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** — RQ1–RQ12, G1–G8 goals, discrete survival analysis for $\text{MDID}_\tau$.
 6.  **[`docs/submission/07_36_MONTH_ROADMAP.md`](./docs/submission/07_36_MONTH_ROADMAP.md)** — Checkpoint-gated timeline and binding kill triggers.
-7.  **[`docs/submission/RESEARCH_DECISION_LEDGER.md`](./docs/submission/RESEARCH_DECISION_LEDGER.md)** — Living systems ADRs (AD-001 through AD-046).
+7.  **[`docs/submission/RESEARCH_DECISION_LEDGER.md`](./docs/submission/RESEARCH_DECISION_LEDGER.md)** — Living systems ADRs (AD-001 through AD-047).
 
 ---
 

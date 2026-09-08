@@ -63,6 +63,7 @@
 *   [AD-044: RQ6 Power TBD + Single Magnitude Estimand (MODIFY)](#ad-044-rq6-power-tbd--single-magnitude-estimand)
 *   [AD-045: Table 6.2 M36 Split Fix (MODIFY)](#ad-045-table-62-m36-split-fix)
 *   [AD-046: Version Semantics 4.1 + Small Fixes (MODIFY)](#ad-046-version-semantics-41--small-fixes)
+*   [AD-047: Founder-Authorized V4 Capital Rebase (ADOPT)](#ad-047-founder-authorized-v4-capital-rebase-450k-current--700k-program--250k-conditional-year-3)
 
 ---
 
@@ -507,3 +508,17 @@
 *   **Decision:** **MODIFY**
 *   **What Changed:** Canonical headers bumped to 4.1; bullet renamed to interaction depth; duplicate H0 removed; $T$-notation residue eliminated.
 *   **Next Experiment:** None.
+
+---
+
+## Section 6: V4.2 Capital Rebase (Founder-Authorized Financing — September 2026)
+
+### AD-047: Founder-Authorized V4 Capital Rebase ($450k Current / ~$700k Program / ~$250k Conditional Year-3)
+*   **Date:** September 2026
+*   **Question:** What financing structure replaces the deliberately unresolved V4 capital model now that the research design is frozen?
+*   **Evidence Examined:** 12-RQ / 12-gate frozen scope; V4.2 CIF methodology closure; bottom-up category build ($180k + $120k + $35k + $80k + $54k + $60k + $25k + $20k + $15k + $20k + $91k = $700,000; reserve 13.0%); stage timing ($450k M0–M24 / ~$250k M25–M36, exact internally).
+*   **Prior Decision Preserved:** AD-034 (refusal to fabricate before scope freeze) stands as history — it is the reason the rebase waited, not a decision being rewritten.
+*   **Decision:** **ADOPT**
+*   **Confidence:** 90% (planning model; §13 uncertainty disclosed)
+*   **What Changed:** Current Financing Target $450,000 (M0–M24 through the M24 readiness gate); modeled program capitalization ~$700,000; conditional Year-3 requirement ~$250,000 behind the M24 evidence/Arc-III-readiness decision (passing M24 authorizes seeking Year-3 capital, never auto-spends it). Founder-preferred single $450k financing; $250k+$200k split exists strictly as an investor-structured fallback (Arc-II financing-event risk documented). No scientific gate becomes a legal tranche; no escrow/SAFE/valuation terms invented; no RQ, N, arm, or threshold altered to fit finance. V3 $400k/$150k demoted to flagged appendices.
+*   **Next Experiment:** None — financing structure. Recalibrate workload-sensitive envelopes at research gates per §13.

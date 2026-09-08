@@ -1,79 +1,127 @@
 # 08: Expense Modeling & Capital-at-Risk
 
-**Document Track:** Financial Modeling & Capital Allocation (Version 4.1)  
-**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
+**Document Track:** Financial Modeling & Capital Allocation (Version 4.2 — Capital Rebase)  
+**Date:** September 2026 | **Dossier Version:** 4.2 (36-Month Systems Research & Prototype Program)  
 **Audience:** Deep-Tech Investors, 1517 Fund Partners, Technical Founders  
 
-> **V4 CAPITAL STATUS — READ FIRST:** The V4 36-month capital model is **explicitly unresolved and requires founder-approved rebasing. No new funding number is introduced in this dossier version.** Sections §§1–§5 below preserve the **V3 historical capital plan (USD 400,000 / 24 months; USD 150,000 / 12-month fallback)** as history and planning context — they are NOT the V4 36-month budget. Section §9 records the rebasing decision, the structural sequencing changes that are made without inventing numbers, and the exact founder authorization required. Do NOT scale $400,000 / 24 months into $600,000 / 36 months or any other extrapolated figure.
+> **V4.2 CAPITAL STATUS — CANONICAL:** The V4 capital model is **rebased and founder-authorized** (see §15). All "capital unresolved / rebasing pending" language from V4–V4.1 is superseded in canonical sections and retained only in changelog/ledger history.
+>
+> **Current Financing Target:** USD 450,000 to fund GIBBRN through Month 24 and the Objective & Evaluation Integrity / Arc-III-readiness major gate.
+>
+> **Modeled 36-Month Program Capitalization:** approximately USD 700,000.
+>
+> **Conditional Year-3 Capital Requirement:** approximately USD 250,000 for Months 25–36, activated only if the Month-24 evidence supports proceeding with Arc III.
+>
+> GIBBRN is NOT raising $700,000 now. The $450,000 current financing and the ~$250,000 conditional extension must never be collapsed into a single "ask."
 
-> **Governance note:** Milestone reviews, gates, and "preserve remaining capital" language in this document are *founder-proposed* review mechanics. They are not investor-agreed disbursement tranches, escrow terms, or return guarantees. Any gated disbursement, escrow, or return mechanics require a separate written investor agreement. No capital preservation or return is promised beyond "unspent funds remain subject to investor governance."
-
-## 1. [HISTORICAL — V3] The $400,000 / 24-Month Operating Budget
-
-*Preserved V3 context (September 2026 review). This budget mapped to the 24-month program (RQ1–RQ7, Gates M3–M24). It does not fund the V4 36-month program.*
-
-The $400,000 capital request was allocated to execute the 24-month research roadmap (RQ1–RQ7), culminating in Gate M24. It was capital mapped against a falsifiable research program, not an arbitrary runway.
-
-### Table 8.1: [HISTORICAL — V3] Primary Resource Allocation (24 Months)
-
-| Category | Item Description | 24-Month Allocation |
-| :--- | :--- | :--- |
-| **Human Capital** | Founder / Principal Researcher — proposed compensation ($5,000/mo × 24 mo) | $120,000 |
-| **Human Capital** | Planned Hire / Contractor, part-time research engineering (contingent on funding; ~$3,000/mo equivalent) | $72,000 |
-| **Compute** | Model Inference + Benchmark Compute (see §5 assumptions) | $62,000 |
-| **Infrastructure** | Sandbox / DB / Observability (AWS/GCP) (see §5 assumptions) | $36,000 |
-| **Operations** | Hardware / Tooling — unconfirmed allocation (no itemized list; device categories TBD by founder before procurement; no quotes claimed) | $24,000 |
-| **Security** | Security / Red-Team / External Evaluation | $18,000 |
-| **Operations** | Legal / Incorporation / IP | $9,000 |
-| **Operations** | Research Dissemination / Travel | $7,000 |
-| **Contingency** | Strategic Reserve / API Volatility Buffer (13.0%) | $52,000 |
-| **TOTAL** | **Target Initial Capitalization [V3 HISTORICAL]** | **$400,000** |
-
-*Note on Compensation:* Amounts are *proposed compensation* assumptions for a founder-led program with optional part-time research engineering support contingent on funding. No claim is made about cost of living or "subsistence" levels, which depend on location and personal circumstances not established in this dossier.
+> **Governance note:** Milestone gates are *founder-proposed scientific review mechanisms*, not investor-agreed disbursement tranches, escrow terms, or return guarantees. Any gated disbursement, escrow, milestone-based wire schedule, clawback, or return mechanics require a separate written investor agreement. Scientific STOP/NARROW/PIVOT decisions govern research scope — not legally binding investor distributions unless separately contracted. This dossier invents no escrow terms, SAFE terms, valuation caps, or ownership percentages. No capital preservation or return is promised beyond "unspent funds remain subject to investor governance."
 
 ---
 
-## 2. [HISTORICAL — V3] The $150,000 Constrained Fallback Plan (Preliminary — Not Fully Costed)
+## 1. V4 Current Financing Target — USD 450,000 (M0–M24)
 
-*Preserved V3 context. This fallback scoped the initial evidence gates (M3–M12) of the 24-month program. It is not a V4 Year-1 budget.*
+USD 450,000 is the amount GIBBRN is currently seeking. It funds Year 1 (Act Safely) and Year 2 (Change Safely): Gates M3–M24, the RQ3 security/consequence-integrity campaign (pilot + confirmatory), procedural adaptation experiments, cross-model/runtime continuity, long-horizon reliability experiments, Objective & Evaluation Integrity, and design-partner preparation plus early validation where scheduled.
 
-If 1517 prefers to fund only the initial evidence gates (M3–M12) to de-risk the core Deterministic Effect Gate, a solo-founder 12-month pilot is sketched at **$150,000**. *This fallback is preliminary and has not been bottom-up costed to the same standard as Table 8.1; treat it as a scoping proposal, not a committed budget.*
-
-*   **Kept (minimal controls, reduced scale — not single-arm):** a fallback that dropped every control arm could not support its own comparative claims, so the pilot keeps the smallest control that each gate's comparison needs: RQ1 paired design on 200 tasks × 2 arms (pairing is inherent to the McNemar comparison); RQ2 on 150 traces × 2 presentation conditions with the same annotation team; RQ3 arm-C pilot of 1,000 attacks plus reduced A/B spot-checks (100 each, descriptive — full characterization deferred); RQ4 on a single Latin-square order (100 tasks) × 2 arms (naive memory + gibbrn; order-robustness deferred); benign suite reduced to 300 (planning assumption, TBD). ≈1,450–1,750 evaluation units total. Deferred: contractor support, RQ5 transfer matrix, RQ6 survival, RQ7 delegation, confirmatory $N\approx3{,}000$, second model tier, external bounties (internal red-teaming only), most travel.
-*   **Cut:** Contractor/engineering support; RQ5 transfer matrix (100 pairs) deferred; RQ6 long-horizon survival (150 deep tasks) deferred; RQ7 IAM delegation deferred; cross-model replication deferred; second model tier deferred; external red-team bounties reduced to internal red-teaming; travel reduced to one domestic conference or remote attendance.
-*   **Evidence it would still produce (pilot precision, not full-gate precision):** M3 paired corruption-reduction estimate with wider intervals; M6 reconstruction result on the frozen subset; M9 UER pilot bound on arm C (0/1,000 → 95% upper ≈0.003 — a single-arm statistic that stands without controls, but no ≤0.001 claim); M12 retention vs. the minimal naive-memory control at reduced precision. No relative-effectiveness verdict beyond what these reduced samples support; full multi-arm replication, order-robustness, and the confirmatory phase require follow-on capital.
-*   **Staffing risk:** Solo-founder execution of ~1,450–1,750 evaluation units plus annotation management (RQ2 double-blinded review with 2 annotators + adjudicator) within 12 months is high-risk; the fallback assumes contracted annotation support within the $150,000 envelope or a further-reduced RQ2 sample with to-be-preregistered power recalculation.
+The ask is not "24 months of burn." It finances the project to a scientifically meaningful decision boundary: the M24 major gate, where the program either earns Arc III or stops expanding. What each gate's evidence buys the investor is mapped in `10_1517_TECHNICAL_BRIEF.md` §8–§9; the binding decision rules live in `06_CORE_RESEARCH_PROGRAM.md` Table 6.2.
 
 ---
 
-## 3. [HISTORICAL — V3] Capital Exposure & Drawdown Schedule
+## 2. Modeled 36-Month Program Capitalization — Approximately USD 700,000
 
-*Preserved V3 context. The 24-month drawdown below does not describe V4 capital-at-risk; see §9 for the structural update.*
+The table below is the founder-authorized bottom-up planning model for the complete 36-month program if all three Research Arcs proceed. Figures are planning allocations, not vendor quotes. The total reconciles exactly.
 
-Table 8.2 projects illustrative cumulative spend against the binding falsification gates (linearized at ~$50,000/quarter for planning; actual burn varies by benchmark phase).
+### Table 8.1 (V4 Canonical): 36-Month Bottom-Up Category Allocation
 
-### Table 8.2: [HISTORICAL — V3] Cumulative Capital-at-Risk by Milestone Gate (24-Month Program)
+| Category | 36-Month Planning Allocation |
+| :--- | ---: |
+| Founder / Principal Researcher compensation ($5,000/mo × 36 mo) | $180,000 |
+| Research engineering / contractor support (ramped to workload) | $120,000 |
+| Statistics / annotation / research assistance | $35,000 |
+| Model API / benchmark compute (frozen APIs + open-weight inference; no foundation-model training) | $80,000 |
+| Sandbox / DB / storage / CI / observability infrastructure | $54,000 |
+| External security / red-team / independent evaluation | $60,000 |
+| Hardware / technical tooling (broad categories; no shopping list) | $25,000 |
+| Legal / IP / company operations | $20,000 |
+| Research dissemination / travel | $15,000 |
+| Design-partner deployments (up to a small number of post-gate deployments) | $20,000 |
+| Contingency / API-volatility / replication reserve (13.0%) | $91,000 |
+| **TOTAL** | **$700,000** |
 
-| Milestone Gate | Target Month | Cumulative Capital Drawn | Remaining (Unspent) | Cumulative % |
-| :--- | :--- | :--- | :--- | :--- |
-| **Gate M3** | Month 3 | $50,000 | $350,000 | 12.5% |
-| **Gate M6** | Month 6 | $100,000 | $300,000 | 25.0% |
-| **Gate M9 (Wedge)** | Month 9 | $150,000 | $250,000 | 37.5% |
-| **Gate M12** | Month 12 | $200,000 | $200,000 | 50.0% |
-| **Gate M15** | Month 15 | $250,000 | $150,000 | 62.5% |
-| **Gate M18 (Scientific Gate)** | Month 18 | $300,000 | $100,000 | 75.0% |
-| **Gate M21** | Month 21 | $350,000 | $50,000 | 87.5% |
-| **Gate M24 (V3 Final Verdict — historical)** | Month 24 | $400,000 | $0 | 100.0% |
-
-"Remaining" means *projected unspent funds*, not a committed return. By M18, ~75% of the ask was projected spent; the investor value at a STOP is the research evidence and artifacts, not capital recovery.
+Arithmetic: $180k + $120k + $35k + $80k + $54k + $60k + $25k + $20k + $15k + $20k + $91k = **$700,000 exactly**. Reserve ratio: $91,000 / $700,000 = **13.0%**.
 
 ---
 
-## 4. Conditional Capital Disposition (Founder-Proposed)
+## 3. Category Notes (What Each Line Covers — and Does Not Claim)
 
-In the event of a metric failure at a binding gate, the founder proposes the disposition paths in Table 8.3. All rows defer to the canonical decision rules in `06_CORE_RESEARCH_PROGRAM.md` Table 6.2; summaries here never override that table. V4 rows (M21–M36) reference strand-level dispositions that spend no invented capital — they describe scope consequences, not dollar amounts.
+*   **Founder compensation ($180,000):** USD 5,000/month × 36 months. This retains the V3 planning assumption rather than opportunistically increasing founder pay for the larger program. It is a founder-approved planning assumption — not described as market-rate, subsistence, salary-benchmark, or cost-of-living-derived.
+*   **Research engineering ($120,000):** contractor support ramped to experimental workload: benchmark-harness implementation, infrastructure integration, experiment automation, multi-agent sandbox engineering, migration-test implementation. No hire is claimed as existing; no full-time employment is implied.
+*   **Statistics / annotation / assistance ($35,000):** blinded trajectory annotation, third-reviewer adjudication, statistical consultation (including the RQ6 competing-risk design), preregistration review, data cleaning, manifest verification, manual taxonomy/family-equivalence adjudication. Kept separate from engineering: the dossier does not imply the founder alone can run every evaluation.
+*   **Model API / benchmark compute ($80,000):** frozen commercial APIs and open-weight inference for RQ1–RQ6 runs, the RQ3 pilot + confirmatory campaigns, replication, regression reruns, RQ5 transfer matrices, RQ6 competing-risk experiments, the RQ7 migration matrix, RQ8 evaluation, and conditional RQ9–RQ12 multi-agent work. Explicitly NOT foundation-model pretraining or a general fine-tuning program. Exact RQ8–RQ12 trajectory counts remain TBD at calibration; the $80k line is therefore a planning envelope protected by contingency and recalibrated at research gates — no token totals are fabricated beyond the frozen workload model.
+*   **Infrastructure ($54,000):** PostgreSQL, object storage, WAL/checkpoint retention, observability, CI runners, gVisor/sandbox hosts, artifact storage, ephemeral and multi-agent sandbox workloads, backup/recovery, security logging. A planning envelope; no vendor pricing quoted.
+*   **Security / red-team / independent evaluation ($60,000):** deliberately protected from cuts — external security review, attack-suite review, RQ3 external red-team exercises, consequence-integrity audit, endpoint/network-authority testing, third-party reproduction attempts, Year-3 governance-sandbox review, independent scientific evaluation where useful. Independent evaluation matters because security/reliability claims cannot credibly rest entirely on founder-generated testing. No auditor is claimed as contracted.
+*   **Hardware / tooling ($25,000):** broad categories only — workstations, justified local-inference hardware, test machines, networking/security test equipment, backup equipment, software/research tooling. No device list invented.
+*   **Legal / IP / operations ($20,000):** setup, contracts, IP review, research licensing, accounting, basic compliance. No patent filing promised; the dossier's anti-IP-hype discipline stands.
+*   **Dissemination / travel ($15,000):** submissions, conferences, technical meetings, partner travel where necessary. No venue acceptance claimed.
+*   **Design-partner deployments ($20,000):** later-stage validation after M18/M24 — deployment engineering, environment integration, logging/observability, partner sandbox setup, security validation, evaluation support. No partner claimed as existing.
+*   **Contingency / replication reserve ($91,000; 13.0%):** NOT free capital. Covers API price changes, replication, larger-than-planned samples, RQ6 power recalibration, RQ3 confirmatory enlargement, incident investigation, unanticipated infrastructure needs, and Year-3 multi-agent variance. Governed by the narrow-before-overspend rule: overruns narrow scope before any follow-on request.
 
-### Table 8.3: Capital Disposition Matrix (V4-extended; dollar figures apply to V3 historical tranches only)
+---
+
+## 4. Stage Allocation — USD 450,000 (M0–M24) + Approximately USD 250,000 (M25–M36)
+
+Stage 1 is fixed at **USD 450,000**; Stage 2 consumes the remaining **approximately USD 250,000**. The line-item timing below models when costs occur: founder pay follows time; engineering ramps upward; Year-3 multi-agent, governance, and design-partner spend concentrate in Stage 2; security/evaluation spans both (early RQ3 + later external validation); contingency is deliberately NOT exhausted before M24. External language keeps "approximately" where timing is uncertain; internal arithmetic is exact.
+
+### Table 8.2 (V4 Canonical): Stage Split (exact internally)
+
+| Category | 36-Mo Total | Stage 1 (M0–M24) | Stage 2 (M25–M36) |
+| :--- | ---: | ---: | ---: |
+| Founder / Principal Researcher | $180,000 | $120,000 | $60,000 |
+| Research engineering / contractor | $120,000 | $70,000 | $50,000 |
+| Statistics / annotation / assistance | $35,000 | $25,000 | $10,000 |
+| Model API / benchmark compute | $80,000 | $55,000 | $25,000 |
+| Infrastructure | $54,000 | $36,000 | $18,000 |
+| Security / red-team / evaluation | $60,000 | $35,000 | $25,000 |
+| Hardware / tooling | $25,000 | $18,000 | $7,000 |
+| Legal / IP / operations | $20,000 | $14,000 | $6,000 |
+| Dissemination / travel | $15,000 | $9,000 | $6,000 |
+| Design-partner deployments | $20,000 | $8,000 | $12,000 |
+| Contingency / replication reserve | $91,000 | $60,000 | $31,000 |
+| **TOTAL** | **$700,000** | **$450,000** | **$250,000** |
+
+Column verification: Stage 1 sums to $450,000 exactly; Stage 2 sums to $250,000 exactly; every row reconciles to its Table 8.1 total.
+
+---
+
+## 5. Capital-at-Risk Model (Activity-Based Planning Estimates)
+
+Burn is NOT assumed uniform: benchmark, red-team, annotation, and deployment phases spend faster than analysis/writing phases. Cumulative exposure below is a planning estimate (not a wire schedule), keyed to the major thesis gates where defensible. Ranges reflect timing uncertainty, not threshold uncertainty.
+
+### Table 8.3 (V4 Canonical): Cumulative Capital Exposure (planning estimates)
+
+| Milestone Gate | Target Month | Cumulative Spend (est.) | Of Which Stage |
+| :--- | :--- | ---: | :--- |
+| **Gate M3** | Month 3 | ~$55,000 | Stage 1 |
+| **Gate M6** | Month 6 | ~$110,000 | Stage 1 |
+| **Gate M9 (Wedge) ★** | Month 9 | ~$170,000 | Stage 1 |
+| **Gate M12** | Month 12 | ~$230,000 | Stage 1 |
+| **Gate M15** | Month 15 | ~$285,000 | Stage 1 |
+| **Gate M18 (Scientific) ★** | Month 18 | ~$345,000 | Stage 1 |
+| **Gate M21** | Month 21 | ~$400,000 | Stage 1 |
+| **Gate M24 (Year-2 / Readiness) ★** | Month 24 | **$450,000** | Stage 1 complete |
+| **Gate M27** | Month 27 | ~$515,000 | Stage 2 (conditional) |
+| **Gate M30** | Month 30 | ~$580,000 | Stage 2 (conditional) |
+| **Gate M33** | Month 33 | ~$640,000 | Stage 2 (conditional) |
+| **Gate M36-A / M36-B ★** | Month 36 | **~$700,000** | Program complete |
+
+"Remaining" at any STOP means projected unspent funds subject to investor governance — not a committed return. The investor value at a STOP is the research evidence and artifacts, not capital recovery.
+
+---
+
+## 6. Conditional Capital Disposition (Founder-Proposed)
+
+In the event of a metric failure at a binding gate, the founder proposes the disposition paths below. All rows defer to the canonical decision rules in `06_CORE_RESEARCH_PROGRAM.md` Table 6.2; summaries here never override that table.
+
+### Table 8.4: Capital Disposition Matrix
 
 | Falsification Gate | Metric Failure | Founder-Proposed Disposition |
 | :--- | :--- | :--- |
@@ -86,7 +134,7 @@ In the event of a metric failure at a binding gate, the founder proposes the dis
 | **Gate M12** | False-Promotion Rate $> 0.02$ | NARROW scope to manually authored skills; STOP only if no mitigation path after one Narrow cycle. |
 | **Gate M15** | $\text{ATR} < 0.50$ without safe bounding, or global regression $> 2\%$ | NARROW to single-model vertical; STOP only on uncontained regression. |
 | **Gate M18** | $\text{MDID}_{0.90}$ ratio point $< 1.5\times$ (C vs B), or CI upper bound $< 2.0\times$ with adequate power, or no significant CIF reduction with adequate power, or completion inferior $>5\text{pp}$, or static pipeline wins joint criterion | STOP on broad thesis. Unspent funds subject to investor governance. |
-| **Gate M21** | Migration-matrix preservation fails | NARROW to single-runtime deployment; defer live-provider validation. No new spend authorized beyond the rebased plan (see §9). |
+| **Gate M21** | Migration-matrix preservation fails | NARROW to single-runtime deployment; defer live-provider validation. No new spend authorized beyond the rebased plan. |
 | **Gate M24** | Objective-integrity pilot fails | NARROW adaptive optimization to pre-approved contracts; refuse Arc III activation. |
 | **Gate M24** | Commercial checkpoint (non-binding; begins post-M18; NO verdict power) | Partner-interest signal tracked descriptively; no Narrow/Pivot/Stop consequence. The binding commercial verdict is M36-B. |
 | **Gates M27–M33** | Strand thresholds missed | KILL the strand; preserve single-agent program scope. No program-level capital consequence beyond the rebased plan. |
@@ -95,73 +143,107 @@ In the event of a metric failure at a binding gate, the founder proposes the dis
 
 ---
 
-## 5. [HISTORICAL — V3] Compute, Sandbox, and Infrastructure Assumptions (Planning Basis — No Vendor Quotes Claimed)
+## 7. M24 Capital Decision — Evidence Gate AND Financing Decision Point
 
-*Preserved V3 context. Workload arithmetic below covers RQ1–RQ7 of the 24-month program. Year-2 migration/objective-integrity workloads (RQ7-expanded, RQ8) and all Year-3 workloads (RQ9–RQ12) are NOT costed here — costing them requires the §9 rebasing.*
-
-No vendor pricing is quoted as fact. Figures below are *planning assumptions as of September 2026*, sensitive to model API price changes, and buffered by the $52,000 (13.0%) reserve.
-
-*   **Benchmark volume — Table 8.0 (planning assumptions; mixed units kept distinct, TBD frozen at pre-registration).** The old line "200 + 150 + 1,000 + 300 + 200 + 450 + 200 ≈ 2,100" was arithmetically wrong on its face (the components sum to 2,500, and they mix tasks, traces, pairs, and sessions across different arm counts). It is replaced by:
-
-### Table 8.0: [HISTORICAL — V3] Workload Decomposition (evaluation units × arms × seeds × tiers → model-invoked trajectories)
-
-| RQ | Evaluation units (planning target) | Arms | Seeds / orders | Model tiers | Model-invoked trajectories (planning assumption) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| RQ1 | 200 tasks (SWE-bench Lite multi-file subset) | 2 (unified-dict control + typed) | 1 (+1 replication if INCONCLUSIVE) | 1 (frozen Tier 1) | 400 |
-| RQ2 | 150 traces (AgentErrorBench frozen subset) | 2 presentation conditions (native spans + spine) | 1 (2 annotators + adjudicator) | 1 | 300 — model invocations cover only the automated-reconstruction condition and blinding paraphrase checks (planning assumption); the traces themselves pre-exist and human annotation is labor, not compute |
-| RQ3 pilot | 1,000 attacks arm C (gibbrn) + 2×300 characterization subsets arms A/B (planning assumption, TBD) | 3 | 1 | 1 (frozen; Tier 3 replication deferred to confirmatory) | 1,600 |
-| RQ3 confirmatory | 3,000 attacks on arm C + ≈300 A/B subset reruns, all on the frozen Tier 1 (from reserve; Tier-3 replication is a separate deferred decision, not inside this count) | 3 | 1 | 1 | ≈3,300 |
-| RQ4 | 300 tasks total across 3 Latin-square orders (100/order, planning assumption) | 2 (naive memory + gibbrn) | 3 orders (built into the 300) | 1 | 600 |
-| RQ5 | 100 transfer pairs × 2 conditions (source + transfer) | 2 (baseline + adapted) | 1 (+ enlargement if INCONCLUSIVE) | 1 per condition (source condition runs on the source model, transfer on the transfer model — tiers designate, not multiply; full-cross execution of every combo on both models would be 800 and is deferred unless an INCONCLUSIVE cycle requires it) | 400 |
-| RQ6 | 150 deep tasks | 3 (A unmanaged + B conventional + C gibbrn) | 1 primary (+1 replication tier if M18 inconclusive) | 1 | 450 |
-| RQ7 | 200 mock sessions (bound) + 100 unbound characterization (planning assumption, TBD) | 2 | 1 | 1 | 300 |
-| FDR benign suite | 500 benign tasks (planning assumption, TBD) | 1 (arm C; spot-checks on B) | 1 | 1 | 500 |
-| **Subtotal** | 3,300 mixed-unit primary evaluations (units, not trajectories) | — | — | — | **≈4,600 primary + ≈3,300 confirmatory ≈ 8,000–9,000** incl. retries, failed runs, regression re-executions |
-
-Totals are ranges, not commitments: undecided multipliers (A/B subset sizes, second-tier replication, INCONCLUSIVE-cycle enlargements) are marked TBD and disclosed at pre-registration. The V2 "13,200" figure is retired.
-*   **Compute $62,000 basis [V3 HISTORICAL]:** blended planning assumption across Tier 1 API models (majority of deep-task spend) and Tier 3 open-weights inference (self-hosted or API). Illustrative arithmetic (not a quote): if mean trajectory consumes ~0.8M blended tokens at an assumed ~$4.50/1M, 8,000 trajectories ≈ $28,800 in raw tokens; the remainder covers retries, failed runs, regression-suite re-executions (Engine 3 candidates × 20-task suites), replication across model tiers, and price-volatility headroom. Actual token totals will be reported per gate.
-*   **Infrastructure $36,000 basis ($1,500/mo avg) [V3 HISTORICAL]:** managed PostgreSQL, object storage for WAL/checkpoints, observability/logging, CI runners for micro-sandbox regression, and gVisor-capable compute for warm-pool sandboxes. Assumes cloud credits are *not* relied upon; any credits received extend the reserve.
-*   **Security $18,000 basis [V3 HISTORICAL]:** internal red-team labor, bounty pool for external adversarial probes at M9/M21, and one independent evaluation review of the Effect Gate boundary (scope-limited; not an "independent audit" or "third-party validation" of the thesis).
-*   **Annotators/reviewers (RQ2):** covered within Human Capital + Security lines: 2 independent annotators plus senior adjudicator for ~150 traces, target $\kappa \ge 0.75$. If annotator rates exceed the planning envelope, the to-be-preregistered fallback is a reduced, re-powered RQ2 sample disclosed at M6 — not an unbudgeted scope increase.
-*   **What is not silently increased:** the M9 confirmatory $N \approx 3{,}000$ phase is funded *from* the $52,000 reserve with corresponding scope deferral disclosed at the M9 review (deferral options, in order: RQ5 pair-count expansion, RQ4 single-seed replication instead of three orders, second-tier replication). Total ask remains $400,000. If the reserve proves insufficient (e.g. sustained API price rises beyond the 13% buffer), the same deferral list applies before any follow-on request — the program narrows rather than overspends.
+M24 is simultaneously the Objective & Evaluation Integrity major gate, the Arc III readiness review, and the future-financing decision point. Passing M24 does NOT automatically spend $250,000. It means the evidence supports *seeking and authorizing* the conditional Year-3 capital. Actual Year-3 financing remains subject to evidence, an updated cost basis, the founder's decision, and investor financing availability. Refusing Arc III activation is a scope decision, not a program failure — the M0–M24 research program stands on its own evidence.
 
 ---
 
-## 6. Disbursement, Governance, and What Is Not Promised
+## 8. M36-A / M36-B Capital Reporting
 
-*   Gates are *scientific review points*, not automatic disbursement tranches. Any tranched disbursement, milestone-gated release, escrow, or unspent-funds return requires a separate written agreement with the investor.
-*   "Preserve remaining capital" means the founder will halt in-scope spend and present unspent funds for investor direction — not a guaranteed refund amount or mechanism.
-*   No revenue, customer, partnership, or follow-on financing outcome is promised. The M36-A / M36-B "PROCEED" rows are *defensibility conditions* (what evidence would justify asking for a further round), not commitments that a round will be available.
+The independent verdict structure is preserved in capital reporting. Expenditure reporting at M36 distinguishes science (experiments, evaluation, replication), engineering/prototype, design-partner deployment, and commercialization validation — so commercial failure cannot retroactively invalidate scientific success, and scientific overreach cannot hide a useful commercial wedge behind Year-3 hypotheses.
 
 ---
 
-## 7. Problem Discovery and External Contact (Early, Without Fabricated Partners)
+## 9. Staged-Financing Rationale
+
+The founder does not currently request the full ~$700k because: (1) Year 3 is scientifically conditional on M24; (2) RQ9–RQ12 must not be fully capitalized before M24 evidence exists; (3) $450k supplies adequate runway through the critical Year-2 decision point; (4) premature Year-3 financing would fund speculative work; (5) optionality is preserved if the program narrows after M9/M18/M24. Conversely, the founder does NOT prefer a $250k + $200k split of Stage 1: a forced financing event inside Arc II would create fundraising risk during the critical RQ5–RQ8 research stretch. The split below exists strictly as an investor-structured fallback.
+
+---
+
+## 10. Optional Constrained Financing Fallback (Investor-Structured Alternative — NOT Founder-Preferred)
+
+```text
+Close A: $250k — initial research / Year-1-heavy execution (through ~M12 + RQ3 pilot)
+Close B: $200k — continuation through M24 after evidence review (M12-gate-gated)
+Conditional Year-3 extension: ~$250k — M24-evidence-gated
+Total: $700k
+```
+
+Close B must be conditioned on an evidence review at the M12 boundary at minimum; the dossier does not recommend quarterly capital tranches. Founder-preferred remains **$450k current financing + ~$250k M24-conditional extension**.
+
+---
+
+## 11. Reserve Policy and What Is Not Promised
+
+*   The $91,000 (13.0%) reserve funds the M9 confirmatory $N \approx 3{,}000$ phase, RQ6 power-driven enlargement, RQ3 suite expansion, and API-volatility headroom — with ordered deferral (RQ5 pair-count expansion; RQ4 single-seed replication; second-tier replication) disclosed at review before any follow-on request. The program narrows rather than overspends.
+*   Gates are scientific review points, not automatic disbursement tranches.
+*   "Preserve remaining capital" means halting in-scope spend and presenting unspent funds for investor direction — not a guaranteed refund.
+*   No revenue, customer, partnership, or follow-on financing outcome is promised. M36-A/M36-B "PROCEED" rows are defensibility conditions, not commitments that capital will be available.
+
+---
+
+## 12. Capital Efficiency Narrative
+
+The program intentionally reuses mature infrastructure and concentrates capital on empirical falsification rather than foundation-model training: no pretraining, no GPU-cluster buildout, no general fine-tuning program. Foundation models are treated as interchangeable frozen cognitive substrates (commercial APIs + open weights) inside controlled experiments. Durable open-source infrastructure (PostgreSQL, gVisor, standard CI) is reused rather than rebuilt. The expensive lines are testing, security/red-teaming, replication, annotation, and long-horizon experiments — exactly where falsification lives.
+
+---
+
+## 13. Cost Uncertainty — Fixed Assumptions vs. Estimates vs. Conditional Spend
+
+*   **Fixed planning assumptions:** founder compensation rate ($5k/mo); authorized totals ($450k current, ~$700k program, ~$250k conditional extension).
+*   **Workload-sensitive estimates:** API/compute envelope ($80k, recalibrated at gates); external evaluation ($60k, scoped per campaign); annotation/assistance ($35k); replication draw on contingency.
+*   **Conditional spend:** most RQ9–RQ12 costs, Year-3 design-partner deployment ($12k of the $20k line), and $31k of contingency sit behind the M24 decision. Uncertainty is disclosed here rather than hidden inside false precision.
+
+---
+
+## 14. Problem Discovery and External Contact (Early, Without Fabricated Partners)
 
 No design partners, customers, or Letters of Intent are claimed. Problem discovery is front-loaded so technical choices track real deployment constraints:
 
-*   **M01–M03 (within existing budget):** 10–15 discovery conversations total with platform/infra engineers, DevOps practitioners, and agent-framework maintainers about authorization, sandboxing, and memory-poisoning pain points — first tranche of 5–8 by day 60 (see §8), remainder by day 90. No partner commitment solicited; notes archived as evidence-checkpoint inputs.
+*   **M01–M03 (within existing budget):** 10–15 discovery conversations total with platform/infra engineers, DevOps practitioners, and agent-framework maintainers about authorization, sandboxing, and memory-poisoning pain points — first tranche of 5–8 by day 60 (see §16), remainder by day 90. No partner commitment solicited; notes archived as evidence-checkpoint inputs.
 *   **M04–M12:** consultative reviews of the Effect Gate API shape (integration effort: time-to-first-gated-tool, lines of integration code) with volunteer reviewers; no deployment or endorsement implied.
 *   **Post-M18 only:** design-partner recruitment for M24 external validation begins *only if* the scientific gate passes. Live IAM provider validation (test tenants) occurs at M24, not earlier.
 
 ---
 
-## 8. First 30–90 Day Experiment Plan (Within Existing Scope; Proposed — Not Completed)
+## 15. V4.2 Rebase Authorization Record (Supersedes the V4–V4.1 "Unresolved" Status)
 
-*   **Days 1–30:** Freeze model tier versions and seeds; build minimal out-of-process interceptor for a defined set of synchronous file-write and shell-tool operations; publish the supported-ops list with the enforcement boundary and known bypass paths (selected-call interception — not all-syscall control); measure synchronous overhead distribution (binding target: median ≤30ms at M3; engineering stretch goal ≤14ms pre-execution; report p95 alongside the median); draft `gibbrn-auth-bench` manifest (attack families, verdict rules) and draft RQ1/RQ3 pilot protocols for OSF pre-registration before data collection.
+The V4–V4.1 dossier deliberately carried no 36-month ask (AD-034): research scope, the V4.2 competing-risk methodology closure, and workload calibration were not yet mature enough to cost honestly. That integrity constraint is now discharged by founder authorization: the scientific design reached sufficient maturity (12 RQs frozen; CIF-based methodology closed; RQ8–RQ12 bounded as calibration-contingent envelopes), and the founder authorizes the §2–§4 model — **$450k current financing; ~$700k total program capitalization; ~$250k M24-conditional Year-3 extension** — as planning allocations, not cost guarantees. No scientific gate becomes a legal financing tranche (governance note, top of file). The budget remains a planning model subject to §13 uncertainty and §11 reserve discipline.
+
+---
+
+## 16. First 30–90 Day Experiment Plan (Within Existing Scope; Proposed — Not Completed)
+
+*   **Days 1–30:** Freeze model tier versions and seeds; build minimal out-of-process interceptor for a defined set of synchronous file-write and shell-tool operations; publish the supported-ops list with the enforcement boundary and known bypass paths (selected-call interception — not all-syscall control); measure synchronous overhead distribution (binding target: median ≤30ms at M3; engineering stretch goal ≤14ms pre-execution; report p95 alongside the median); draft `gibbrn-auth-bench` manifest (attack families, per-family quotas, fault-injection axis, verdict rules) and draft RQ1/RQ3 pilot protocols for OSF pre-registration before data collection.
 *   **Days 31–60:** Execute RQ1 planning-target sample (200 SWE-bench Lite multi-file tasks, paired design, completion reported) with multi-arm harness where feasible; run first 200-attack RQ3 pilot slice; conduct the first tranche of 5–8 discovery interviews; publish internal checkpoint memo (methods + raw counts, no thesis claims).
 *   **Days 61–90:** Remaining interviews (to 10–15 total). Complete to Gate M3 evidence package: McNemar result for corruption reduction, overhead histogram (median + p95), RQ3 pilot UER/FDR/latency with Clopper-Pearson/Wilson bounds, supported-ops/bypass documentation, integration-effort log, and Narrow/Pivot/Proceed recommendation per Table 6.2. *This plan proposes work to be done; no results are claimed.*
 
 ---
 
-## 9. [V4] 36-Month Rebasing — Explicitly Unresolved (No New Ask)
+## APPENDIX H1. [HISTORICAL — V3] The $400,000 / 24-Month Operating Budget (Superseded)
 
-**Decision:** the V4 36-month program (12 RQs, 12 gates, ~24 checkpoints, Years 1–3 per `07_36_MONTH_ROADMAP.md`) has **no authorized capital ask as of this dossier version.** The following are recorded without inventing salaries, compute costs, contingency reserves, or fundraising numbers:
+*Preserved V3 context (September 2026 review). This budget mapped to the superseded 24-month program (RQ1–RQ7, Gates M3–M24) and is NOT the V4 financing structure. Retained for provenance only.*
 
-1.  **Every capital assumption tied to 24 months is identified:** Table 8.1 categories and 24-month allocations; Table 8.2 drawdown through M24; Table 8.0 workloads for RQ1–RQ7; §5 compute/infra/security bases; the §2 fallback envelope. All are marked [HISTORICAL — V3] above and remain valid only as history and calibration context.
-2.  **No linear extrapolation is authorized:** $400,000 / 24 months is NOT scaled to $600,000 / 36 months or any other figure. Year-3 workloads (multi-agent sandboxes, governance experiments, integrated deployments) have no cost basis in this dossier, and Year-2 migration/objective-integrity expansions (RQ7-expanded, RQ8) are scoped but not costed.
-3.  **Structural sequencing changes made without inventing numbers:**
-    - Capital-at-risk logic extends gate-by-gate through M36: each gate's Narrow/Pivot/Stop/Kill disposition (§4) is defined as a *scope* consequence; dollar exposure per gate awaits the rebased model.
-    - The M24 Arc III readiness review (§4 of `07_36_MONTH_ROADMAP.md`) doubles as a capital-gating review: Year-3 scope activates only with justified evidence AND authorized funding.
-    - The narrow-before-overspend rule (§5, V3) carries forward as policy: pilot overruns narrow scope before any follow-on request.
-4.  **Founder authorization required (see AD-034):** a rebased 36-month capital model — bottom-up staffing, compute (including RQ8–RQ12 workloads), infrastructure, security/red-team, operations, and reserve — with a stated base ask and any fallback envelope. Until that authorization lands, every investor-facing file states the ask as unresolved rather than quoting a number.
-5.  **If internal consistency requires a current public number** (e.g., an overview table that cannot show a blank), the file cites the V3 historical ask with an explicit [HISTORICAL — V3; V4 REBASING PENDING] flag — never a silent substitution. See `11_INVESTOR_OVERVIEW.md` §8 and `10_1517_TECHNICAL_BRIEF.md` §10 for the flagged presentation.
+| Category | Item Description | 24-Month Allocation |
+| :--- | :--- | ---: |
+| **Human Capital** | Founder / Principal Researcher — proposed compensation ($5,000/mo × 24 mo) | $120,000 |
+| **Human Capital** | Planned Hire / Contractor, part-time research engineering (contingent on funding; ~$3,000/mo equivalent) | $72,000 |
+| **Compute** | Model Inference + Benchmark Compute | $62,000 |
+| **Infrastructure** | Sandbox / DB / Observability (AWS/GCP) | $36,000 |
+| **Operations** | Hardware / Tooling — unconfirmed allocation (no itemized list; no quotes claimed) | $24,000 |
+| **Security** | Security / Red-Team / External Evaluation | $18,000 |
+| **Operations** | Legal / Incorporation / IP | $9,000 |
+| **Operations** | Research Dissemination / Travel | $7,000 |
+| **Contingency** | Strategic Reserve / API Volatility Buffer (13.0%) | $52,000 |
+| **TOTAL [V3 HISTORICAL]** | **$400,000** |
+
+*Compensation amounts were proposed planning assumptions, not cost-of-living claims.*
+
+## APPENDIX H2. [HISTORICAL — V3] The $150,000 Constrained Fallback (Superseded; Preliminary — Never Fully Costed)
+
+*Preserved V3 context. A solo-founder 12-month pilot sketch for gates M3–M12 with minimal paired controls (≈1,450–1,750 evaluation units). Superseded by the V4 §10 fallback. Retained for provenance only.*
+
+## APPENDIX H3. [HISTORICAL — V3] Cumulative Drawdown, Workload Arithmetic, and Planning Bases (Superseded)
+
+*Preserved V3 context. The 24-month drawdown table (M3 $50k → M24 $400k), the Table 8.0 workload decomposition (≈4,600 primary + ≈3,300 confirmatory trajectories), and the §5 compute/infrastructure/security bases (including the narrow-before-overspend rule and ordered deferral list) are retained in git history and superseded by V4 §§2–§5 and §11. The narrow-before-overspend policy itself carries forward into V4 §11.*

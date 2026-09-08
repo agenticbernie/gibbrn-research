@@ -78,11 +78,11 @@ The submission-grade dossier consists of the following 14 core documents (13 cha
 6.  **[`05_SECURITY_AND_FAILURE_MODEL.md`](./05_SECURITY_AND_FAILURE_MODEL.md)** — Parameter smuggling defenses, kernel isolation, TOCTOU leases, V4 threats (ADV-06–ADV-09), failure taxonomy SYS-01–SYS-10.
 7.  **[`06_CORE_RESEARCH_PROGRAM.md`](./06_CORE_RESEARCH_PROGRAM.md)** — Twelve RQs (RQ1–RQ12) across 3 arcs, G1–G8 goals, discrete survival hazard modeling for $\text{MDID}_\tau$, and ATR transfer metrics.
 8.  **[`07_36_MONTH_ROADMAP.md`](./07_36_MONTH_ROADMAP.md)** — Twelve binding falsification gates (M3–M36), ~24 lightweight evidence checkpoints, four major thesis gates (renamed from `07_24_MONTH_ROADMAP.md`; old filename preserved in git history).
-9.  **[`08_CAPITAL_PLAN.md`](./08_CAPITAL_PLAN.md)** — V3 \$400,000 / 24-month model preserved as flagged history; V4 36-month rebasing explicitly unresolved (no new ask).
+9.  **[`08_CAPITAL_PLAN.md`](./08_CAPITAL_PLAN.md)** — V4.2 rebased financing ($450k current / ~$700k program / ~$250k conditional Year-3) with bottom-up model, stage split, and reserve policy; V3 \$400,000 / \$150,000 retained as flagged history (Appendices H1–H3).
 10. **[`09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** — Potential research contributions vs. commoditized plumbing, competitor matrix (incl. CONTINUITY precedent), platform risks, V4 company thesis.
 11. **[`10_1517_TECHNICAL_BRIEF.md`](./10_1517_TECHNICAL_BRIEF.md)** — Executive 12-question diligence response for 1517 Fund.
 12. **[`11_INVESTOR_OVERVIEW.md`](./11_INVESTOR_OVERVIEW.md)** — One-page investor overview (concise; detailed depth deferred to the dossier).
-13. **[`RESEARCH_DECISION_LEDGER.md`](./RESEARCH_DECISION_LEDGER.md)** — Complete ADRs (AD-001 through AD-046; AD-017/AD-019 marked superseded; AD-024–AD-046 record the V4 transition and V4.1 review).
+13. **[`RESEARCH_DECISION_LEDGER.md`](./RESEARCH_DECISION_LEDGER.md)** — Complete ADRs (AD-001 through AD-047; AD-017/AD-019 marked superseded; AD-024–AD-047 record the V4 transition and V4.1 review).
 14. **[`DOSSIER_CHANGELOG.md`](./DOSSIER_CHANGELOG.md)** — This document (Systematic V1 $\to$ V2 $\to$ V3 $\to$ V4 provenance ledger).
 
 ---
@@ -111,6 +111,7 @@ The submission-grade dossier consists of the following 14 core documents (13 cha
 | **CHG-055** | **V4.2 RQ6 power + single estimand (founder review)** | 0.90/log-rank power basis invalid for the joint CIF gate; OR-floor invites estimand shopping. | Founder review, Sept 2026. | — | Power TBD via competing-risk simulation (added to Table 6.2b deliverables); $\Delta F_1(k^*)$ sole primary magnitude with no interim number; sHR secondary only. | No underpowered gate; no researcher degrees of freedom. |
 | **CHG-056** | **V4.2 Table 6.2 M36 split (founder review)** | M36 row had 6 cells against 4 binding columns. | Founder review, Sept 2026. | — | Split into M36-A / M36-B rows; logic unchanged. | Canonical decision table well-formed. |
 | **CHG-057** | **V4.2 version + small fixes (founder review)** | Headers 4.0 vs. V4.1 ledger; "Dependency depth" residue; duplicated RQ6 H0. | Founder review, Sept 2026. | — | Canonical headers → 4.1; bullet/H0/notation fixed. | Version semantics coherent. |
+| **CHG-058** | **V4.2 capital rebase (founder-authorized)** | V4–V4.1 carried no 36-month ask by design (AD-034). | Founder financing authorization, Sept 2026: $450k current / ~$700k program / ~$250k conditional Year-3. | Bottom-up build reconciling exactly to $700,000 (reserve 13.0%); stage split $450k/~$250k exact internally. | Rewrote `08` as canonical §§1–§16 + history appendices H1–H3; updated README, docs/README, 00, 10 (§2/§10), 11 (§8); AD-034 preserved, AD-047 added. No RQ/N/arm/threshold touched for finance. | Dossier has an authorized, staged, conditional financing structure. |
 
 ---
 

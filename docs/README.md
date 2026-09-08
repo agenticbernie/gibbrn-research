@@ -2,7 +2,7 @@
 
 **Project:** gibbrn — Agent State Integrity Layer  
 **Repository:** `github.com/agenticbernie/gibbrn-research`  
-**Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
+**Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
 **License:** Strict Restricted Research & Evaluation License (See [`LICENSE`](../LICENSE))  
 **Audience:** 1517 Fund Investment Committee, Distributed Systems Researchers, AI Security Architects
 
@@ -48,8 +48,8 @@ The canonical V4 research dossier. Externally checkable claims carry epistemic l
 | **[`09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Potential research contributions vs. commoditized plumbing, OCAP lineage, CONTINUITY precedent, platform risks. |
 | **[`10_1517_TECHNICAL_BRIEF.md`](./submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Investor Technical Brief | High-density 12-question diligence responses for the 1517 Fund Investment Committee. |
 | **[`11_INVESTOR_OVERVIEW.md`](./submission/11_INVESTOR_OVERVIEW.md)** | Investor Overview (One Page) | Problem, thesis, wedge, evidence plan, and capital status in one page. |
-| **[`RESEARCH_DECISION_LEDGER.md`](./submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Architecture Decision Records covering initial formulation (AD-001–AD-011), post-diligence decisions (AD-012–AD-023; AD-017/AD-019 superseded), and V4 transition + V4.1 review (AD-024–AD-042). |
-| **[`DOSSIER_CHANGELOG.md`](./submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-053). |
+| **[`RESEARCH_DECISION_LEDGER.md`](./submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Architecture Decision Records covering initial formulation (AD-001–AD-011), post-diligence decisions (AD-012–AD-023; AD-017/AD-019 superseded), and V4 transition + V4.1 review (AD-024–AD-046). |
+| **[`DOSSIER_CHANGELOG.md`](./submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-057). |
 
 ---
 

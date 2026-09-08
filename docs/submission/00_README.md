@@ -1,7 +1,7 @@
 # Dossier Master Overview
 
 **Date:** September 2026  
-**Dossier Version:** 4.0  
+**Dossier Version:** 4.1  
 **Status:** V4 Canonical — 36-Month / 12 RQs / 12 Gates / ~24 Evidence Checkpoints  
 **Canonical scope:** 36-month systems research and prototype program; 12 Research Questions (RQ1–RQ12) across 3 Research Arcs; 12 quarterly binding gates (M3–M36) with four major thesis gates (M9, M18, M24, M36); approximately 24 lightweight evidence checkpoints.
 **Capital status:** V3 historical ask (USD 400,000 / 24 months; USD 150,000 / 12-month fallback) is preserved as history. The V4 36-month capital model is **explicitly unresolved and requires founder-approved rebasing** — see `08_CAPITAL_PLAN.md`. No new funding number is introduced in V4.

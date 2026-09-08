@@ -59,6 +59,10 @@
 *   [AD-040: RQ8 Contract Integrity vs. Operationalization Fidelity Split (MODIFY)](#ad-040-rq8-contract-integrity-vs-operationalization-fidelity-split)
 *   [AD-041: RQ9 Rename + M36-A/B Verdict Split (MODIFY)](#ad-041-rq9-rename--m36-ab-verdict-split)
 *   [AD-042: Source-Hygiene + Table 8.3 Consistency Fixes (MODIFY)](#ad-042-source-hygiene--table-83-consistency-fixes)
+*   [AD-043: CIF-Based MDID Redefinition (Option A) (MODIFY)](#ad-043-cif-based-mdid-redefinition-option-a)
+*   [AD-044: RQ6 Power TBD + Single Magnitude Estimand (MODIFY)](#ad-044-rq6-power-tbd--single-magnitude-estimand)
+*   [AD-045: Table 6.2 M36 Split Fix (MODIFY)](#ad-045-table-62-m36-split-fix)
+*   [AD-046: Version Semantics 4.1 + Small Fixes (MODIFY)](#ad-046-version-semantics-41--small-fixes)
 
 ---
 
@@ -465,3 +469,41 @@
 *   **Decision:** **MODIFY**
 *   **What Changed:** "13 newly verified evidence entries, prioritizing primary sources" repo-wide; CONTINUITY → "independently support in their evaluated setting"; "unoccupied" → "no directly equivalent product was identified in the reviewed competitor set"; Mem0/Letta → "architecturally exposed to analogous poisoning unless separately mitigated" with non-tested-implementation disclaimer (`02`, `09`, `10`). Table 8.3: M24 ROI row demoted to a non-binding commercial checkpoint; binding verdict rows added for M36-A/M36-B. No capital numbers touched.
 *   **Next Experiment:** Full citation/source re-audit before workload freeze.
+
+---
+
+## Section 5: V4.2 Statistical Coherence Fixes (Competing-Risks Closure — September 2026)
+
+### AD-043: CIF-Based MDID Redefinition (Option A)
+*   **Date:** September 2026
+*   **Question:** V4.1 declared completion "NOT censored" while MDID remained a Kaplan-Meier quantile — an incoherent estimator, since naïve KM estimates no absolute incidence correctly under competing risks while still gating M18 as a co-primary.
+*   **Decision:** **MODIFY (Option A — cleanest)**
+*   **What Changed:** Single binding depth estimand $\text{MDID}_\tau = \max\{k \mid 1 - \hat{F}_1(k) \ge \tau\}$ via Aalen–Johansen CIFs; completion a legitimate terminal state, budget exhaustion the only censoring. Cause-specific KM demoted to a labeled never-binding sensitivity. Gray's = whether, $\Delta F_1(k^*)$ = how much, MDID ratio = depth translation.
+*   **Next Experiment:** M18 pre-registration freezes $k^*$ horizon and the $\Delta F_1(k^*)$ floor at pilot calibration.
+
+---
+
+### AD-044: RQ6 Power TBD + Single Magnitude Estimand
+*   **Date:** September 2026
+*   **Question:** Legacy 0.90/log-rank power basis does not transfer to the joint CIF gate (150×3 may be underpowered for simultaneous criteria); an "sHR OR absolute reduction" floor invites estimand shopping.
+*   **Decision:** **MODIFY**
+*   **What Changed:** RQ6 power/TBD via competing-risk simulation over incidence, censoring, CIF differences, N, allocation. Primary magnitude frozen to absolute $\Delta F_1(k^*)$ with no interim number quoted; Fine-Gray sHR secondary support only. Table 6.1/6.2/6.2b, power note, and brief/overview updated.
+*   **Next Experiment:** Simulation-based power report as an M18 pre-registration deliverable (added to Table 6.2b).
+
+---
+
+### AD-045: Table 6.2 M36 Split Fix
+*   **Date:** September 2026
+*   **Question:** The M36 row packed two verdicts into six cells against a four-column binding table.
+*   **Decision:** **MODIFY**
+*   **What Changed:** Split into `M36-A Scientific` and `M36-B Company` rows (capital plan already used this shape). No verdict logic changed.
+*   **Next Experiment:** None — formatting/consistency fix.
+
+---
+
+### AD-046: Version Semantics 4.1 + Small Fixes
+*   **Date:** September 2026
+*   **Question:** Canonical headers said 4.0 while the ledger called the update V4.1; a leftover "Dependency depth" bullet and a duplicated RQ6 null hypothesis survived the rename pass.
+*   **Decision:** **MODIFY**
+*   **What Changed:** Canonical headers bumped to 4.1; bullet renamed to interaction depth; duplicate H0 removed; $T$-notation residue eliminated.
+*   **Next Experiment:** None.

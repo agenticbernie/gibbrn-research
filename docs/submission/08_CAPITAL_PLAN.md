@@ -1,7 +1,7 @@
 # 08: Expense Modeling & Capital-at-Risk
 
-**Document Track:** Financial Modeling & Capital Allocation (Version 4.0)  
-**Date:** September 2026 | **Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
+**Document Track:** Financial Modeling & Capital Allocation (Version 4.1)  
+**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
 **Audience:** Deep-Tech Investors, 1517 Fund Partners, Technical Founders  
 
 > **V4 CAPITAL STATUS — READ FIRST:** The V4 36-month capital model is **explicitly unresolved and requires founder-approved rebasing. No new funding number is introduced in this dossier version.** Sections §§1–§5 below preserve the **V3 historical capital plan (USD 400,000 / 24 months; USD 150,000 / 12-month fallback)** as history and planning context — they are NOT the V4 36-month budget. Section §9 records the rebasing decision, the structural sequencing changes that are made without inventing numbers, and the exact founder authorization required. Do NOT scale $400,000 / 24 months into $600,000 / 36 months or any other extrapolated figure.

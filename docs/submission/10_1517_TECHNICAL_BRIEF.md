@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Executive Investor Diligence & Systems Brief  
-**Date:** September 2026 | **Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
 **Target:** 1517 Fund Investment Committee  
 **Standard:** 12 Direct Diligence Responses (Post-Adversarial Diligence; V4-Evidence Update)
 
@@ -83,7 +83,7 @@ Twelve research questions across three arcs (full protocols: `06_CORE_RESEARCH_P
 *   **Gate M9 ★ (Main Wedge):** Zero observed unauthorized effects across the $N=1{,}000$ pilot (95% upper $\approx 0.003$); false denials $\le 2.0\%$ with non-straddling interval ($N_{\text{benign}}=500$ planning assumption); median ≤30ms with tail within proposed bound. Single failure → Narrow/Pivot; $>0.001$ or confirmed FDR/latency breach → STOP. Full disjoint rules in Table 6.2.
 *   **Gate M12:** False-Promotion Rate $\text{FPR} \le 0.02$; downstream retention $\ge 98\%$.
 *   **Gate M15:** Dual-mode satisfaction on portability (either portable transfer $\text{ATR} \ge 0.80$, or verified safe specialization bounding co-adaptation with zero downstream regressions).
-*   **Gate M18 ★ (Scientific Gate):** Joint over C-vs-B: $\text{MDID}_{0.90}$ ratio ≥2.0× (CI lower $> 1.5\times$) AND fatal-failure incidence reduced (Gray's $p < 0.01$ + magnitude floor) AND completion non-inferior AND practicality review; Table 6.2.
+*   **Gate M18 ★ (Scientific Gate):** Joint over C-vs-B, all CIF-based (Aalen–Johansen): $\text{MDID}_{0.90}$ ratio ≥2.0× (CI lower $> 1.5\times$) AND fatal-failure CIF reduced (Gray's $p < 0.01$ + $\Delta F_1(k^*)$ floor) AND completion non-inferior AND practicality review; Table 6.2. RQ6 power TBD via competing-risk simulation.
 *   **Gate M21:** Migration continuity preserves lineage/contract/authority/skills per calibrated thresholds (no behavioral-identity claim required); narrow to single-runtime on failure.
 *   **Gate M24 ★ (Year-2 Company Gate):** Objective integrity holds per calibrated thresholds; Arc III readiness review decides Year-3 activation.
 *   **Gate M27 [conditional]:** Decision-sufficient variables justified per calibrated thresholds.
@@ -112,7 +112,7 @@ If a major gate fails, **we will stop pursuing the broad company thesis and eith
 ### 12. What result would justify a subsequent seed round?
 A subsequent institutional Seed round at M36 (with an interim defensibility check at M24) would become defensible if gibbrn demonstrates:
 1.  The pipeline maintains zero observed unauthorized effects across the $N=1{,}000$ pilot *and* the to-be-preregistered $N \approx 3{,}000$ confirmatory phase (one-sided 95% upper $\le 0.001$), with per-family bounds reported, FDR and latency within bounds and three-arm incremental value over conventional controls.
-2.  gibbrn-managed adaptive agents achieve a to-be-preregistered, practically meaningful joint improvement (fatal-failure incidence down per Gray's test with magnitude floor, $\text{MDID}_{0.90} \ge 2.0\times$ vs the conventional-controls arm with bootstrap CI lower $> 1.5\times$) with completion non-inferior and cost/latency against proposed practicality triggers.
+2.  gibbrn-managed adaptive agents achieve a to-be-preregistered, practically meaningful joint improvement (fatal-failure CIF down per Gray's test with the $\Delta F_1(k^*)$ floor met, $\text{MDID}_{0.90} \ge 2.0\times$ vs the conventional-controls arm with bootstrap CI lower $> 1.5\times$, all CIF-based) with completion non-inferior and cost/latency against proposed practicality triggers.
 3.  Learned skills and harnesses either exhibit portable cross-model transfer ($\text{ATR} \ge 0.80$) or are verifiably constrained via safely bounded specialization without contaminating global state — with abstraction value (yield, family transfer, compression) documented separately from admission safety.
 4.  Migration preserves mechanical continuity (conformance probes pass; incompatible migrations safely refused) and objective integrity holds on both axes — contract intact AND operationalization faithful — per their calibrated thresholds.
 5.  External deployment evaluations (up to 2 partners recruited post-M18) confirm integration effort, ROI signal, and live-authority validation (M36-B company verdict, independent of the M36-A scientific verdict). No partners are pre-claimed.

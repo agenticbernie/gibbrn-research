@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Core Research Thesis & Problem Formulation  
-**Date:** September 2026 | **Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
 **Audience:** Distributed Systems Researchers, AI Security Architects, 1517 Fund  
 **Evidence Standard:** Epistemic demarcation required for all claims. Established | Emerging Evidence | Early / Weak Signal | GIBBRN Inference | Design Hypothesis | Engineering Target
 

@@ -1,8 +1,8 @@
 # 03 — Agent State Semantics, Access Control, and Trust Model (Submission)
 
 **Project Name:** GIBBRN  
-**Document Track:** State Formalization & Trust Architecture (Version 4.0)  
-**Date:** September 2026 | **Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
+**Document Track:** State Formalization & Trust Architecture (Version 4.1)  
+**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
 **Audience:** Formal Methods Researchers, Distributed Systems Engineers, 1517 Fund  
 **Formal Standard:** Design Invariants (Clearly Separated from Empirical Proofs)
 

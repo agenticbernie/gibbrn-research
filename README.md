@@ -104,8 +104,8 @@ docs/
 | **[09](./docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Potential research contributions vs. plumbing, OCAP lineage, CONTINUITY precedent, platform risk. |
 | **[10](./docs/submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Technical Brief | High-density 12-question diligence summary for the 1517 Fund Investment Committee. |
 | **[11](./docs/submission/11_INVESTOR_OVERVIEW.md)** | Investor Overview (One Page) | Problem, thesis, wedge, evidence plan, and capital status in one page. |
-| **[ADRs](./docs/submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Historical records AD-001–AD-023 (AD-017/AD-019 superseded) plus V4 transition and V4.1 review AD-024–AD-042. |
-| **[Changelog](./docs/submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-053). |
+| **[ADRs](./docs/submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Historical records AD-001–AD-023 (AD-017/AD-019 superseded) plus V4 transition and V4.1 review AD-024–AD-046. |
+| **[Changelog](./docs/submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-057). |
 
 ---
 
@@ -153,7 +153,7 @@ The program operates on a **~24-checkpoint / 12-gate** schedule (lightweight che
 4.  **[`docs/submission/05_SECURITY_AND_FAILURE_MODEL.md`](./docs/submission/05_SECURITY_AND_FAILURE_MODEL.md)** — Hardened security architecture and threat mitigations.
 5.  **[`docs/submission/06_CORE_RESEARCH_PROGRAM.md`](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** — RQ1–RQ12, G1–G8 goals, discrete survival analysis for $\text{MDID}_\tau$.
 6.  **[`docs/submission/07_36_MONTH_ROADMAP.md`](./docs/submission/07_36_MONTH_ROADMAP.md)** — Checkpoint-gated timeline and binding kill triggers.
-7.  **[`docs/submission/RESEARCH_DECISION_LEDGER.md`](./docs/submission/RESEARCH_DECISION_LEDGER.md)** — Living systems ADRs (AD-001 through AD-042).
+7.  **[`docs/submission/RESEARCH_DECISION_LEDGER.md`](./docs/submission/RESEARCH_DECISION_LEDGER.md)** — Living systems ADRs (AD-001 through AD-046).
 
 ---
 

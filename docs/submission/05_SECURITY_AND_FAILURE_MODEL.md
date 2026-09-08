@@ -1,8 +1,8 @@
 # 05 — Security Architecture, Threat Model, and Failure Modes (Submission)
 
 **Project Name:** GIBBRN  
-**Document Track:** Security Architecture & Threat Modeling (Version 4.0)  
-**Date:** September 2026 | **Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
+**Document Track:** Security Architecture & Threat Modeling (Version 4.1)  
+**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
 **Audience:** AI Security Researchers, Penetration Testers, Systems Engineers, 1517 Fund  
 **Security Standard:** Hardened Adversarial Threat Model (Addressing Red-Team Diligence)
 

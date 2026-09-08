@@ -1,7 +1,7 @@
 # 07: Core Research Program (36-Month Scientific Execution)
 
-**Document Track:** R&D Timeline & Binding Falsification Gates (Version 4.0)  
-**Date:** September 2026 | **Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
+**Document Track:** R&D Timeline & Binding Falsification Gates (Version 4.1)  
+**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
 **Audience:** Deep-Tech Investors, 1517 Fund Partners, Technical Founders
 
 ## 1. The ~24-Checkpoint / 12-Gate Methodology
@@ -95,7 +95,7 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 
 ### Gate M18 (Month 18) — Integrated Long-Horizon Integrity ★ MAJOR THESIS GATE
 *   **Target:** Verify the integrated 3-engine architecture extends trajectory survival over deep tasks on the joint success–cost criterion, with the expanded failure taxonomy (epistemic/authority/objective/adaptation/runtime/migration/consequence).
-*   **Empirical Hurdle:** Joint over GIBBRN arm (C) vs. conventional-controls arm (B) — the canonical thesis comparison; (A) unmanaged is a secondary problem-severity reference only: $\text{MDID}_{0.90}(\text{C}) \ge 2.0\times \text{MDID}_{0.90}(\text{B})$ with bootstrap 95% CI lower bound $> 1.5\times$, AND fatal-failure CIF significantly reduced (Gray's $p < 0.01$ with pre-registered magnitude floor), AND completion non-inferior, with cost/latency reported (Core RQ6; full joint rules in Table 6.2).
+*   **Empirical Hurdle:** Joint over GIBBRN arm (C) vs. conventional-controls arm (B) — the canonical thesis comparison; (A) unmanaged is a secondary problem-severity reference only: CIF-based $\text{MDID}_{0.90}(\text{C}) \ge 2.0\times \text{MDID}_{0.90}(\text{B})$ with bootstrap 95% CI lower bound $> 1.5\times$, AND fatal-failure CIF significantly reduced (Gray's $p < 0.01$ with the pre-registered $\Delta F_1(k^*)$ floor met), AND completion non-inferior, with cost/latency reported (Core RQ6; full joint rules in Table 6.2).
 *   **Verdict Matrix (per Table 6.2):**
     - PROCEED: Proposed empirical thesis criterion (frozen at pre-registration) satisfied on the core evaluation suite — ratio point ≥2.0 vs (B) with CI lower >1.5, $p<0.01$, success parity, no practicality trigger tripped.
     - INCONCLUSIVE → Narrow: ratio in [1.5,2.0) including 2.0, or a tripped cost/latency trigger → optimization + calibration cycle.

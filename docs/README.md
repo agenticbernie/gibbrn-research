@@ -49,7 +49,7 @@ The canonical V4.2 research dossier. Externally checkable claims carry epistemic
 | **[`10_1517_TECHNICAL_BRIEF.md`](./submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Investor Technical Brief | High-density 12-question diligence responses for the 1517 Fund Investment Committee. |
 | **[`11_INVESTOR_OVERVIEW.md`](./submission/11_INVESTOR_OVERVIEW.md)** | Investor Overview (One Page) | Problem, thesis, wedge, evidence plan, and capital status in one page. |
 | **[`RESEARCH_DECISION_LEDGER.md`](./submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Architecture Decision Records covering initial formulation (AD-001–AD-011), post-diligence decisions (AD-012–AD-023; AD-017/AD-019 superseded), and V4 transition + V4.1 review (AD-024–AD-047). |
-| **[`DOSSIER_CHANGELOG.md`](./submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-058). |
+| **[`DOSSIER_CHANGELOG.md`](./submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-059). |
 
 ---
 

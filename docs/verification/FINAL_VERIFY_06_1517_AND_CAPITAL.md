@@ -1,5 +1,11 @@
 # FINAL_VERIFY_06 — 1517 Fund and Capital Claims Ledger
 
+> **SUPERSEDED FOR CURRENT CAPITAL DILIGENCE (V4.2.1 notice — content below retained unaltered as history):**
+>
+> This ledger audits historical V2/V3 capital structures (including its own scope notice naming V3 USD 400,000 / 24 months).
+> Current canonical financing is: **USD 450,000 current target (M0–M24) / ~USD 700,000 36-month program / ~USD 250,000 conditional Year-3**.
+> See `docs/submission/08_CAPITAL_PLAN.md`. Do not cite figures below as current.
+
 **Project:** GIBBRN Dossier V2  
 **Scope:** All claims about 1517 Fund, investor facts, and capital-related assertions  
 **Audit Date:** September 2026

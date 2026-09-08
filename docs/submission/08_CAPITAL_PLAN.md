@@ -94,9 +94,9 @@ Column verification: Stage 1 sums to $450,000 exactly; Stage 2 sums to $250,000 
 
 ## 5. Capital-at-Risk Model (Activity-Based Planning Estimates)
 
-Burn is NOT assumed uniform: benchmark, red-team, annotation, and deployment phases spend faster than analysis/writing phases. Cumulative exposure below is a planning estimate (not a wire schedule), keyed to the major thesis gates where defensible. Ranges reflect timing uncertainty, not threshold uncertainty.
+Burn is NOT assumed uniform: benchmark, red-team, annotation, and deployment phases spend faster than analysis/writing phases. Cumulative exposure below is an illustrative stage-level planning path (not a wire schedule, not a derived quarterly burn curve), keyed to the major thesis gates where defensible. Exact quarterly timing will be frozen in the operating budget after financing; until then no calculation beneath these gate-level figures is claimed.
 
-### Table 8.3 (V4 Canonical): Cumulative Capital Exposure (planning estimates)
+### Table 8.3 (V4 Canonical): Cumulative Capital Exposure (illustrative stage-level path)
 
 | Milestone Gate | Target Month | Cumulative Spend (est.) | Of Which Stage |
 | :--- | :--- | ---: | :--- |

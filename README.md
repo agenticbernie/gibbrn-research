@@ -21,7 +21,7 @@
 
 This is a research hypothesis/program, not an established guarantee.
 
-This repository hosts the complete **36-Month R&D Technical Dossier (V4)**, building on the V3 24-month dossier (preserved in history) with a September 6–8, 2026 evidence delta of 13 verified primary sources.
+This repository hosts the complete **36-Month R&D Technical Dossier (V4)**, building on the V3 24-month dossier (preserved in history) with a September 6–8, 2026 evidence delta of 13 newly verified evidence entries, prioritizing primary sources.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -98,14 +98,14 @@ docs/
 | **[03](./docs/submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** | State Semantics & Trust Model | Four-Class State Taxonomy (retained), Continuity Model, Goal Contract, Invariants 1–9. |
 | **[04](./docs/submission/04_ARCHITECTURE.md)** | Systems Architecture | Three Physical Engines, authority broker, consequence pipeline, labeled latency budgets. |
 | **[05](./docs/submission/05_SECURITY_AND_FAILURE_MODEL.md)** | Security & Threat Model | Hardened security model plus V4 threats (context discontinuity, endpoint confusion, mismatch, capture). |
-| **[06](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Twelve RQs (RQ1–RQ12) across 3 arcs, G1–G8 goals, survival analysis for $\text{MDDD}_\tau$, pre-registration. |
+| **[06](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Twelve RQs (RQ1–RQ12) across 3 arcs, G1–G8 goals, survival analysis for $\text{MDID}_\tau$, pre-registration. |
 | **[07](./docs/submission/07_36_MONTH_ROADMAP.md)** | 36-Month R&D Roadmap | ~24 checkpoints and twelve binding gates (M3–M36); four major thesis gates (M9/M18/M24/M36). |
 | **[08](./docs/submission/08_CAPITAL_PLAN.md)** | Capital & Expense Model | V3 $400k history preserved; V4 36-month rebasing explicitly unresolved (no new ask). |
 | **[09](./docs/submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Potential research contributions vs. plumbing, OCAP lineage, CONTINUITY precedent, platform risk. |
 | **[10](./docs/submission/10_1517_TECHNICAL_BRIEF.md)** | 1517 Technical Brief | High-density 12-question diligence summary for the 1517 Fund Investment Committee. |
 | **[11](./docs/submission/11_INVESTOR_OVERVIEW.md)** | Investor Overview (One Page) | Problem, thesis, wedge, evidence plan, and capital status in one page. |
-| **[ADRs](./docs/submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Historical records AD-001–AD-023 (AD-017/AD-019 superseded) plus V4 transition AD-024–AD-034. |
-| **[Changelog](./docs/submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-047). |
+| **[ADRs](./docs/submission/RESEARCH_DECISION_LEDGER.md)** | Living Systems ADR Ledger | Historical records AD-001–AD-023 (AD-017/AD-019 superseded) plus V4 transition and V4.1 review AD-024–AD-042. |
+| **[Changelog](./docs/submission/DOSSIER_CHANGELOG.md)** | Master Provenance Ledger | Full traceability V1 → V2 → V3 → V4 (CHG-001–CHG-053). |
 
 ---
 
@@ -122,14 +122,14 @@ The program operates on a **~24-checkpoint / 12-gate** schedule (lightweight che
 | PHASE 4: M10 - M12 | Procedural-family verified adaptation      | GATE M12: Poisoned/regressive skill blocked |
 | ARC II — CHANGE SAFELY (M13–M24)                                                                              |
 | PHASE 5: M13 - M15 | Adaptation portability / specialization    | GATE M15: Transfer or safe bounding         |
-| PHASE 6: M16 - M18 | Integrated long-horizon integrity          | GATE M18 ★: Meaningful MDDD improvement     |
+| PHASE 6: M16 - M18 | Integrated long-horizon integrity          | GATE M18 ★: Joint depth + incidence gain (C vs B) |
 | PHASE 7: M19 - M21 | Cross-model/runtime migration continuity   | GATE M21: Migration preserves continuity    |
 | PHASE 8: M22 - M24 | Objective & evaluation integrity           | GATE M24 ★: Objective integrity holds       |
 | ARC III — PERSIST TOGETHER (M25–M36; CONDITIONAL on M24)                                                       |
 | PHASE 9: M25 - M27 | Decision-sufficient state                  | GATE M27: Canonical variables justified     |
 | PHASE 10: M28-M30 | Team coordination-state transfer           | GATE M30: Transfer reduces replacement cost |
 | PHASE 11: M31-M33 | Shared-state governance                    | GATE M33: Governed sharing contains exploits|
-| PHASE 12: M34-M36 | Integrated persistent-agent validation     | GATE M36 ★: FINAL thesis/company verdict    |
+| PHASE 12: M34-M36 | Integrated persistent-agent validation     | GATE M36 ★: Scientific (A) + Company (B) verdicts |
 +----------------------------------------------------------------------------------------------------------------+
 ★ = major thesis gate
 ```
@@ -151,9 +151,9 @@ The program operates on a **~24-checkpoint / 12-gate** schedule (lightweight che
 2.  **[`docs/submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md`](./docs/submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** — Four-Class State Taxonomy, Continuity Model, Goal Contract, Invariants 1–9.
 3.  **[`docs/submission/04_ARCHITECTURE.md`](./docs/submission/04_ARCHITECTURE.md)** — The Three Physical Engines and gVisor sandboxing.
 4.  **[`docs/submission/05_SECURITY_AND_FAILURE_MODEL.md`](./docs/submission/05_SECURITY_AND_FAILURE_MODEL.md)** — Hardened security architecture and threat mitigations.
-5.  **[`docs/submission/06_CORE_RESEARCH_PROGRAM.md`](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** — RQ1–RQ12, G1–G8 goals, discrete survival analysis for $\text{MDDD}_\tau$.
+5.  **[`docs/submission/06_CORE_RESEARCH_PROGRAM.md`](./docs/submission/06_CORE_RESEARCH_PROGRAM.md)** — RQ1–RQ12, G1–G8 goals, discrete survival analysis for $\text{MDID}_\tau$.
 6.  **[`docs/submission/07_36_MONTH_ROADMAP.md`](./docs/submission/07_36_MONTH_ROADMAP.md)** — Checkpoint-gated timeline and binding kill triggers.
-7.  **[`docs/submission/RESEARCH_DECISION_LEDGER.md`](./docs/submission/RESEARCH_DECISION_LEDGER.md)** — Living systems ADRs (AD-001 through AD-034).
+7.  **[`docs/submission/RESEARCH_DECISION_LEDGER.md`](./docs/submission/RESEARCH_DECISION_LEDGER.md)** — Living systems ADRs (AD-001 through AD-042).
 
 ---
 
@@ -161,7 +161,7 @@ The program operates on a **~24-checkpoint / 12-gate** schedule (lightweight che
 
 This repository contains pre-publication research materials, architectural specifications, and experimental protocols. Public viewing and evaluation are permitted; commercial implementation, model training, reproduction, redistribution, and derivative use are strictly subject to the **[GIBBRN Strict Research and Evaluation License](./LICENSE)**:
 - **Public Viewing & Evaluation:** Permitted for non-commercial academic research review, scientific evaluation, and investor technical due diligence.
-- **Strict Anti-AI Training:** Use of this text, schemas, architectures, or metrics (including MDDD) for AI/LLM model training, fine-tuning, distillation, benchmarking, or synthetic data generation is **strictly prohibited**.
+- **Strict Anti-AI Training:** Use of this text, schemas, architectures, or metrics (including MDID) for AI/LLM model training, fine-tuning, distillation, benchmarking, or synthetic data generation is **strictly prohibited**.
 - **No Commercial Use:** Commercial deployment, service integration, or derivative systems implementation requires a separate written commercial license.
 
 See [`LICENSE`](./LICENSE) for complete legal terms.

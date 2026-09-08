@@ -85,12 +85,13 @@ In the event of a metric failure at a binding gate, the founder proposes the dis
 | **Gate M9** | $\text{UER} > 0.001$ on red-team suite, or $\text{FDR} > 2.0\%$ | STOP: fundamental security boundary breached. Unspent funds subject to investor governance. |
 | **Gate M12** | False-Promotion Rate $> 0.02$ | NARROW scope to manually authored skills; STOP only if no mitigation path after one Narrow cycle. |
 | **Gate M15** | $\text{ATR} < 0.50$ without safe bounding, or global regression $> 2\%$ | NARROW to single-model vertical; STOP only on uncontained regression. |
-| **Gate M18** | $\text{MDDD}_{0.90}$ ratio point $< 1.5\times$, or CI upper bound $< 2.0\times$ with adequate power, or success inferior $>5\text{pp}$, or static pipeline wins joint criterion | STOP on broad thesis. Unspent funds subject to investor governance. |
+| **Gate M18** | $\text{MDID}_{0.90}$ ratio point $< 1.5\times$ (C vs B), or CI upper bound $< 2.0\times$ with adequate power, or no significant CIF reduction with adequate power, or completion inferior $>5\text{pp}$, or static pipeline wins joint criterion | STOP on broad thesis. Unspent funds subject to investor governance. |
 | **Gate M21** | Migration-matrix preservation fails | NARROW to single-runtime deployment; defer live-provider validation. No new spend authorized beyond the rebased plan (see §9). |
 | **Gate M24** | Objective-integrity pilot fails | NARROW adaptive optimization to pre-approved contracts; refuse Arc III activation. |
-| **Gate M24** | External deployments fail ROI | NARROW/PIVOT to specific verticals or wind down per investor governance. |
+| **Gate M24** | Commercial checkpoint (non-binding; begins post-M18; NO verdict power) | Partner-interest signal tracked descriptively; no Narrow/Pivot/Stop consequence. The binding commercial verdict is M36-B. |
 | **Gates M27–M33** | Strand thresholds missed | KILL the strand; preserve single-agent program scope. No program-level capital consequence beyond the rebased plan. |
-| **Gate M36** | Integrated validation fails | PIVOT or STOP per investor governance. |
+| **Gate M36-A** | Integrated scientific validation fails | PIVOT or STOP the research thesis per investor governance. |
+| **Gate M36-B** | External deployments fail ROI / adoption | NARROW/PIVOT to specific verticals or wind down per investor governance. Independent of M36-A. |
 
 ---
 
@@ -130,7 +131,7 @@ Totals are ranges, not commitments: undecided multipliers (A/B subset sizes, sec
 
 *   Gates are *scientific review points*, not automatic disbursement tranches. Any tranched disbursement, milestone-gated release, escrow, or unspent-funds return requires a separate written agreement with the investor.
 *   "Preserve remaining capital" means the founder will halt in-scope spend and present unspent funds for investor direction — not a guaranteed refund amount or mechanism.
-*   No revenue, customer, partnership, or follow-on financing outcome is promised. The M36 "PROCEED to Seed/scale" row is a *defensibility condition* (what evidence would justify asking for a further round), not a commitment that a round will be available.
+*   No revenue, customer, partnership, or follow-on financing outcome is promised. The M36-A / M36-B "PROCEED" rows are *defensibility conditions* (what evidence would justify asking for a further round), not commitments that a round will be available.
 
 ---
 

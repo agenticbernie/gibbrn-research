@@ -30,7 +30,7 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 +----------------------------------------------------------------------------------------------------------------+
 | ARC II — AGENT CONTINUITY & ADAPTIVE COMPETENCE (M13–M24: CHANGE SAFELY)                                      |
 | PHASE 5: M13 - M15 | Adaptation portability / specialization    | GATE M15: Transfer or safe bounding         |
-| PHASE 6: M16 - M18 | Integrated long-horizon integrity          | GATE M18: Meaningful MDDD improvement ★     |
+| PHASE 6: M16 - M18 | Integrated long-horizon integrity          | GATE M18: Joint depth + incidence gain (C vs B) ★ |
 | PHASE 7: M19 - M21 | Cross-model/runtime migration continuity   | GATE M21: Migration preserves continuity    |
 | PHASE 8: M22 - M24 | Objective & evaluation integrity           | GATE M24: Objective integrity holds ★       |
 +----------------------------------------------------------------------------------------------------------------+
@@ -38,7 +38,7 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 | PHASE 9: M25 - M27 | Decision-sufficient state                  | GATE M27: Canonical variables justified     |
 | PHASE 10: M28-M30 | Team coordination-state transfer           | GATE M30: Transfer reduces replacement cost |
 | PHASE 11: M31-M33 | Shared-state governance                    | GATE M33: Governed sharing contains exploits|
-| PHASE 12: M34-M36 | Integrated persistent-agent validation     | GATE M36: FINAL thesis/company verdict ★    |
+| PHASE 12: M34-M36 | Integrated persistent-agent validation     | GATE M36: Scientific (A) + Company (B) verdicts ★ |
 +----------------------------------------------------------------------------------------------------------------+
 ★ = major thesis gate (M9, M18, M24, M36)
 ```
@@ -95,7 +95,7 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 
 ### Gate M18 (Month 18) — Integrated Long-Horizon Integrity ★ MAJOR THESIS GATE
 *   **Target:** Verify the integrated 3-engine architecture extends trajectory survival over deep tasks on the joint success–cost criterion, with the expanded failure taxonomy (epistemic/authority/objective/adaptation/runtime/migration/consequence).
-*   **Empirical Hurdle:** $\text{MDDD}_{0.90}(\text{gibbrn}) \ge 2.0\times$ unmanaged baseline with $p < 0.01$ **and** bootstrap 95% CI lower bound $> 1.5\times$, with task success non-inferior and cost/latency reported (Core RQ6).
+*   **Empirical Hurdle:** Joint over GIBBRN arm (C) vs. conventional-controls arm (B) — the canonical thesis comparison; (A) unmanaged is a secondary problem-severity reference only: $\text{MDID}_{0.90}(\text{C}) \ge 2.0\times \text{MDID}_{0.90}(\text{B})$ with bootstrap 95% CI lower bound $> 1.5\times$, AND fatal-failure CIF significantly reduced (Gray's $p < 0.01$ with pre-registered magnitude floor), AND completion non-inferior, with cost/latency reported (Core RQ6; full joint rules in Table 6.2).
 *   **Verdict Matrix (per Table 6.2):**
     - PROCEED: Proposed empirical thesis criterion (frozen at pre-registration) satisfied on the core evaluation suite — ratio point ≥2.0 vs (B) with CI lower >1.5, $p<0.01$, success parity, no practicality trigger tripped.
     - INCONCLUSIVE → Narrow: ratio in [1.5,2.0) including 2.0, or a tripped cost/latency trigger → optimization + calibration cycle.
@@ -133,13 +133,13 @@ To prevent bureaucratic drag while maintaining strict epistemic discipline, the 
 *   **Empirical Hurdle:** Containment per calibrated thresholds (frozen at M30 pre-registration): containment time/rate, false-sanction rate, norm-recovery time, governance overhead.
 *   **Verdict Matrix:** PROCEED / INCONCLUSIVE (one sandbox-enlargement cycle) / strand-kill KILL (no invalidation of single-agent results).
 
-### Gate M36 (Month 36) — Integrated Persistent Adaptive System ★ FINAL MAJOR THESIS / COMPANY GATE
-*   **Target:** Final integrated scientific and commercial verdict (Core RQ12): long-lived entity persisting and adapting across cognition/runtime/skill/environment/collaborator change while preserving objective, identity, authority, provenance, and consequence integrity.
-*   **Empirical Hurdle:** Composed surviving-metric targets met (frozen at M33 pre-registration) plus external deployment ROI signal.
-*   **Final Verdict Matrix:**
-    - **PROCEED:** Raise Seed capital to scale the platform.
-    - **NARROW/PIVOT:** Target highly specific verticals if general autonomy fails.
-    - **STOP:** Wind down; preserve remaining capital subject to investor governance (founder-proposed review; any disbursement or return mechanics require a separate investor agreement — see `08_CAPITAL_PLAN.md` §6).
+### Gate M36 (Month 36) — Integrated Verdicts ★ FINAL MAJOR GATE (M36-A scientific / M36-B company)
+*   **Target:** Final integrated scientific verdict (Core RQ12: long-lived entity persisting and adapting across cognition/runtime/skill/environment/collaborator change while preserving objective, identity, authority, provenance, and consequence integrity) PLUS an independent company verdict.
+*   **Empirical Hurdle:** M36-A: composed surviving-metric targets met (frozen at M33 pre-registration). M36-B: partner ROI / adoption / integration-benefit targets met (frozen at M33 pre-registration; up to 2 design partners recruited post-M18; no partners pre-claimed).
+*   **Final Verdict Matrix (independent axes):**
+    - **M36-A scientific — PROCEED:** the integrated continuity/integrity thesis holds on composed metrics. **NARROW:** responsive vertical only. **STOP/PIVOT:** no integrated advantage.
+    - **M36-B company — PROCEED:** developers/partners show sufficient ROI and adoption value. **NARROW/PIVOT:** specific verticals. **STOP:** wind down.
+    - The axes do not imply each other; each follows investor governance (founder-proposed review; disbursement/return mechanics require a separate investor agreement — see `08_CAPITAL_PLAN.md` §6).
 
 ---
 

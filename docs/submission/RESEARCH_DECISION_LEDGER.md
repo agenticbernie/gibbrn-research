@@ -50,6 +50,16 @@
 *   [AD-033: Decision-Sufficient Digital State as Hypothesis (DEFER)](#ad-033-decision-sufficient-digital-state-as-hypothesis)
 *   [AD-034: Refusal to Fabricate a V4 Capital Ask (KEEP)](#ad-034-refusal-to-fabricate-a-v4-capital-ask)
 
+### Section 4: V4.1 Founder Review Fixes (RQ↔Experiment Alignment — September 2026)
+*   [AD-035: RQ1/RQ2 Primary-vs-Secondary Alignment (MODIFY)](#ad-035-rq1rq2-primary-vs-secondary-alignment)
+*   [AD-036: RQ3 Family Stratification + Deterministic Fault Injection (MODIFY)](#ad-036-rq3-family-stratification--deterministic-fault-injection)
+*   [AD-037: RQ4 Abstraction Metrics Separate from Admission Gates (MODIFY)](#ad-037-rq4-abstraction-metrics-separate-from-admission-gates)
+*   [AD-038: MDID Rename + Competing-Risks-First M18 + Canonical C-vs-B (MODIFY)](#ad-038-mdid-rename--competing-risks-first-m18--canonical-c-vs-b)
+*   [AD-039: RQ7 Semantic Conformance Probes + Negative Migration (MODIFY)](#ad-039-rq7-semantic-conformance-probes--negative-migration)
+*   [AD-040: RQ8 Contract Integrity vs. Operationalization Fidelity Split (MODIFY)](#ad-040-rq8-contract-integrity-vs-operationalization-fidelity-split)
+*   [AD-041: RQ9 Rename + M36-A/B Verdict Split (MODIFY)](#ad-041-rq9-rename--m36-ab-verdict-split)
+*   [AD-042: Source-Hygiene + Table 8.3 Consistency Fixes (MODIFY)](#ad-042-source-hygiene--table-83-consistency-fixes)
+
 ---
 
 ## Section 1: Historical Decisions (Preserved from V1)
@@ -125,7 +135,7 @@
 *   **Evidence Strength:** `ESTABLISHED (STATISTICAL)`
 *   **Decision:** **MODIFY**
 *   **Confidence:** 100%
-*   **What Changed:** Formally adopted discrete survival analysis: $S(k) = \prod_{i=1}^k (1 - h(i))$, defining $\text{MDDD}_\tau$ as an empirical Kaplan-Meier quantile with pre-registered competing-risks sensitivity analysis.
+*   **What Changed:** Formally adopted discrete survival analysis: $S(k) = \prod_{i=1}^k (1 - h(i))$, defining $\text{MDID}_\tau$ as an empirical Kaplan-Meier quantile with pre-registered competing-risks sensitivity analysis.
 *   **Next Experiment:** Gate M15 Log-Rank survival curve analysis.
 
 ---
@@ -381,3 +391,77 @@
 *   **Confidence:** 100%
 *   **What Changed:** V3 figures preserved as flagged history; V4 ask declared unresolved; structural sequencing/capital-at-risk logic updated without dollars; founder authorization defined as the sole path to a rebased number (`08_CAPITAL_PLAN.md` §9).
 *   **Next Experiment:** Founder rebasing review (out of dossier scope).
+
+---
+
+## Section 4: V4.1 Founder Review Fixes (RQ↔Experiment Alignment — September 2026)
+
+### AD-035: RQ1/RQ2 Primary-vs-Secondary Alignment
+*   **Date:** September 2026
+*   **Question:** RQ1 asked about taxonomy + identity + Goal Contract while its binding experiment measured only schema-corruption reduction; RQ2 claimed five lineage dimensions while CRR measured only causal reconstruction on AgentErrorBench (which lacks contract/IAM/migration ground truth).
+*   **Decision:** **MODIFY**
+*   **What Changed:** RQ1 binding = typed-separation corruption reduction; identity/contract representability becomes a non-binding secondary feasibility check. RQ2 binding = causal reconstruction; new secondary Lineage Reconstruction Accuracy (identity/objective/authority/adaptation) on purpose-built instrumented traces, descriptive at M6. No RQ13 created.
+*   **Next Experiment:** Gate M3 (primary); LRA instrument construction for M6.
+
+---
+
+### AD-036: RQ3 Family Stratification + Deterministic Fault Injection
+*   **Date:** September 2026
+*   **Question:** N=1,000 spread over eight threat families leaves per-family claims unsupported; prompt injection alone cannot exercise consequence-integrity semantics.
+*   **Decision:** **MODIFY**
+*   **What Changed:** Pre-registration must fix per-family minimum quotas; M9 reports per-family Clopper-Pearson bounds alongside aggregate UER. New deterministic fault-injection axis (recipient/resource/endpoint/credential/scope/adapter/amount faults) with pre-registered fail-closed expectations, counted in the same UER. Table 6.1 and Table 6.2b updated.
+*   **Next Experiment:** `gibbrn-auth-bench` manifest with quotas + fault suite at M7 pre-registration.
+
+---
+
+### AD-037: RQ4 Abstraction Metrics Separate from Admission Gates
+*   **Date:** September 2026
+*   **Question:** FPR/retention prove filtering, not that procedural-family abstraction has value.
+*   **Decision:** **MODIFY**
+*   **What Changed:** Six secondary abstraction metrics (yield, held-out family transfer, compression, merge/split error rates, vs-per-task benefit, admission rate) published descriptively at M12 with no kill power. Division of labor: M12 proves safe admission; M15 proves useful abstraction/transfer.
+*   **Next Experiment:** Gate M12 (safety) + M15 (abstraction value).
+
+---
+
+### AD-038: MDID Rename + Competing-Risks-First M18 + Canonical C-vs-B
+*   **Date:** September 2026
+*   **Question:** "Dependency Depth" misnames a step index; completion-as-censoring is likely informative; roadmap wording said "unmanaged baseline" while RQ6/brief required (C)-vs-(B).
+*   **Decision:** **MODIFY**
+*   **What Changed:** Metric renamed Maximum Dependable Interaction Depth (MDID); causal-path depth declared future instrumentation. Competing-risks primary (Gray's test + Fine-Gray magnitude floor) with KM/Log-Rank demoted to sensitivity; M18 verdict is joint over completion, CIF, MDID ratio, cost, latency. Canonical comparison fixed repo-wide: (C) must beat (B); (A) is a secondary severity reference. Pre-V4 documents keep the old name as history.
+*   **Next Experiment:** M18 pre-registration freezes the CIF magnitude floor at pilot calibration.
+
+---
+
+### AD-039: RQ7 Semantic Conformance Probes + Negative Migration
+*   **Date:** September 2026
+*   **Question:** Preservation rates are trivially gameable by database copying; universal migration success proves serialization, not continuity.
+*   **Decision:** **MODIFY**
+*   **What Changed:** Mandatory pre/post semantic probes (allow preserved, deny preserved, narrowing enforced, commitments honored, skills re-validated) plus negative incompatible-migration cases where safe refusal/rebinding is the correct outcome.
+*   **Next Experiment:** Probe suite construction M19–M20; calibration at M18 pre-registration.
+
+---
+
+### AD-040: RQ8 Contract Integrity vs. Operationalization Fidelity Split
+*   **Date:** September 2026
+*   **Question:** An intact Goal Contract does not imply faithful operationalization (easy-self-tests proxy trap).
+*   **Decision:** **MODIFY**
+*   **What Changed:** RQ8 split into Contract Integrity (unauthorized edits = failures) and Operationalization Fidelity (proxy-divergence scoring + hidden-evaluation transfer on frozen principal-authored probes), with trap-pattern tasks in the workload and fidelity-transfer added to candidate metrics.
+*   **Next Experiment:** Suite construction M19–M21; calibration at M21 pre-registration.
+
+---
+
+### AD-041: RQ9 Rename + M36-A/B Verdict Split
+*   **Date:** September 2026
+*   **Question:** "World" in RQ9 implies world-model/robotics scope GIBBRN does not pursue; a single M36 verdict conflates scientific success with company viability.
+*   **Decision:** **MODIFY**
+*   **What Changed:** RQ9 → "Decision-Sufficient Canonical Operational State" with an explicit non-robotics scope note (Puffin/JEPA as motivating analogy only). M36 split into M36-A (scientific) and M36-B (company) verdict-independent axes across `06` (RQ12, Table 6.2/6.2b), `07`, `08` Table 8.3, `10`, and root README schedule.
+*   **Next Experiment:** M36 pre-registration freezes both axes' targets at M33.
+
+---
+
+### AD-042: Source-Hygiene + Table 8.3 Consistency Fixes
+*   **Date:** September 2026
+*   **Question:** "13 verified primary sources" overclaims (delta mixes papers, a draft, advisories); CONTINUITY/"unoccupied"/Mem0 wordings outran the evidence; Table 8.3 kept a binding M24 ROI row after M24 became objective-integrity/Arc-III-readiness.
+*   **Decision:** **MODIFY**
+*   **What Changed:** "13 newly verified evidence entries, prioritizing primary sources" repo-wide; CONTINUITY → "independently support in their evaluated setting"; "unoccupied" → "no directly equivalent product was identified in the reviewed competitor set"; Mem0/Letta → "architecturally exposed to analogous poisoning unless separately mitigated" with non-tested-implementation disclaimer (`02`, `09`, `10`). Table 8.3: M24 ROI row demoted to a non-binding commercial checkpoint; binding verdict rows added for M36-A/M36-B. No capital numbers touched.
+*   **Next Experiment:** Full citation/source re-audit before workload freeze.

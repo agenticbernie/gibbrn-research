@@ -2,9 +2,9 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Core Research Thesis & Problem Formulation  
-**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
+**Date:** September 2026 | **Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
 **Audience:** Distributed Systems Researchers, AI Security Architects, 1517 Fund  
-**Evidence Standard:** Epistemic demarcation required for all claims. Established | Emerging | GIBBRN Inference | Design Hypothesis | Engineering Target  
+**Evidence Standard:** Epistemic demarcation required for all claims. Established | Emerging Evidence | Early / Weak Signal | GIBBRN Inference | Design Hypothesis | Engineering Target
 
 ---
 
@@ -34,27 +34,47 @@ When deployed across long dependency chains, four compounding failure modes emer
 3.  **Memory & Skill Poisoning:** When agents use naive reflection to store "lessons learned" in persistent retrieval stores, flawed, insecure, or adversarial heuristics (e.g., OWASP ASI06 / MINJA memory injection attacks) are committed to long-term memory, subverting future executions weeks or months later [7], [8].
 4.  **Cascading State-Dependent Errors:** Trajectory failures do not follow memoryless coin flips; early errors alter the environment state and escalate the failure hazard of subsequent steps. Without external, canonical state checkpoints and rollback, long-horizon completion rates collapse [9]. *(Emerging Evidence; Zhu et al., arXiv:2509.25370, 2025)*
 
+The September 2026 evidence delta (`02_EVIDENCE_LANDSCAPE.md` §3) extends this failure profile along the continuity axis: agents that change models, runtimes, skills, objectives, tools, or collaborators can additionally suffer **identity discontinuity** (which operational entity is this?), **objective drift** (what does success now mean?), **authority discontinuity** (did delegation survive the transformation?), **consequence mismatch** (did the realized effect match the authorized action?), and **coordination-state loss** (did the team forget how it works together?). Each is a distinct, falsifiable research target — not an established inevitability.
+
 ---
 
 ## 2. Updated Project Positioning: Research Thesis vs. Initial Wedge
 
-To maintain disciplined systems boundaries, this dossier formally bifurcates the project into its **broad 24-month research thesis** and its **concrete initial technical wedge**:
+To maintain disciplined systems boundaries, this dossier formally bifurcates the project into its **broad 36-month research thesis** and its **concrete initial technical wedge**:
 
-### 2.1 The Broad Research Thesis: Agent State Integrity
-> **gibbrn investigates whether a framework-neutral control layer can preserve the integrity, authority, provenance, validation status, and recoverability of consequential agent state as autonomous agents operate and change over time.**
+### 2.1 The Broad Research Thesis: Continuity and Integrity for Long-Lived Adaptive Agents
+> **GIBBRN investigates continuity and integrity for long-lived adaptive agents.**
 
-*North-Star Principle:*
+> **GIBBRN investigates how long-lived adaptive agents can change models, runtimes, memory representations, skills, tools, collaborators, and execution environments while preserving canonical identity, authority, provenance, validated competence, objective integrity, and end-to-end consequence integrity.**
+
+*North-Star Principle (retained):*
 > **Agents can change. Their integrity must persist.**
 
-*Central Research Question:*
+*North-Star Research Question (V4):*
+> **How can a long-lived autonomous system change its cognition, models, memory, skills, tools, runtime, environment, and collaborators without losing its identity, intended objective, validated competence, delegated authority, or the integrity of the consequences it produces?**
+
+*Subordinate foundational question (retained from V3, now RQ1):*
 > **Which agent state may safely remain probabilistic and model-maintained, and which state must remain canonical, deterministic, provenance-preserving, validated, versioned, and externally enforced?**
 
-### 2.2 The Initial Technical Wedge: Deterministic Authority and Effect Integrity
-While the long-term research investigates full state integrity, the immediate 24-month engineering wedge is focused on a razor-sharp enterprise problem:
+The V4 wording is a research hypothesis/program, not an established guarantee. The program succeeds empirically or is narrowed/killed at its major gates — it does not promise safe autonomy.
 
-> **gibbrn is researching how autonomous agents can change their cognitive reasoning without silently changing what they are allowed to do in the external world.**
+### 2.2 The Initial Technical Wedge: Deterministic Authority and Consequence Integrity
+While the long-term research investigates full continuity, the immediate engineering wedge remains focused on a razor-sharp enterprise problem:
 
-The initial wedge treats foundation model outputs strictly as **untrusted action proposals**, passing every mutating request through an external, deterministic reference monitor and kernel sandbox before any external side effect can occur.
+> **gibbrn is researching how autonomous agents can change their cognitive reasoning without silently changing what they are allowed to do in the external world — and whether the realized external effect matches what was authorized.**
+
+The initial wedge treats foundation model outputs strictly as **untrusted action proposals**, passing every mutating request through an external, deterministic reference monitor and kernel sandbox before any external side effect can occur, and reconciling the realized effect against the authorization witness afterward (End-to-End Authority & Consequence Integrity Pipeline; see `04_ARCHITECTURE.md`).
+
+### 2.3 The Three-Year Progression
+
+```
+YEAR 1 (M1–M12) — ACT SAFELY:   Can one adaptive agent act safely?
+YEAR 2 (M13–M24) — CHANGE SAFELY: Can that agent change safely?
+YEAR 3 (M25–M36) — PERSIST TOGETHER: Can persistent agents operate together
+                                and remain governable over time? (conditional)
+```
+
+Year 3 activates only if earlier scientific gates justify continued expansion. Failure at any major gate narrows or stops the program rather than expanding it.
 
 ---
 
@@ -66,6 +86,8 @@ An authentic scientific proposal must confront the strongest argument against it
 > *Enterprises will never deploy open-ended, self-directed autonomous agents for consequential production workflows. Instead, production systems will converge on deterministic, hard-coded DAGs (e.g., the Agentless paradigm [10], pre-wired Temporal workflows used as fixed DAGs, or microservices) where foundation models are called only as narrow, stateless extraction functions.*
 
 *Clarification on Temporal:* Temporal's documented model separates deterministic workflow orchestration code from non-deterministic activities (LLM calls, tool executions recorded in Event History), so Temporal *can* execute LLM-driven dynamic branching at runtime (Temporal, "Of course you can build dynamic AI agents," Nov 2025; OpenAI Codex and Replit Agent cited as production users). gibbrn does not claim Temporal lacks dynamic branching. The counter-case concerns *pre-wired static DAGs operated as fixed pipelines* — whether implemented on Temporal, Step Functions, or hand-rolled code — versus tasks that require runtime exploratory branching. What Temporal's durability model does not by itself provide, per public documentation reviewed, is agent-specific semantic validation of whether an LLM-proposed side effect reflects laundered in-context authority.
+
+The September 2026 τ^τ-Bench result (Shi et al., arXiv:2609.04611) sharpens — but does not settle — this counter-case from the opposite direction: even frontier coding agents currently struggle to *construct* production agent systems end-to-end (strongest configuration 23.9% vs. 82.2% expert reference across 53 tasks). Coding competence is not system-design competence. This counsels against assuming autonomous architecture design will quickly obsolete managed-autonomy infrastructure — while equally counseling against assuming it never will. The counter-case remains the program's falsification test.
 
 In that world:
 - Agents never execute open-ended 50-step exploratory tool loops.
@@ -93,16 +115,19 @@ Rigid Pipelines (Agentless / Temporal)   Managed Autonomy (gibbrn)      Unmanage
 
 ---
 
-## 4. Falsifiable 24-Month Core Research Objective
+## 4. Falsifiable Core Research Objective (36-Month)
 
-The 24-month R&D program funded by this capital request is designed to validate or falsify the following formal proposition:
+The 36-month R&D program is designed to validate or falsify the following formal proposition:
 
 $$\mathcal{H}_1: \text{On tasks requiring dynamic exploratory branching and adaptation, a deterministic authority and state-integrity layer}$$
 $$\text{measurably extends empirical trajectory survival depth and adaptation portability, while maintaining near-zero unauthorized effects,}$$
+$$\text{preserving mechanical operational continuity across model/runtime migration and objective integrity under adaptive optimization,}$$
 $$\text{without modifying underlying foundation model weights.}$$
 
 $$\mathcal{H}_0: \text{External state integrity constraints provide no statistically significant improvement in long-horizon}$$
 $$\text{task survival over unmanaged adaptive loops, or impose latency and execution friction that negates reliability gains.}$$
+
+The migration and objective-integrity clauses are tested in Year 2 (RQ7–RQ8); the multi-agent clauses (RQ9–RQ12) are conditional Year-3 research with independent kill criteria. No clause is claimed as established.
 
 ---
 
@@ -110,13 +135,15 @@ $$\text{task survival over unmanaged adaptive loops, or impose latency and execu
 
 To maintain disciplined focus, gibbrn explicitly rejects the following scope:
 
-1.  **NOT a Foundation Model:** gibbrn does not pre-train, post-train, or fine-tune models. It operates with frozen, off-the-shelf APIs and open weights.
+1.  **NOT a Foundation Model:** gibbrn does not pre-train, post-train, or fine-tune models. It operates with frozen, off-the-shelf APIs and open weights. (Aspire-style weight-level self-evolution is studied as *evaluation subject matter* for objective integrity in RQ8, not as a gibbrn training capability.)
 2.  **NOT an AGI or Recursive Self-Improvement System:** gibbrn rejects unconstrained cognitive self-modification loops.
 3.  **NOT an Agent Framework Replacement:** gibbrn does not replace LangGraph, AutoGen, CrewAI, or OpenHands. It sits alongside or underneath them as an out-of-process control plane.
 4.  **NOT a Distributed Workflow Engine:** gibbrn does not build a new Temporal, Cadence, or DBOS. It delegates workflow scheduling and activity retries to established systems.
 5.  **NOT a Vector Database:** gibbrn does not compete with Pinecone, Qdrant, or Chroma. Semantic vector indexing is an orthogonal retrieval tool.
 6.  **NOT an Enterprise IAM Replacement:** gibbrn does not replace Okta or AWS IAM. It enforces transient, per-step capability scopes and ephemeral execution leases.
-7.  **NOT a Generic Prompt Filter:** gibbrn does not rely on heuristic regex or probabilistic LLM-as-a-judge classifiers to detect attacks; it uses deterministic schema and kernel-level capability containment.
+7.  **NOT a Generic Prompt Filter:** gibbrn does not rely on heuristic regex or probabilistic LLM-as-a-judge classifiers to detect attacks; it uses deterministic schema and kernel-level capability containment. (Semantic evaluators may supply *evidence*; they hold no unilateral commit authority.)
+8.  **NOT a Machine-Society Platform:** gibbrn does not build autonomous machine societies, political institutions, or general machine culture. Shared-state governance (RQ11) studies membership, provenance, sanctions, and change rules for persistent multi-agent deployments — narrow systems governance, not a society thesis.
+9.  **NOT an AGI Operating System; NOT a Foundation Model; NOT a Generic Agent Framework.** (Restated for diligence clarity per V4 company thesis.)
 
 ---
 
@@ -130,5 +157,5 @@ To maintain disciplined focus, gibbrn explicitly rejects the following scope:
 *   [6] N. Dziri et al., "Faith and Fate: Limits of Transformers on Compositionality," in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, vol. 36, 2023.
 *   [7] OWASP GenAI Security Project, "OWASP Top 10 for Agentic AI Applications," Official Release v1.0, December 2025. Category ASI06: Memory & Context Poisoning.
 *   [8] S. Dong, S. Xu, P. He, Y. Li, J. Tang, T. Liu, H. Liu, and Z. Xiang, "Memory Injection Attacks on LLM Agents via Query-Only Interaction," in *Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)*, 2025. arXiv:2503.03704. [Submitted March 2025; accepted NeurIPS 2025.]
-*   [9] K. Zhu, Z. Liu, B. Li, M. Tian, Y. Yang, J. Zhang, et al., "Where LLM Agents Fail and How They Can Learn From Failures," *arXiv preprint arXiv:2509.25370*, 2025. Benchmark dataset: AgentErrorBench (200 annotated failure trajectories across ALFWorld, GAIA, and WebShop; ulab-uiuc/AgentDebug).
+*   [9] K. Zhu, Z. Liu, B. Li, M. Tian, Y. Yang, J. Zhang, et al., "Where LLM Agents Fail and How They Can Learn From Failures," *arXiv preprint arXiv:2509.25370*, 2025. Benchmark dataset: AgentErrorBench (annotated failure trajectories across ALFWorld, GAIA, and WebShop; ulab-uiuc/AgentDebug).
 *   [10] C. S. Xia et al., "Agentless: Demystifying LLM-based Software Engineering," *arXiv preprint arXiv:2407.01489*, 2024.

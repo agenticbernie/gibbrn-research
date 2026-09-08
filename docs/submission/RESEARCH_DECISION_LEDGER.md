@@ -37,6 +37,19 @@
 *   [AD-022: Decoupling into Three Substrates & Verified Adaptation Engine (ADOPT)](#ad-022-decoupling-into-three-substrates--verified-adaptation-engine)
 *   [AD-023: 24-Month Roadmap, 7 Core RQs, and $400,000 Capital Allocation (ADOPT)](#ad-023-24-month-roadmap-7-core-rqs-and-400000-capital-allocation)
 
+### Section 3: V4 Transition Decisions (36-Month Continuity Program — September 6–8, 2026 Evidence)
+*   [AD-024: Expansion from 24 to 36 Months with Three Research Arcs (ADOPT)](#ad-024-expansion-from-24-to-36-months-with-three-research-arcs)
+*   [AD-025: Reframing from State-Only to Continuity + Integrity (ADOPT)](#ad-025-reframing-from-state-only-to-continuity--integrity)
+*   [AD-026: Preservation of Three Physical Engines — No Engine 4 (KEEP)](#ad-026-preservation-of-three-physical-engines--no-engine-4)
+*   [AD-027: Goal Contract Introduction as Design Hypothesis (ADOPT)](#ad-027-goal-contract-introduction-as-design-hypothesis)
+*   [AD-028: Engine 2 Consequence-Integrity Expansion (MODIFY)](#ad-028-engine-2-consequence-integrity-expansion)
+*   [AD-029: Engine 3 Procedural-Family Abstraction (MODIFY)](#ad-029-engine-3-procedural-family-abstraction)
+*   [AD-030: Runtime-Independent Continuity as Core Year-2 Research (ADOPT)](#ad-030-runtime-independent-continuity-as-core-year-2-research)
+*   [AD-031: Objective & Evaluation Integrity as Year-2 Core RQ (ADOPT)](#ad-031-objective--evaluation-integrity-as-year-2-core-rq)
+*   [AD-032: Multi-Agent Governance as Conditional Year-3 Research (DEFER)](#ad-032-multi-agent-governance-as-conditional-year-3-research)
+*   [AD-033: Decision-Sufficient Digital State as Hypothesis (DEFER)](#ad-033-decision-sufficient-digital-state-as-hypothesis)
+*   [AD-034: Refusal to Fabricate a V4 Capital Ask (KEEP)](#ad-034-refusal-to-fabricate-a-v4-capital-ask)
+
 ---
 
 ## Section 1: Historical Decisions (Preserved from V1)
@@ -212,3 +225,159 @@
 *   **Confidence:** 96%
 *   **What Changed:** Expanded roadmap to 24 months with 8 binding gates (M3–M24) and 16 lightweight evidence checkpoints. Formulated Core RQ5 (Harness Generalization / ATR) with dual-mode PASS (portable generalization vs. safely bounded specialization) and Core RQ7 (IAM Delegation). Reconciled budget bottom-up to exactly $400,000.
 *   **Next Experiment:** Gate M3 and M6 checkpoint evaluations.
+
+---
+
+## Section 3: V4 Transition Decisions (36-Month Continuity Program — September 2026)
+
+### AD-024: Expansion from 24 to 36 Months with Three Research Arcs
+*   **Date:** September 8, 2026
+*   **Question:** Should the program extend to 36 months, and how should new scope be gated so expansion does not dilute falsifiability?
+*   **Evidence Examined:** September 6–8, 2026 primary sources (13 verified: §§3.1–3.13 of `02_EVIDENCE_LANDSCAPE.md`); V3 gate structure and capital history.
+*   **Supporting Evidence:** Distinct evidence clusters arrived simultaneously for migration continuity, objective integrity, team coordination state, shared-state governance, and decision-sufficient state — each with at least one checkable primary source. A 24-month frame cannot test them without dropping core gates.
+*   **Contradictory Evidence:** Longer programs risk scope sprawl and weaker accountability; Year-3 topics rest on single papers/case studies.
+*   **Evidence Strength:** `SUPPORTED (program judgment; evidence-motivated, not evidence-mandated)`
+*   **Decision:** **ADOPT**
+*   **Confidence:** 85%
+*   **What Changed:** 36-month program; 3 arcs (Act Safely / Change Safely / Persist Together); 12 RQs; 12 quarterly gates; ~24 checkpoints; four major thesis gates (M9, M18, M24, M36). Arc III conditional on the M24 readiness review. Roadmap renamed `07_24_MONTH_ROADMAP.md` → `07_36_MONTH_ROADMAP.md`.
+*   **Next Experiment:** Gate M3 per retained RQ1 protocol.
+
+---
+
+### AD-025: Reframing from State-Only to Continuity + Integrity
+*   **Date:** September 8, 2026
+*   **Question:** Should the broad thesis evolve from "Agent State Integrity" toward "continuity and integrity for long-lived adaptive agents"?
+*   **Evidence Examined:** Enoch migration paper (arXiv:2609.00546); CONTINUITY contracts (arXiv:2609.05269); Aspire (arXiv:2608.31111); interchangeability (arXiv:2609.05279); swarm case study (arXiv:2609.04170).
+*   **Supporting Evidence:** The new sources jointly show state integrity is necessary but insufficient: identity, objective, authority, consequence, and coordination continuity fail independently of state corruption.
+*   **Contradictory Evidence:** Broader framing risks diluting the sharp wedge investors diligence.
+*   **Evidence Strength:** `SUPPORTED`
+*   **Decision:** **ADOPT**
+*   **Confidence:** 88%
+*   **What Changed:** Broad positioning evolved; product name (GIBBRN — Agent State Integrity Layer) and north-star sentence retained; new north-star RQ adopted with the V3 question retained as subordinate RQ1; Four-Class Taxonomy retained with a cross-cutting Continuity Model alongside it; wedge stays narrow (Deterministic Authority & Consequence Integrity).
+*   **Next Experiment:** RQ1–RQ3 gates unchanged in binding thresholds.
+
+---
+
+### AD-026: Preservation of Three Physical Engines — No Engine 4
+*   **Date:** September 8, 2026
+*   **Question:** Does the expanded scope require a fourth engine (identity service, governance service, world-state service)?
+*   **Evidence Examined:** V4 architecture review; "diagram architecture" anti-pattern risk.
+*   **Supporting Evidence:** Every new concept maps onto an existing engine's pipeline stage or record schema; separate daemons would reintroduce the IPC/latency costs AD-012 removed.
+*   **Contradictory Evidence:** Dedicated services could isolate failure domains at scale.
+*   **Evidence Strength:** `SUPPORTED (architectural judgment)`
+*   **Decision:** **KEEP**
+*   **Confidence:** 92%
+*   **What Changed:** Engines renamed toward their V4 roles (Continuity Spine; Consequence Integrity Pipeline; Skill Compilation) with no new daemons. Goal Contract, broker, migration, team-state, world-state, governance recorded as conceptual layers/experimental modules.
+*   **Next Experiment:** M3 latency profiling must confirm the pipeline still fits the ≤14ms engineering target envelope.
+
+---
+
+### AD-027: Goal Contract Introduction as Design Hypothesis
+*   **Date:** September 8, 2026
+*   **Question:** How should the architecture prevent silent objective redefinition under adaptive optimization?
+*   **Evidence Examined:** Aspire vague-goal findings (arXiv:2608.31111: mismatched data, narrow self-evaluations, instability); PROCTOR judge failures (arXiv:2609.02246).
+*   **Supporting Evidence:** Both sources locate failure at the objective/evaluator layer rather than the tool layer; neither proposes a canonical contract object, leaving the design open.
+*   **Contradictory Evidence:** A contract schema adds Authoritative State complexity before RQ1 validates the base taxonomy.
+*   **Evidence Strength:** `GIBBRN DESIGN HYPOTHESIS (evidence-motivated)`
+*   **Decision:** **ADOPT (as hypothesis)**
+*   **Confidence:** 70%
+*   **What Changed:** Goal Contract object proposed in Authoritative State (8 fields); cognition-proposes / contract-disposes principle; goal-generation vs. operationalization distinction; RQ8 tests it. Labeled hypothesis throughout; no established-abstraction claim.
+*   **Next Experiment:** RQ8 pilot calibration at M21 pre-registration.
+
+---
+
+### AD-028: Engine 2 Consequence-Integrity Expansion
+*   **Date:** September 8, 2026
+*   **Question:** Should Engine 2 grow from an authorization gate into an end-to-end consequence pipeline?
+*   **Evidence Examined:** CONTINUITY (arXiv:2609.05269); IETF draft-abak-agent-control-delivery-evidence-01 (work in progress); CVE-2026-85666 advisories; EmbodiedSkills propose–verify loop (arXiv:2609.01281, analogy only).
+*   **Supporting Evidence:** Composition failures (dropped/widened/rebound context), endpoint-confusion SSRF in the wild, and delivery/enforcement/effect separation jointly require stages beyond the check itself.
+*   **Contradictory Evidence:** Longer pipelines risk latency-budget breach and async-reconciliation complexity.
+*   **Evidence Strength:** `SUPPORTED`
+*   **Decision:** **MODIFY**
+*   **Confidence:** 85%
+*   **What Changed:** 13-stage target action path; Tool Network Authority Broker (capability/endpoint/network/credential split) as a design response (not industry practice); Invariants 8–9 added; RQ3 expanded with endpoint-substitution, credential-rebound, consequence-mismatch families. Latency note: reconciliation may go bounded-async if measurement requires; pre-execution gating never does.
+*   **Next Experiment:** RQ3 pilot (M9) with extended attack families.
+
+---
+
+### AD-029: Engine 3 Procedural-Family Abstraction
+*   **Date:** September 8, 2026
+*   **Question:** Should Engine 3 evolve from experience→skill to procedural-family compilation?
+*   **Evidence Examined:** SkillGLoW (arXiv:2609.02217: +17.2 hard avg, commit-gate, 3.6× compactness, ALFWorld transfer); PROCTOR (judge-advisory discipline).
+*   **Supporting Evidence:** SkillGLoW's local→family→de-instantiated-prior→execution-gated-commit pipeline with positive gains in all 12 runs directly addresses V3's over-specific-procedure risk; PROCTOR supplies the missing commit-authority rule.
+*   **Contradictory Evidence:** Single-paper basis; full-text variance unconfirmed; software-task transfer unproven at GIBBRN scale.
+*   **Evidence Strength:** `EMERGING EVIDENCE → DESIGN TARGET`
+*   **Decision:** **MODIFY**
+*   **Confidence:** 78%
+*   **What Changed:** 10-stage V4 pipeline; portability bindings per skill; Invariant 4 extended (judge advisory; checks outrank; holdouts + canaries); verifier-rich scoping preserved; RQ4 thresholds unchanged.
+*   **Next Experiment:** RQ4 gate (M12) per retained FPR/retention thresholds.
+
+---
+
+### AD-030: Runtime-Independent Continuity as Core Year-2 Research
+*   **Date:** September 8, 2026
+*   **Question:** Should model/runtime migration graduate from a replication axis into a full continuity RQ?
+*   **Evidence Examined:** Enoch system (arXiv:2609.00546: substrate/binding split, six invariants, 833 + 92 tests, mechanical-only claims).
+*   **Supporting Evidence:** First checkable precedent for lineage-preserving migration with explicit behavioral-invariance disclaimer — exactly GIBBRN's needed scope.
+*   **Contradictory Evidence:** Single system; no independent replication; migration-security questions open.
+*   **Evidence Strength:** `EMERGING EVIDENCE`
+*   **Decision:** **ADOPT**
+*   **Confidence:** 75%
+*   **What Changed:** RQ7 re-scoped to migration continuity (Model/Harness/Host/Runtime A→B) with mechanical-operational-continuity target; Engine 1 continuity records; mock-IAM retained as authority axis; failure narrows to single-runtime (never invalidates single-runtime integrity).
+*   **Next Experiment:** RQ7 pilot calibration at M18 pre-registration.
+
+---
+
+### AD-031: Objective & Evaluation Integrity as Year-2 Core RQ
+*   **Date:** September 8, 2026
+*   **Question:** Should objective integrity become a core RQ rather than an implicit assumption?
+*   **Evidence Examined:** Aspire (arXiv:2608.31111); PROCTOR (arXiv:2609.02246).
+*   **Supporting Evidence:** Two independent sources document evaluator/operationalization failure as the dominant self-improvement failure mode — a gap V3 never gated.
+*   **Contradictory Evidence:** Benchmark suite must be built; thresholds uncalibrated; risk of duplicating RQ4.
+*   **Evidence Strength:** `EMERGING EVIDENCE`
+*   **Decision:** **ADOPT**
+*   **Confidence:** 72%
+*   **What Changed:** New Core RQ8 with Goal Contract + evaluator-separation tests; candidate metrics defined; thresholds TBD at calibration; failure narrows optimization to pre-approved contracts.
+*   **Next Experiment:** Suite construction M19–M21; calibration at M21 pre-registration.
+
+---
+
+### AD-032: Multi-Agent Governance as Conditional Year-3 Research
+*   **Date:** September 8, 2026
+*   **Question:** Should persistent multi-agent governance enter the program, and with what status?
+*   **Evidence Examined:** Swarm case study (arXiv:2609.04170: 100 agents, Ostrom framing); interchangeability (arXiv:2609.05279: +16–63% comms penalty).
+*   **Supporting Evidence:** The swarm study supports governance problems beyond task allocation; interchangeability supplies a controlled coordination-state measurement paradigm.
+*   **Contradictory Evidence:** Single case study (weak signal); no stable-institution evidence; high speculation risk ("machine society" drift).
+*   **Evidence Strength:** `EARLY / WEAK SIGNAL + EMERGING (respectively)`
+*   **Decision:** **DEFER (conditional Year 3)**
+*   **Confidence:** 80% (in the deferral judgment)
+*   **What Changed:** RQ10/RQ11 defined with tacit-coordination-state terminology, placebo-controlled designs, and independent kill criteria; "culture"/"society" language banned as scientific claim; strand failure never invalidates single-agent results.
+*   **Next Experiment:** Activation decision at the M24 readiness review — not before.
+
+---
+
+### AD-033: Decision-Sufficient Digital State as Hypothesis
+*   **Date:** September 8, 2026
+*   **Question:** What status should environment-state extension receive given Puffin-World and spectral-latent findings?
+*   **Evidence Examined:** Puffin-World (arXiv:2609.04196: physics/geometry/appearance states, Puffin-16M); spectral latent structuring (arXiv:2609.04264: representation laziness).
+*   **Supporting Evidence:** Both papers support structured/decision-relevant state in their own domains; neither establishes any digital-agent schema.
+*   **Contradictory Evidence:** Cross-domain analogy is the weakest inference class in the dossier.
+*   **Evidence Strength:** `GIBBRN HYPOTHESIS`
+*   **Decision:** **DEFER (conditional Year 3)**
+*   **Confidence:** 65%
+*   **What Changed:** RQ9 defined as ablation-gated hypothesis with digital candidate variables listed explicitly as hypotheses; allowed conclusion capped at "structured state beyond visual generation exists in world-model research."
+*   **Next Experiment:** Activation at M24; ablation suite TBD.
+
+---
+
+### AD-034: Refusal to Fabricate a V4 Capital Ask
+*   **Date:** September 8, 2026
+*   **Question:** What 36-month funding figure should V4 present?
+*   **Evidence Examined:** V3 bottom-up model ($400k/24mo); absence of any cost basis for RQ7-expanded, RQ8, RQ9–RQ12 workloads.
+*   **Supporting Evidence:** No staffing/compute/infra quotes exist for Year-3-scale multi-agent sandboxes or the new evaluation suites; linear extrapolation ($400k→$600k) would be fabrication.
+*   **Contradictory Evidence:** Investor materials prefer a single number; a blank may read as unpreparedness.
+*   **Evidence Strength:** `GOVERNANCE DECISION (methodological integrity)`
+*   **Decision:** **KEEP (integrity constraint)**
+*   **Confidence:** 100%
+*   **What Changed:** V3 figures preserved as flagged history; V4 ask declared unresolved; structural sequencing/capital-at-risk logic updated without dollars; founder authorization defined as the sole path to a rebased number (`08_CAPITAL_PLAN.md` §9).
+*   **Next Experiment:** Founder rebasing review (out of dossier scope).

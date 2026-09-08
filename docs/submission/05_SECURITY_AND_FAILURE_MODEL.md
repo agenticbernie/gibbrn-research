@@ -1,20 +1,22 @@
 # 05 — Security Architecture, Threat Model, and Failure Modes (Submission)
 
 **Project Name:** GIBBRN  
-**Document Track:** Security Architecture & Threat Modeling (Version 3.0)  
-**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
+**Document Track:** Security Architecture & Threat Modeling (Version 4.0)  
+**Date:** September 2026 | **Dossier Version:** 4.0 (36-Month Systems Research & Prototype Program)  
 **Audience:** AI Security Researchers, Penetration Testers, Systems Engineers, 1517 Fund  
-**Security Standard:** Hardened Adversarial Threat Model (Addressing Red-Team Diligence)  
+**Security Standard:** Hardened Adversarial Threat Model (Addressing Red-Team Diligence)
+
+> **Demarcation rule for this chapter:** each entry distinguishes *security threat* (adversarial) from *reliability failure* (non-adversarial) from *research uncertainty* (unknown pending experiment). New V4 categories are marked accordingly.
 
 ---
 
 ## 1. Executive Threat Profile: The Active Agent Attack Surface
 
-Deploying autonomous agents with shell execution, API credentials, and database access expands the attack surface far beyond conventional web applications. In Dossier V2, the threat model explicitly addresses the critical security blindspots exposed in the adversarial audit (`AUDIT_05`):
+Deploying autonomous agents with shell execution, API credentials, and database access expands the attack surface far beyond conventional web applications. The V4 threat model retains all V3 vectors and adds four categories motivated by the September 2026 evidence delta:
 
 ```
 +-----------------------------------------------------------------------------------+
-|                        GIBBRN DEFENSE-IN-DEPTH MATRIX                             |
+|                        GIBBRN DEFENSE-IN-DEPTH MATRIX (V4)                        |
 +-----------------------------------------------------------------------------------+
 | THREAT VECTOR                   | PRIMARY ENFORCEMENT BOUNDARY                     |
 |---------------------------------+-------------------------------------------------|
@@ -24,6 +26,13 @@ Deploying autonomous agents with shell execution, API credentials, and database 
 | TOCTOU Capability Expiry Races  | Single-Use Ephemeral Leases (TTL <= 2000ms)      |
 | Compromised Agent Harness       | Out-of-Process Sidecar Daemon with Socket Auth   |
 | Non-Idempotent Replay Hazards   | Cryptographic Idempotency Keys & Effect Receipts |
+| Security-Context Discontinuity  | Invariant 8: preserve-or-narrow across all       |
+|  (V4-NEW)                       | transitions; authenticated context carry-over    |
+| Endpoint / Network Authority    | Tool Network Authority Broker: separate semantic |
+|  Confusion (V4-NEW)             | capability from endpoint/network/credential scope|
+| Consequence Mismatch (V4-NEW)   | Invariant 9: permit→effect→receipt reconciliation|
+| Objective / Evaluator Capture   | Goal Contract + evaluator separation (RQ8);      |
+|  (V4-NEW)                       | judge-advisory commit semantics                  |
 +-----------------------------------------------------------------------------------+
 ```
 
@@ -67,6 +76,31 @@ Deploying autonomous agents with shell execution, API credentials, and database 
     - **Process Boundary Isolation:** The Deterministic Effect Gate runs as an **isolated out-of-process daemon (written in Rust or Go)**.
     - **IPC Authentication:** Communication between the Python harness and the Effect Gate occurs via Unix domain sockets with peer credential validation. Even if the entire Python runtime is compromised, the attacker cannot modify the memory or enforcement rules of the Effect Gate daemon.
 
+### 2.6 Threat ADV-06 (V4-NEW): Security-Context Discontinuity — *security threat*
+*   **Attack Mechanism:** An intermediate adapter — protocol translator, tool shim, sub-agent delegation layer, retry wrapper — drops or reinterprets security context as an action crosses a component boundary: principal, scope, resource, recipient, amount, endpoint, credential, or policy context. Each component is individually correct; the composition is not. Formalized as *security-context discontinuity* (Zheng & Yang, CONTINUITY, arXiv:2609.05269, Sept 2026): context dropped, widened, rebound, or reinterpreted across transitions.
+*   **gibbrn Hardened Defense:**
+    - **Invariant 8 (Security-Context Preservation):** every consequential transformation preserves or narrows authority; silent widening fails closed.
+    - **Authenticated context carry-over:** signed grants, provenance commitments, role-bound transition receipts, and transformation witnesses across each pipeline stage; RQ3's red-team suite covers authority laundering, parameter smuggling, endpoint substitution, credential rebound, semantic drift, TOCTOU races, and consequence mismatch against conventional-controls baselines.
+
+### 2.7 Threat ADV-07 (V4-NEW): Endpoint / Network Authority Confusion — *security threat*
+*   **Attack Mechanism:** Semantic permission to use a capability (*"this agent may use web-fetch"*) becomes implicit permission to select arbitrary network destinations. Demonstrated in the wild by CVE-2026-85666: caller-supplied MCP `server_url` values were fetched server-side without destination validation, with attacker headers/credentials forwarded — yielding unauthenticated SSRF (CVSS v4.0 8.7) against internal and cloud-metadata endpoints in OGX ≤1.3.1 (see `02_EVIDENCE_LANDSCAPE.md` §3.10).
+*   **Scope honesty:** this CVE demonstrates one implementation's confusion bug, not that MCP as a protocol is inherently insecure. The dossier makes no such claim.
+*   **gibbrn Hardened Defense:**
+    - **Tool Network Authority Broker:** endpoint resolution, network policy, and credential binding are control-plane decisions, not caller prerogatives. The broker determines which authenticated endpoint may satisfy a capability need, from which zone, with which credential, under which scope and duration.
+    - Default-deny egress (`netns = none`) with single-domain proxy tokens; resolved-IP validation against private/loopback/link-local ranges; no credential forwarding across endpoint boundaries without explicit binding.
+
+### 2.8 Threat ADV-08 (V4-NEW): Consequence Mismatch — *security threat / reliability failure (both)*
+*   **Attack/Failure Mechanism:** The actual external effect differs from the action that was authorized — via confused-deputy parameter resolution, stale-state execution, retry duplication, or partial application. Adversarial when induced; reliability failure when emergent.
+*   **gibbrn Hardened Defense:**
+    - **Invariant 9 (Consequence Traceability):** effect-bound execution permits; effect receipts plus outcome evidence reconciled against the authorization witness. Delivery, enforcement outcome, and observed effect recorded as separate facts (measurement discipline informed by IETF draft-abak-agent-control-delivery-evidence-01, work in progress — cited as direction, not standard).
+    - RQ3 tests mismatched realized effects as a first-class failure class, not an edge case.
+
+### 2.9 Threat ADV-09 (V4-NEW): Objective / Evaluator Capture — *security threat (adversarial) and reliability failure (emergent)*
+*   **Attack/Failure Mechanism:** An adaptive agent modifies or exploits the evaluation process used to approve its own adaptations: training on mismatched data while trusting narrow self-evaluations (Aspire failure pattern, arXiv:2608.31111); gaming an LLM judge that holds unilateral promotion authority (PROCTOR failure catalog, arXiv:2609.02246: 100% nominal pass concealing 68% true capability; corrupted labels deleting correct rules).
+*   **gibbrn Hardened Defense:**
+    - **Goal Contract:** the canonical success contract lives in Authoritative State; the agent may propose operationalizations but cannot amend the contract (RQ8).
+    - **Evaluator separation:** the component proposing a behavioral change never holds unilateral authority to define and approve its success metric. Semantic evaluators are advisory; deterministic acceptance checks, frozen holdouts, and canary cases outrank them (Invariant 4, V4 extension).
+
 ---
 
 ## 3. Demarcating Security Boundaries vs. Audit Immutability
@@ -78,14 +112,16 @@ A critical conceptual correction in Dossier V2 is the rigorous demarcation betwe
 +-----------------------------------------------------------------------------------+
 | ACTIVE SECURITY ENFORCEMENT (PREVENTATIVE):                                      |
 | - Deterministic Effect Gate (Pre-execution capability evaluation)                 |
+| - Tool Network Authority Broker (Endpoint / credential authority)                 |
 | - gVisor / Linux seccomp Micro-Sandboxing (Network and filesystem isolation)      |
 | - Ephemeral Leases (TOCTOU race prevention)                                       |
+| - Consequence reconciliation (Permit-effect-receipt binding)                       |
 | -> FUNCTION: Physically blocks unauthorized actions from executing.               |
 +-----------------------------------------------------------------------------------+
 | FORENSIC AUDIT INTEGRITY (DETECTIVE):                                             |
 | - Merkle DAG Event Hashing (Parent SHA-256 chaining)                              |
 | - Append-Only PostgreSQL / SQLite WAL                                             |
-| - Effect Receipts (Idempotency tokens)                                            |
+| - Effect Receipts + Outcome Evidence (Idempotency tokens)                          |
 | -> FUNCTION: Detects retroactive log tampering; provides causal auditability.    |
 +-----------------------------------------------------------------------------------+
 ```
@@ -94,9 +130,9 @@ Merkle DAG hashing does not prevent an authorized tool from executing harm; it e
 
 ---
 
-## 4. Failure Mode Taxonomy: Systemic and Epistemic Failures
+## 4. Failure Mode Taxonomy: Systemic and Epistemic Failures (V4-Extended)
 
-Table 5.1 classifies systemic, non-adversarial failure modes in long-lived agents and specifies gibbrn's automated recovery responses.
+Table 5.1 classifies systemic, non-adversarial failure modes in long-lived agents and specifies gibbrn's automated recovery responses. V4 adds migration-discontinuity, objective-drift, adaptation-regression, authority-failure, and consequence-mismatch rows (also tracked in RQ6's expanded taxonomy).
 
 ### Table 5.1: Systemic Failure Modes and Automated Mitigations
 
@@ -107,6 +143,11 @@ Table 5.1 classifies systemic, non-adversarial failure modes in long-lived agent
 | **SYS-03** | Replay Hazard on Crash Recovery | Crashed agent re-runs non-idempotent tool | Duplicated financial charge or double email | Effect receipts with cryptographic idempotency keys replay cached result. |
 | **SYS-04** | Operational Skill Regression | Flawed candidate heuristic committed to memory | Degrades performance on subsequent tasks | Engine 3 automated regression suite in sandbox; immediate causal revocation. |
 | **SYS-05** | Unmocked Environment Entropy | External system state changes during replay | Bounded replay diverges from recorded trace | Hermetic replay boundary enforcement; fall back to causal divergence audit. |
+| **SYS-06 (V4-NEW)** | Migration Discontinuity | Model/runtime/harness swap drops lineage, authority, or commitments | Agent continues under wrong identity, scope, or objective | Migration checkpoints with lineage validation; resume blocked until bindings verify (RQ7). |
+| **SYS-07 (V4-NEW)** | Objective / Proxy Drift | Adaptive optimization redefines success metric | Silent metric satisfaction without principal-goal progress | Goal Contract lineage checks; independent held-out evaluation; evaluator separation (RQ8). |
+| **SYS-08 (V4-NEW)** | Authority-Chain Break | Delegation or credential context lost across a transformation | Actions execute under stale or widened scope | Invariant 8 transition checks; fail-closed on missing context (RQ3). |
+| **SYS-09 (V4-NEW)** | Consequence Mismatch | Realized effect diverges from authorized action | Unauthorized world state despite clean authorization logs | Permit–effect–receipt reconciliation; mismatch alarms + rollback (RQ3; Invariant 9). |
+| **SYS-10 (V4-NEW)** | Coordination-State Loss | Team member replaced without state transfer | Communication overhead spikes; conventions clash | Coordination-state transfer protocols; onboarding-cost measurement (RQ10, conditional). |
 
 ---
 

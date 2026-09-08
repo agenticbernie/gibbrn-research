@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Historical Architecture Decision Records (ADRs)  
-**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
+**Date:** September 2026 | **Verification / Provenance Status:** V4.2.1 Canonical  
 **Governance Rule:** Never overwrite historical decisions. Record the continuous evolution of systems hypotheses based on empirical research, adversarial diligence audits, and verification passes.  
 **Allowed Verdicts:** `KEEP` | `MODIFY` | `MERGE` | `DEFER` | `KILL`  
 

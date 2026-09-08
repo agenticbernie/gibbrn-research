@@ -42,7 +42,7 @@ The canonical V4.2 research dossier. Externally checkable claims carry epistemic
 | **[`03_STATE_SEMANTICS_AND_TRUST_MODEL.md`](./submission/03_STATE_SEMANTICS_AND_TRUST_MODEL.md)** | State Semantics & Trust Model | Four-Class State Taxonomy (retained), Continuity Model, Goal Contract, Invariants 1–9. |
 | **[`04_ARCHITECTURE.md`](./submission/04_ARCHITECTURE.md)** | Systems Architecture | The Three Physical Engines (Continuity Spine, Consequence Pipeline + Authority Broker, Skill Compilation), gVisor sandboxing, labeled latency targets. |
 | **[`05_SECURITY_AND_FAILURE_MODEL.md`](./submission/05_SECURITY_AND_FAILURE_MODEL.md)** | Security & Threat Model | Hardened security model plus V4 threats (ADV-06–ADV-09), expanded failure taxonomy SYS-01–SYS-10. |
-| **[`06_CORE_RESEARCH_PROGRAM.md`](./submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Twelve RQs (RQ1–RQ12) across 3 arcs, G1–G8 goals, discrete survival hazard modeling for $\text{MDID}_\tau$, pre-registration commitment. |
+| **[`06_CORE_RESEARCH_PROGRAM.md`](./submission/06_CORE_RESEARCH_PROGRAM.md)** | Core Research Program | Twelve RQs (RQ1–RQ12) across 3 arcs, G1–G8 goals, competing-risks / Aalen–Johansen CIF modeling for $\text{MDID}_\tau$, pre-registration commitment. |
 | **[`07_36_MONTH_ROADMAP.md`](./submission/07_36_MONTH_ROADMAP.md)** | 36-Month R&D Roadmap | ~24 evidence checkpoints and twelve binding gates (M3–M36); four major thesis gates (M9/M18/M24/M36). |
 | **[`08_CAPITAL_PLAN.md`](./submission/08_CAPITAL_PLAN.md)** | Capital & Expense Plan | V4.2 rebase: $450k current target, ~$700k program, ~$250k conditional Year-3; V3 figures as history. |
 | **[`09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md`](./submission/09_NOVELTY_COMPETITION_AND_COMPANY_THESIS.md)** | Novelty & Company Thesis | Potential research contributions vs. commoditized plumbing, OCAP lineage, CONTINUITY precedent, platform risks. |
@@ -63,7 +63,7 @@ The complete verification paper trail generated during the final submission-grad
 *   [`FINAL_VERIFY_03_NUMBERS_AND_TARGETS.md`](./verification/FINAL_VERIFY_03_NUMBERS_AND_TARGETS.md) — Quantitative classifications, latency budgets, and token arithmetic.
 *   [`FINAL_VERIFY_04_BENCHMARK_AND_STATISTICS.md`](./verification/FINAL_VERIFY_04_BENCHMARK_AND_STATISTICS.md) — MDID mathematical review and experimental protocols for Core RQ1–RQ5.
 *   [`FINAL_VERIFY_05_COMPETITOR_AND_NOVELTY.md`](./verification/FINAL_VERIFY_05_COMPETITOR_AND_NOVELTY.md) — Steel-man analysis of 5 competitor classes and novelty decomposition.
-*   [`FINAL_VERIFY_06_1517_AND_CAPITAL.md`](./verification/FINAL_VERIFY_06_1517_AND_CAPITAL.md) — 1517 Fund thesis fit, check size compatibility, and burn rate validation.
+*   [`FINAL_VERIFY_06_1517_AND_CAPITAL.md`](./verification/FINAL_VERIFY_06_1517_AND_CAPITAL.md) — Historical V2/V3 capital-diligence ledger (audits $285k/$120k/$400k-era structures) — superseded for current financing; see `08_CAPITAL_PLAN.md`.
 *   [`FINAL_VERIFY_07_CANONICAL_FACT_SHEET.md`](./verification/FINAL_VERIFY_07_CANONICAL_FACT_SHEET.md) — Single source of truth for approved figures, citations, and terminology.
 *   [`FINAL_VERIFY_08_PATCHSET.md`](./verification/FINAL_VERIFY_08_PATCHSET.md) — Surgical patch specifications for all documents.
 *   [`FINAL_VERIFY_09_FINAL_CHANGELOG.md`](./verification/FINAL_VERIFY_09_FINAL_CHANGELOG.md) — Detailed changelog recording all 24 applied modifications.

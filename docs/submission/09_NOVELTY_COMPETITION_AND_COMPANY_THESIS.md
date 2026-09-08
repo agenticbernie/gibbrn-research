@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Systems Novelty, Commercial Strategy & Defensibility (Version 4.1)  
-**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.2.1 (36-Month Systems Research & Prototype Program)  
 **Audience:** Deep-Tech Investors, 1517 Fund Investment Committee, Systems Researchers  
 **Demarcation Standard:** Clean Separation of Research Novelty, Engineering, and Market Moats
 

@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Empirical Protocol (Version 4.1)  
-**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.2.1 (36-Month Systems Research & Prototype Program)  
 **Audience:** Empirical AI Researchers, Benchmark Methodologists, 1517 Fund  
 **Methodological Standard:** Twelve Falsifiable Research Questions across Three Research Arcs, with Survival Analysis
 

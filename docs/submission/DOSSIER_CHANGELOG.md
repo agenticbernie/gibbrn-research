@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Audit Provenance & Document Lineage (Submission Grade)  
-**Date:** September 2026 | **Verification Pass:** V3 Delta Pending Verification  
+**Date:** September 2026 | **Verification / Provenance Status:** V4.2.1 Canonical  
 **Audience:** Technical Due-Diligence Reviewers, Systems Researchers, 1517 Fund  
 **Purpose:** Comprehensive Traceability of All Architectural, Mathematical, Epistemic, and Citation Modifications from V1 through V2 to Final Submission  
 
@@ -10,7 +10,7 @@
 
 ## 1. Executive Summary of Dossier Evolution
 
-The GIBBRN technical dossier has undergone a rigorous, three-stage development and verification process:
+The GIBBRN technical dossier has undergone a rigorous, multi-phase development and verification process:
 
 1.  **Phase 1 (V1 Dossier):** Initial 18-month R&D dossier formulating the Agent State Integrity thesis.
 2.  **Phase 2 (Adversarial Diligence Simulation & V2 Reconstruction):** Independent 1517-oriented diligence simulation (`AUDIT_00`–`AUDIT_11`) followed by structural reconstruction: consolidating 5 subsystems into 3 physical engines, eliminating naive geometric failure models in favor of discrete survival analysis, hardening kernel-level sandboxing, and establishing pre-seed capital asks.

@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Empirical Literature & Systems Landscape  
-**Date:** September 2026 | **Dossier Version:** 4.1 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.2.1 (36-Month Systems Research & Prototype Program)  
 **Audience:** Distributed Systems Researchers, AI Security Architects, 1517 Fund  
 **Evidence Standard:** All externally checkable claims are supported by cited primary sources. Citations should be independently verified. Epistemic classifications: Established Evidence | Emerging Evidence | Early / Weak Signal | GIBBRN Inference | Design Hypothesis | Engineering Target. Preprints (arXiv) are never cited as settled consensus.
 

@@ -1,7 +1,7 @@
 # 07: Core Research Program (36-Month Scientific Execution)
 
 **Document Track:** R&D Timeline & Binding Falsification Gates (Version 4.1)  
-**Date:** September 2026 | **Dossier Version:** 4.2.1 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.2.2 (36-Month Systems Research & Prototype Program)  
 **Audience:** Deep-Tech Investors, 1517 Fund Partners, Technical Founders
 
 ## 1. The ~24-Checkpoint / 12-Gate Methodology

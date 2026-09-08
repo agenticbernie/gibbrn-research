@@ -1,7 +1,7 @@
 # 04: Systems Architecture & Engine Design
 
 **Document Track:** Systems Engineering & Implementation (Version 4.1)  
-**Date:** September 2026 | **Dossier Version:** 4.2.1 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.2.2 (36-Month Systems Research & Prototype Program)  
 **Audience:** Systems Engineers, Security Auditors
 
 ## 1. Core Systems Design: The Three-Substrate Boundary

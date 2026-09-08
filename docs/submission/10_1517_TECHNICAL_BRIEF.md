@@ -2,7 +2,7 @@
 
 **Project Name:** GIBBRN  
 **Document Track:** Executive Investor Diligence & Systems Brief  
-**Date:** September 2026 | **Dossier Version:** 4.2 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.2.2 (36-Month Systems Research & Prototype Program)  
 **Target:** 1517 Fund Investment Committee  
 **Standard:** 12 Direct Diligence Responses (Post-Adversarial Diligence; V4-Evidence Update)
 

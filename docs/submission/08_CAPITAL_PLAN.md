@@ -1,7 +1,7 @@
 # 08: Expense Modeling & Capital-at-Risk
 
 **Document Track:** Financial Modeling & Capital Allocation (Version 4.2 — Capital Rebase)  
-**Date:** September 2026 | **Dossier Version:** 4.2 (36-Month Systems Research & Prototype Program)  
+**Date:** September 2026 | **Dossier Version:** 4.2.2 (36-Month Systems Research & Prototype Program)  
 **Audience:** Deep-Tech Investors, 1517 Fund Partners, Technical Founders  
 
 > **V4.2 CAPITAL STATUS — CANONICAL:** The V4 capital model is **rebased and founder-authorized** (see §15). All "capital unresolved / rebasing pending" language from V4–V4.1 is superseded in canonical sections and retained only in changelog/ledger history.

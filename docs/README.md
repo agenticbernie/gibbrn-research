@@ -2,7 +2,7 @@
 
 **Project:** gibbrn — Agent State Integrity Layer  
 **Repository:** `github.com/agenticbernie/gibbrn-research`  
-**Dossier Version:** 4.2 (36-Month Systems Research & Prototype Program)  
+**Dossier Version:** 4.2.2 (36-Month Systems Research & Prototype Program)  
 **License:** Strict Restricted Research & Evaluation License (See [`LICENSE`](../LICENSE))  
 **Audience:** 1517 Fund Investment Committee, Distributed Systems Researchers, AI Security Architects
 
